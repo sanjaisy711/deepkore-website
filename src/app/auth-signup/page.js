@@ -38,7 +38,7 @@ export default function Page() {
                                     <div className="mb-4">
                                         <div className="flex items-center w-full mb-0">
                                             <input className="form-checkbox rounded border-gray-200 dark:border-gray-800 text-indigo-600 focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50 me-2" type="checkbox" value="" id="AcceptT&C" />
-                                            <label className="form-check-label text-slate-400" htmlFor="AcceptT&C">I Accept <Link href="#" className="text-indigo-600">Terms And Condition</Link></label>
+                                            <label className="form-check-label text-slate-400" htmlFor="AcceptT&C">I Accept <Link href="/page-terms" className="text-indigo-600">Terms And Condition</Link></label>
                                         </div>
                                     </div>
 
