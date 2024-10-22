@@ -22,9 +22,7 @@ export default function Page() {
                 </div>
                 <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
                     <ul className="tracking-[0.5px] mb-0 inline-flex space-x-1">
-                        <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600"><Link href="/i">worksbyte</Link></li>
-                        <li className="inline-block text-base mx-0.5 ltr:rotate-0 rtl:rotate-180"><MdKeyboardArrowRight className="text-xl"/></li>
-                        <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600"><Link href="#" >Utility</Link></li>
+                        <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600"><Link href="/i">Worksbyte</Link></li>
                         <li className="inline-block text-base mx-0.5 ltr:rotate-0 rtl:rotate-180"><MdKeyboardArrowRight className="text-xl"/></li>
                         <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-indigo-600"aria-current="page">Privacy</li>
                     </ul>
@@ -65,13 +63,65 @@ export default function Page() {
                                <h4 className="text-xl font-semibold mb-4 mt-8">2. How We Use Your Information</h4>
                                 <p className="text-slate-400">We may use the information collected for the following purposes:</p>
 
-                                  <h3 className="text-xl font-semibold mb-4 mt-8">2.1.	To Provide and Improve Services: </h3>
-                                <p className="text-slate-400">Personal identification information such as your name, email address, phone number, job title, and company name when you sign up for our services, contact us, or otherwise interact with us.</p>
-                                  <h3 className="text-xl font-semibold mb-4 mt-8">1.2. Non-Personal Data:</h3>
-                                <p className="text-slate-400">Non-identifiable and anonymous information such as usage data, device information (IP address, browser type, device type), and other statistical data to improve our services.</p>
-                                <h3 className="text-xl font-semibold mb-4 mt-8">1.3. Cookies:</h3>
-                                <p className="text-slate-400">We use cookies and similar tracking technologies to track the activity on our website and store certain information to enhance user experience. You can modify your cookie preferences through your browser settings.</p>
+                                  <h3 className="text-xl font-semibold mb-4 mt-8">2.1.	To Provide and Improve Services:</h3>
+                                <p className="text-slate-400">To personalize your experience, improve our website, and provide the services you request.</p>
+                                  <h3 className="text-xl font-semibold mb-4 mt-8">2.2. To Communicate:</h3>
+                                <p className="text-slate-400">To send you updates, newsletters, and other communications related to our products, services, or promotions, where you have opted in to receive such communications.</p>
+                                <h3 className="text-xl font-semibold mb-4 mt-8">2.3. To Comply with Legal Obligations:</h3>
+                                <p className="text-slate-400">To comply with laws, regulations, and legal requests.</p>
+                                <h3 className="text-xl font-semibold mb-4 mt-8">2.4. •	To Analyze Website Usage:</h3>
+                                <p className="text-slate-400">To monitor and analyze website usage and trends to enhance user experience.</p>
+
+
+                                 <h4 className="text-xl font-semibold mb-4 mt-8">3. How We Share Your Information</h4>
+                                <p className="text-slate-400">We do not sell or rent your personal information. However, we may share your information with trusted third parties for the following reasons:</p>
+
+                                  <h3 className="text-xl font-semibold mb-4 mt-8">3.1. Service Providers:</h3>
+                                <p className="text-slate-400">: We may share your information with third-party vendors, consultants, and service providers who perform services on our behalf.</p>
+                                  <h3 className="text-xl font-semibold mb-4 mt-8">3.2. Business Transfers:</h3>
+                                <p className="text-slate-400">If we undergo a merger, acquisition, or asset sale, your information may be transferred to the new entity.</p>
+                                <h3 className="text-xl font-semibold mb-4 mt-8">3.3. Legal Requirements:</h3>
+                                <p className="text-slate-400">We may disclose your information if required by law or if we believe such action is necessary to comply with legal obligations or protect the rights and safety of our company or users.</p>
+
+
+
+                                 <h4 className="text-xl font-semibold mb-4 mt-8">4. Data Security</h4>
+                                <p className="text-slate-400">We implement reasonable technical, administrative, and physical safeguards to protect your personal data from unauthorized access, use, or disclosure. However, no security system is completely infallible, and we cannot guarantee the security of your data.</p>
+
+                                  
+
+                                <h4 className="text-xl font-semibold mb-4 mt-8">5. Data Retention</h4>
+                                <p className="text-slate-400">We retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy or as required by law.</p>
+
+
+
+
+                                   <h4 className="text-xl font-semibold mb-4 mt-8">6. Your Rights</h4>
+                                <p className="text-slate-400">Depending on your location and applicable laws, you may have certain rights regarding your personal data, including:</p>
+                                <ul className="list-none text-slate-400 mt-3">
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>The right to access and request copies of your personal data.</li>
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>The right to request correction of any inaccuracies in your personal data.</li>
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>The right to request deletion of your personal data.</li>
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>The right to withdraw your consent at any time where we rely on your consent to process your personal data.</li>
+                                </ul>
+                                <p className="text-slate-400">To exercise these rights, please contact us at contact@worksbyte.com </p>
+
+
+                                 <h4 className="text-xl font-semibold mb-4 mt-8">7. Third-Party Links</h4>
+                                <p className="text-slate-400"Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of such third-party websites. We encourage you to review their privacy policies before providing them with any personal information.</p>
+
+
                                 
+                                <h4 className="text-xl font-semibold mb-4 mt-8">8. Changes to This Privacy Policy</h4>
+                                <p className="text-slate-400"We may update this Privacy Policy from time to time to reflect changes in our practices or for legal or regulatory reasons. We will notify you of any material changes by updating the "Last Updated" date at the top of this page.</p>
+
+
+
+                                 <h4 className="text-xl font-semibold mb-4 mt-8">9. Contact Us</h4>
+                                <p className="text-slate-400"If you have any questions about this Privacy Policy or our privacy practices, please contact us at: contact@worksbyte.com </p>
+
+
+        
                                  <div className="mt-8">
                                     <Link href="#" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">Print</Link>
                                 </div>
