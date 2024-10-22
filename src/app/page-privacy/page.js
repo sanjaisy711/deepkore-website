@@ -56,8 +56,23 @@ export default function Page() {
 
                                   <h3 className="text-xl font-semibold mb-4 mt-8">1.1. Personal Data :</h3>
                                 <p className="text-slate-400">Personal identification information such as your name, email address, phone number, job title, and company name when you sign up for our services, contact us, or otherwise interact with us.</p>
+                                  <h3 className="text-xl font-semibold mb-4 mt-8">1.2. Non-Personal Data:</h3>
+                                <p className="text-slate-400">Non-identifiable and anonymous information such as usage data, device information (IP address, browser type, device type), and other statistical data to improve our services.</p>
+                                <h3 className="text-xl font-semibold mb-4 mt-8">1.3. Cookies:</h3>
+                                <p className="text-slate-400">We use cookies and similar tracking technologies to track the activity on our website and store certain information to enhance user experience. You can modify your cookie preferences through your browser settings.</p>
+                               
+        
+                               <h4 className="text-xl font-semibold mb-4 mt-8">2. How We Use Your Information</h4>
+                                <p className="text-slate-400">We may use the information collected for the following purposes:</p>
 
-                                <div className="mt-8">
+                                  <h3 className="text-xl font-semibold mb-4 mt-8">2.1.	To Provide and Improve Services: </h3>
+                                <p className="text-slate-400">Personal identification information such as your name, email address, phone number, job title, and company name when you sign up for our services, contact us, or otherwise interact with us.</p>
+                                  <h3 className="text-xl font-semibold mb-4 mt-8">1.2. Non-Personal Data:</h3>
+                                <p className="text-slate-400">Non-identifiable and anonymous information such as usage data, device information (IP address, browser type, device type), and other statistical data to improve our services.</p>
+                                <h3 className="text-xl font-semibold mb-4 mt-8">1.3. Cookies:</h3>
+                                <p className="text-slate-400">We use cookies and similar tracking technologies to track the activity on our website and store certain information to enhance user experience. You can modify your cookie preferences through your browser settings.</p>
+                                
+                                 <div className="mt-8">
                                     <Link href="#" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">Print</Link>
                                 </div>
                             </div>
