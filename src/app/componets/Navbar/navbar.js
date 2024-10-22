@@ -117,6 +117,24 @@ export default function Navbar(props) {
                     
              </ul> 
             </div>
+    <div class="component NavigationLink">
+    <div class="component-content">
+        <a
+            href="/schedule-demo/?utm_source=google&amp;utm_medium=search-ads&amp;utm_campaign=GOOGLE_SEARCH_B_APAC_IND&amp;utm_term=outsystems&amp;utm_adid=outsystems_exact&amp;utm_campaignteam=digital-mktg&amp;utm_partner=none"
+            class="os-btn-action js-os-btn-action-main-menu"
+            data-mfo-track="1"
+            data-mfo-asset="CS"
+            data-mfo-group="Demo"
+            data-mfo-position="Header "
+            data-mfo-activity="Click"
+            data-mfo-destination="Page"
+            style="opacity: 1;"
+        >
+            Schedule demo
+        </a>
+    </div>
+</div>
+
         </div >
     </nav >
     )
