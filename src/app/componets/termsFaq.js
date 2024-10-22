@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from 'react'
-
+import Link from "next/link";
 import { accordionData } from '../Data/dataTwo';
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function TermsFaq(){
     const [activeIndex, setActiveIndex] = useState(0);
