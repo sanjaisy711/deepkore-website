@@ -104,7 +104,7 @@ export default function Page() {
                                     <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>The right to request deletion of your personal data.</li>
                                     <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>The right to withdraw your consent at any time where we rely on your consent to process your personal data.</li>
                                 </ul>
-                                <p className="text-slate-400">To exercise these rights, please contact us at contact@worksbyte.com </p>
+                                <p className="text-slate-400">To exercise these rights, please contact us at <Link href="#" className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500">contact@worksbyte.com</Link> </p>
 
 
                                  <h4 className="text-xl font-semibold mb-4 mt-8">7. Third-Party Links</h4>
