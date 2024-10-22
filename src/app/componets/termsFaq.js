@@ -36,8 +36,7 @@ export default function TermsFaq(){
             </div>
 
         ))}
-    </div>
-               <div className="mt-4">
+            <div className="mt-4">
                 <Link
                   href="/helpcenter-faqs"
                   className="relative inline-flex items-right font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
@@ -46,6 +45,8 @@ export default function TermsFaq(){
                   <MdKeyboardArrowRight className="text-xl ms-1" />
                 </Link>
               </div>
+    </div>
+               
             
     )
 }
