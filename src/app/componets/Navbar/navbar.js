@@ -113,7 +113,7 @@ export default function Navbar(props) {
                     </li>
                     <li className={manu === "/contactus" || "" ? "active" : ""}><Link href="contactus" className="sub-menu-item">Contact Us</Link></li>
                     <li className={manu === "/auth-signup" || "" ? "active" : ""}><Link href="auth-signup" className="sub-menu-item">Get Started</Link></li>
-                    <li className={manu === "/auth-login" || "" ? "active" : ""}><Link href="auth-login" className="sub-menu-item">Login</Link></li>
+                    <li className={manu === "/https://brightbars.worksbyte.com" || "" ? "active" : ""}><Link href="https://brightbars.worksbyte.com" className="sub-menu-item">Login</Link></li>
                     
              </ul> 
             </div>
