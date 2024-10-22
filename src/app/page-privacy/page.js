@@ -118,7 +118,7 @@ export default function Page() {
 
 
                                  <h4 className="text-xl font-semibold mb-4 mt-8">9. Contact Us</h4>
-                                <p className="text-slate-400">If you have any questions about this Privacy Policy or our privacy practices, please contact us at: contact@worksbyte.com </p>
+                                <p className="text-slate-400">If you have any questions about this Privacy Policy or our privacy practices, please contact us at: <Link href="#" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">contact@worksbyte.com</Link> </p>
 
 
         
