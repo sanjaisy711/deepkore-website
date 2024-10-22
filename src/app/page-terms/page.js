@@ -76,7 +76,7 @@ export default function Page() {
                                     <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Notify us immediately of any unauthorized use of your account.</li>
                                     <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Be responsible for all activities that occur under your account.</li>
                                 </ul> 
-                                 className="text-slate-400">We reserve the right to terminate accounts that provide false or misleading information or violate these Terms</p>
+                                <p className="text-slate-400">We reserve the right to terminate accounts that provide false or misleading information or violate these<b className="text-red-600"> Terms</b>.</p>
 
 
 
