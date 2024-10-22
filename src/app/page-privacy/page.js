@@ -46,7 +46,7 @@ export default function Page() {
                                 <h5 className="text-xl font-semibold mb-4">Privacy Policy</h5>
                                 <p className="text-slate-400">Last updated: [22/10/2024]</p>
 
-                                <h5 className="text-xl font-semibold mb-4 mt-8"Introduction:</h5>
+                                <h5 className="text-xl font-semibold mb-4 mt-8">Introduction:</h5>
                                 <p className="text-slate-400">At Dgiverse, your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.worksbyte.com, use our services, or engage with us. Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.</p>
                                 <p className="text-slate-400">By using our services, you consent to the data practices described in this Privacy Policy.</p>
         
