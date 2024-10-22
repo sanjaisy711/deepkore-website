@@ -90,7 +90,7 @@ export default function Page() {
                                     <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Misuse or abuse our Services, including creating malicious or fraudulent applications.</li>
                                
                                 </ul> 
-                                 className="text-slate-400">You are <b className="text-red-600">responsible </b> for the content you create, including any applications, data, or code.</p>
+                                 <p className="text-slate-400">You are <b className="text-red-600">responsible </b> for the content you create, including any applications, data, or code.</p>
 
 
 
