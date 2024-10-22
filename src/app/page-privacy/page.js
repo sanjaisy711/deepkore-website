@@ -43,23 +43,19 @@ export default function Page() {
                     <div className="md:flex justify-center">
                         <div className="md:w-3/4">
                             <div className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
-                                <h5 className="text-xl font-semibold mb-4">Overview :</h5>
-                                <p className="text-slate-400">It seems that only fragments of the original text remain in the Lorem Ipsum texts used today. One may speculate that over the course of time certain letters were added or deleted at various positions within the text.</p>
-                                <p className="text-slate-400">In the 1960s, the text suddenly became known beyond the professional circle of typesetters and layout designers when it was used for Letraset sheets (adhesive letters on transparent film, popular until the 1980s) Versions of the text were subsequently included in DTP programmes such as PageMaker etc.</p>
-                                <p className="text-slate-400">There is now an abundance of readable dummy texts. These are usually used when a text is required purely to fill a space. These alternatives to the classic Lorem Ipsum texts are often amusing and tell short, funny or nonsensical stories.</p>
+                                <h5 className="text-xl font-semibold mb-4">Privacy Policy</h5>
+                                <p className="text-slate-400">Last updated: [22/10/2024]</p>
 
-                                <h5 className="text-xl font-semibold mb-4 mt-8">We use your information to :</h5>
-                                <ul className="list-none text-slate-400 mt-4">
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600 align-middle me-2"/> Digital Marketing Solutions for Tomorrow</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600 align-middle me-2"/> Our Talented & Experienced Marketing Agency</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600 align-middle me-2"/> Create your own skin to match your brand</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600 align-middle me-2"/> Digital Marketing Solutions for Tomorrow</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600 align-middle me-2"/> Our Talented & Experienced Marketing Agency</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600 align-middle me-2"/> Create your own skin to match your brand</li>
-                                </ul>
+                                <h5 className="text-xl font-semibold mb-4 mt-8"Introduction:</h5>
+                                <p className="text-slate-400">At Dgiverse, your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website www.worksbyte.com, use our services, or engage with us. Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.</p>
+                                <p className="text-slate-400">By using our services, you consent to the data practices described in this Privacy Policy.</p>
+        
 
-                                <h5 className="text-xl font-semibold mb-4 mt-8">Information Provided Voluntarily :</h5>
-                                <p className="text-slate-400">In the 1960s, the text suddenly became known beyond the professional circle of typesetters and layout designers when it was used for Letraset sheets (adhesive letters on transparent film, popular until the 1980s) Versions of the text were subsequently included in DTP programmes such as PageMaker etc.</p>
+                                <h4 className="text-xl font-semibold mb-4 mt-8">1. Information We Collect</h4>
+                                <p className="text-slate-400">We may collect and process the following types of information:</p>
+
+                                  <h3 className="text-xl font-semibold mb-4 mt-8">1.1. Personal Data :</h3>
+                                <p className="text-slate-400">Personal identification information such as your name, email address, phone number, job title, and company name when you sign up for our services, contact us, or otherwise interact with us.</p>
 
                                 <div className="mt-8">
                                     <Link href="#" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">Print</Link>
