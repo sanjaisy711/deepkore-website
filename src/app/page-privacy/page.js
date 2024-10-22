@@ -108,17 +108,17 @@ export default function Page() {
 
 
                                  <h4 className="text-xl font-semibold mb-4 mt-8">7. Third-Party Links</h4>
-                                <p className="text-slate-400"Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of such third-party websites. We encourage you to review their privacy policies before providing them with any personal information.</p>
+                                <p className="text-slate-400">Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of such third-party websites. We encourage you to review their privacy policies before providing them with any personal information.</p>
 
 
                                 
                                 <h4 className="text-xl font-semibold mb-4 mt-8">8. Changes to This Privacy Policy</h4>
-                                <p className="text-slate-400"We may update this Privacy Policy from time to time to reflect changes in our practices or for legal or regulatory reasons. We will notify you of any material changes by updating the "Last Updated" date at the top of this page.</p>
+                                <p className="text-slate-400">We may update this Privacy Policy from time to time to reflect changes in our practices or for legal or regulatory reasons. We will notify you of any material changes by updating the "Last Updated" date at the top of this page.</p>
 
 
 
                                  <h4 className="text-xl font-semibold mb-4 mt-8">9. Contact Us</h4>
-                                <p className="text-slate-400"If you have any questions about this Privacy Policy or our privacy practices, please contact us at: contact@worksbyte.com </p>
+                                <p className="text-slate-400">If you have any questions about this Privacy Policy or our privacy practices, please contact us at: contact@worksbyte.com </p>
 
 
         
