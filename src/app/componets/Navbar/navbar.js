@@ -79,7 +79,7 @@ export default function Navbar(props) {
                     </Link>
             }
              {
-                navClass !== 'nav-light' ? <ul className={`buy-button list-none space-x-1 mb-0`} >
+                navClass !== 'nav-light' ? <ul className={`buy-button list-none space-x-1 mb-0`} 
                         <li className="inline mb-0">
                             <Link href="auth-signup" className="size-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full bg-indigo-600/5 hover:bg-indigo-600 border border-indigo-600/10 hover:border-indigo-600 text-indigo-600 hover:text-white" className="sub-menu-item">Login></Link>
                         </li>
