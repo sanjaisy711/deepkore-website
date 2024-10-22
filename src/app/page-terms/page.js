@@ -100,11 +100,6 @@ export default function Page() {
                                 <p className="text-slate-400">Some of our Services may be provided on a paid basis. By selecting a paid plan or subscription, you agree to pay the fees associated with that plan. All fees are non-refundable unless otherwise specified in writing. We reserve the right to change our pricing at any time with reasonable notice.</p>
 
 
-
-                                      <h5 className="text-xl font-semibold mb-4 mt-8">6. Fees and Payment</h5>
-                                <p className="text-slate-400">Some of our Services may be provided on a paid basis. By selecting a paid plan or subscription, you agree to pay the fees associated with that plan. All fees are non-refundable unless otherwise specified in writing. We reserve the right to change our pricing at any time with reasonable notice.</p>
-
-
                                      <h5 className="text-xl font-semibold mb-4 mt-8">7. Intellectual Property</h5>
                                      <h3 className="text-lg font-semibold mb-4 mt-8">7.1. Ownership:</h3>
                                 <p className="text-slate-400">All content, technology, and intellectual property rights on our platform, including software, logos, and designs, are owned by or licensed to us. You agree not to copy, distribute, or create derivative works based on our platform without prior written permission.</p>
@@ -122,19 +117,45 @@ export default function Page() {
 
                                      <h5 className="text-xl font-semibold mb-4 mt-8">9. Termination of Services</h5>
                                 <p className="text-slate-400">We reserve the right to suspend or terminate your access to the Services at any time, without notice, for any reason, including, but not limited to, violation of these Terms. Upon termination, your right to use the Services will immediately cease, and you must stop using the platform and any related services.</p>
+                                 <p className="text-slate-400">You may also terminate your account at any time by contacting us at  <Link href="#" className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500">muru@dgiversse.com</Link> / <Link href="#" className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500">kris@dgiverse.com</Link>. Please note that any fees paid are non-refundable upon termination.</p>
 
 
-                                     
-                                <h5 className="text-xl font-semibold mb-4 mt-8">Restrictions :</h5>
-                                <p className="text-slate-400">You are specifically restricted from all of the following :</p>
-                                <ul className="list-none text-slate-400 mt-3">
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Digital Marketing Solutions for Tomorrow</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Our Talented & Experienced Marketing Agency</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Create your own skin to match your brand</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Digital Marketing Solutions for Tomorrow</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Our Talented & Experienced Marketing Agency</li>
-                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Create your own skin to match your brand</li>
+                                    <h5 className="text-xl font-semibold mb-4 mt-8">10. Disclaimer of Warranties</h5>
+                                <p className="text-slate-400">The Services are provided "as is" and "as available" without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement, or course of performance.</p>
+                                <p className="text-slate-400">We do not warrant that:</p>
+                                 <ul className="list-none text-slate-400 mt-3">
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>The Services will function uninterrupted, secure, or error-free.</li>
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>The results obtained from the use of the Services will be accurate or reliable.</li>
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Any errors or defects in the Services will be corrected.</li>
                                 </ul>
+
+
+                                <h5 className="text-xl font-semibold mb-4 mt-8">11. Limitation of Liability</h5>
+                                <p className="text-slate-400">To the fullest extent permitted by law, Dgiverse and its affiliates, officers, directors, employees, and agents will not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Services, even if we have been advised of the possibility of such damages.</p>
+                                <p className="text-slate-400">Our total liability to you for any claim arising from or relating to these Terms or the Services will not exceed the amount you paid to us in the twelve months preceding the claim.</p>
+
+
+                                  <h5 className="text-xl font-semibold mb-4 mt-8">12. Indemnification</h5>
+                                <p className="text-slate-400">You agree to indemnify, defend, and hold harmless Dgiverse, its affiliates, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorney’s fees, arising out of or in connection with:</p>
+                               
+                                 <ul className="list-none text-slate-400 mt-3">
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Your use of the Services.</li>
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Your violation of these Terms.</li>
+                                    <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Your infringement of any intellectual property or other rights of any person or entity.</li>
+                                </ul>
+
+
+
+                                      <h5 className="text-xl font-semibold mb-4 mt-8">13. Governing Law</h5>
+                                <p className="text-slate-400">These Terms will be governed by and construed in accordance with the laws of [Jurisdiction], without regard to its conflict of law principles. Any legal action or proceeding arising under these Terms will be brought exclusively in the courts located in [Jurisdiction], and you hereby consent to the jurisdiction of such courts.</p>
+
+
+                                 <h5 className="text-xl font-semibold mb-4 mt-8">14. Contact Us</h5>
+                                <p className="text-slate-400">If you have any questions about these Terms or the Services, please contact us at:<Link href="#" className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500">contact@worksbyte.com</Link></p>
+
+
+        
+                              
 
                                 <h5 className="text-xl font-semibold mt-8">Users Question & Answer :</h5>
 
