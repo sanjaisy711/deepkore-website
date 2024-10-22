@@ -69,7 +69,7 @@ export default function Page() {
                                 <p className="text-slate-400">To send you updates, newsletters, and other communications related to our products, services, or promotions, where you have opted in to receive such communications.</p>
                                 <h3 className="text-xl font-semibold mb-4 mt-8">2.3. To Comply with Legal Obligations:</h3>
                                 <p className="text-slate-400">To comply with laws, regulations, and legal requests.</p>
-                                <h3 className="text-xl font-semibold mb-4 mt-8">2.4. •	To Analyze Website Usage:</h3>
+                                <h3 className="text-xl font-semibold mb-4 mt-8">2.4. To Analyze Website Usage:</h3>
                                 <p className="text-slate-400">To monitor and analyze website usage and trends to enhance user experience.</p>
 
 
@@ -77,7 +77,7 @@ export default function Page() {
                                 <p className="text-slate-400">We do not sell or rent your personal information. However, we may share your information with trusted third parties for the following reasons:</p>
 
                                   <h3 className="text-xl font-semibold mb-4 mt-8">3.1. Service Providers:</h3>
-                                <p className="text-slate-400">: We may share your information with third-party vendors, consultants, and service providers who perform services on our behalf.</p>
+                                <p className="text-slate-400">We may share your information with third-party vendors, consultants, and service providers who perform services on our behalf.</p>
                                   <h3 className="text-xl font-semibold mb-4 mt-8">3.2. Business Transfers:</h3>
                                 <p className="text-slate-400">If we undergo a merger, acquisition, or asset sale, your information may be transferred to the new entity.</p>
                                 <h3 className="text-xl font-semibold mb-4 mt-8">3.3. Legal Requirements:</h3>
@@ -118,7 +118,7 @@ export default function Page() {
 
 
                                  <h4 className="text-xl font-semibold mb-4 mt-8">9. Contact Us</h4>
-                                <p className="text-slate-400">If you have any questions about this Privacy Policy or our privacy practices, please contact us at: <Link href="#" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">contact@worksbyte.com</Link> </p>
+                                <p className="text-slate-400">If you have any questions about this Privacy Policy or our privacy practices, please contact us at: <Link href="#" className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500">contact@worksbyte.com</Link> </p>
 
 
         
