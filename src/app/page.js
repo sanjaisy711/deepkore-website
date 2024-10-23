@@ -54,9 +54,8 @@ export default function Page() {
                       placeholder="Your Email Address :"
                     />
                     <button
-                      type="submit" <link href="/contactus"
+                      type="submit" 
                       className="py-2 px-5 inline-flex items-center item-center font-semibold tracking-wide align-middle transition duration-500 ease-in-out text-base text-center absolute top-[2px] end-[3px] h-[46px] bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white rounded-full"
-                        </link>
                         >
                       Schedule a Demo
                       <FaArrowRight className="ms-2 text-[10px]" />
