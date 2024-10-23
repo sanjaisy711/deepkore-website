@@ -85,7 +85,7 @@ export default function Faq(){
                        
 
                         <div id="payment" className="mt-8">
-                            <h5 className="text-2xl font-semibold">Payments Questions</h5>
+                            <h5 className="text-2xl font-semibold">Pricing Questions</h5>
 
                             <div id="accordion-collapsethree" data-accordion="collapse" className="mt-6">
                                 {accordionDataprice.slice(0,10).map((item, index) => (
