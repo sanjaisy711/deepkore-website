@@ -40,7 +40,7 @@ export default function Page() {
                 Build Smarter & {" "}
                   Deploy Faster
                 </h4>
-                <p className="text-slate-400 text-lg max-w-xl">
+                <p className="font-bold text-slate-400 text-lg max-w-xl">
                 Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs.
                 </p>
 
