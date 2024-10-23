@@ -1005,7 +1005,7 @@ export const servicesTwo = [
     {
         icon:MdApi,
         title:"Process",
-        desc:"Our platform's Process feature enables you to design and automate complex business workflows without any coding."
+        desc:"Automate complex workflows without code. Our platform's Process feature lets you design and automate processes with a simple drag-and-drop interface. "
     },
     {
         icon:TbCameraPlus,
