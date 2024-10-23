@@ -129,10 +129,9 @@ export default function Page() {
               />
             </div>
             <h3 className="mb-6 mt-8 md:text-4xl text-3xl md:leading-normal leading-normal font-bold">
-              The #1 choice for low-code and no-code app <br /> development,
-              trusted by discerning <br /> businesses{" "}
+             Leading Enterprise Application Platform for <br /> {" "}
               <span className="after:absolute after:end-0  after:start-0  after:bottom-1 after:lg:h-3 after:h-2 after:w-auto after:rounded-md after:bg-indigo-600/30 relative text-indigo-600">
-                worldwide.
+                Digital Tranformation.
               </span>
             </h3>
 
