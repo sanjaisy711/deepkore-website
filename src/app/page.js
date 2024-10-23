@@ -246,8 +246,7 @@ export default function Page() {
                 Process
               </h3>
               <p className="text-slate-400">
-               Our platform's Process feature enables you to design and automate complex business workflows without any coding. With an intuitive drag-and-drop interface, you can map out processes, set triggers, and automate tasks to optimize efficiency and reduce manual effort. 
-              </p>
+              Automate complex workflows without code. Our platform's Process feature lets you design and automate processes with a simple drag-and-drop interface. Integrates seamlessly with your data and scales with your business. Streamline operations and reduce manual work.</p>
               <ul className="list-none text-slate-400 mt-4">
                 <li className="mb-1 flex items-center">
                   <BsCheckCircle className="text-indigo-600 text-base me-2" />
