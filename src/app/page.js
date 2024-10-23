@@ -37,8 +37,8 @@ export default function Page() {
             <div className="md:col-span-6">
               <div className="md:me-8">
                 <h4 className="font-bold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-black dark:text-white relative">
-                Build  <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-600 relative inline-block"><span className="relative text-white">Smarter,</span></span> {" "}
-                  Deploy Faster
+                Build Smarter, <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-600 relative inline-block"><span className="relative text-white">Deploy</span></span> {" "}
+                   Faster
                 </h4>
                 <p className="font-bold text-slate-400 text-lg max-w-xl">
                 Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs.
