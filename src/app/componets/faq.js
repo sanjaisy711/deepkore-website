@@ -47,7 +47,7 @@ export default function Faq(){
                                 <li className="navbar-item p-0"><Link2 to="tech"  spy={true} activeClass="active"
                                     smooth={true} className="text-base font-medium navbar-link">Product Questions</Link2></li>
                                 <li className="navbar-item mt-3 p-0"><Link2 to="payment"  spy={true} activeClass="active"
-                                    smooth={true} className="text-base font-medium navbar-link">Payments Questions</Link2></li>
+                                    smooth={true} className="text-base font-medium navbar-link">Pricing Questions</Link2></li>
                             </ul>
                         </div>
                     </div>
