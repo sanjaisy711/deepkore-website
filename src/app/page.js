@@ -226,15 +226,9 @@ export default function Page() {
               className="relative order-1 md:order-2 wow animate__animated animate__fadeInRight"
               data-wow-delay=".5s"
             >
-             <video controls autoPlay loop
+             <video controls autoPlay loop>
                 <source src="/images/classic04.mp4" type="video/mp4" />
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
-                className="rounded-lg shadow-md dark:shadow-gray-800"
-                alt=""
-              />
+              </video>
               <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 end-0 rotate-45 -z-1 rounded-3xl"></div>
             </div>
 
