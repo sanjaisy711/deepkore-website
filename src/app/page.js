@@ -226,7 +226,7 @@ export default function Page() {
               className="relative order-1 md:order-2 wow animate__animated animate__fadeInRight"
               data-wow-delay=".5s"
             >
-             <video controls autoPlay loop>
+             <video controls autoPlay loop
                 <source src="/images/classic04.mp4" type="video/mp4" />
                 width={0}
                 height={0}
