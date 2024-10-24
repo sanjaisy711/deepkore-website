@@ -328,7 +328,7 @@ export default function Page() {
               data-wow-delay=".5s"
             >
               <Image
-                src="/images/saas/classic05.PNG"
+                src="/images/saas/classic05.png"
                 width={0}
                 height={0}
                 sizes="100vw"
@@ -344,23 +344,23 @@ export default function Page() {
               data-wow-delay=".5s"
             >
               <h3 className="mb-4 text-2xl leading-normal font-medium">
-                Board
+                Analytics
               </h3>
               <p className="text-slate-400">
-               Our platform’s Board feature provides a visual management tool that helps you organize and track your projects effortlessly. You can create boards for various tasks, assign responsibilities, and monitor progress in real-time. 
+               Our platform's Analytics feature empowers you to turn data into actionable insights effortlessly. With intuitive dashboards and customizable reports, you can visualize key metrics and track performance in real time. 
               </p>
               <ul className="list-none text-slate-400 mt-4">
                 <li className="mb-1 flex items-center">
                   <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i> Enhance collaboration among team members
+                  <i></i> Make informed decisions.
                 </li>
                 <li className="mb-1 flex items-center">
                   <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i> Streamline workflows
+                  <i></i> Identify trends, and optimize processes.
                 </li>
                 <li className="mb-1 flex items-center">
                   <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i> Ensure that your projects stay on track
+                  <i></i> All without the need for data analysis skills.
                 </li>
               </ul>
 
