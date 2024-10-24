@@ -122,8 +122,8 @@ export default function Page() {
             <div className="flex items-center justify-center rounded-full mx-auto bg-gray-50 dark:bg-slate-800 shadow dark:shadow-gray-800 size-[110px]">
               <Image
                 src="/images/logo-icon-40.png"
-                width={56}
-                height={56}
+                width={66}
+                height={66}
                 className="block mx-auto"
                 alt=""
               />
