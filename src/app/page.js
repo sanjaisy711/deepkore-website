@@ -226,9 +226,13 @@ export default function Page() {
               className="relative order-1 md:order-2 wow animate__animated animate__fadeInRight"
               data-wow-delay=".5s"
             >
+                <div className="grid mt-8">
+            <div className="relative overflow-hidden rounded-lg shadow-md dark:shadow-gray-800">
              <video controls autoPlay loop>
                 <source src="/images/classic04.mp4" type="video/mp4" />
               </video>
+                </div>
+                </div>
               <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 end-0 rotate-45 -z-1 rounded-3xl"></div>
             </div>
 
