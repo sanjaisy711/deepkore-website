@@ -454,7 +454,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </div>
 
         <GetInTuct className="container relative md:mt-24 mt-16" />
       </section>
