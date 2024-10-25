@@ -1,7 +1,7 @@
 {
   "name": "worksbyte",
   "version": "2.3.0",
-  "description": "Build Smarter & Deploy Faster",
+  "description": "Build Smarter & Deploy Faster" ,
   "private": true,
   "scripts": {
     "dev": "next dev",
