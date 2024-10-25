@@ -17,22 +17,32 @@ export default function Page() {
                             <form action="auth-signup-success" className="text-start">
                                 <div className="grid grid-cols-1">
                                     <div className="mb-4">
-                                        <label className="font-semibold" htmlFor="RegisterName">Your Name:</label>
-                                        <input id="RegisterName" type="text" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Harry" />
+                                        <label className="font-semibold" htmlFor="name">Your Name:</label>
+                                        <input id="name" type="text" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Harry" required />
                                     </div>
 
                                     <div className="mb-4">
-                                        <label className="font-semibold" htmlFor="LoginEmail">Business Email Address:</label>
-                                        <input id="LoginEmail" type="email" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="name@example.com" />
+                                        <label className="font-semibold" htmlFor="business_email">Business Email Address:</label>
+                                        <input id="business_email" type="email" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="name@example.com"  required/>
                                     </div>
                                     <div className="mb-4">
-                                        <label className="font-semibold" htmlFor="LoginPhone">Phone :</label>
-                                        <input id="LoginPhone" type="phone" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Contact Number" />
+                                        <label className="font-semibold" htmlFor="mobile">Phone :</label>
+                                        <input id="mobile" type="phone" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Contact Number" required />
                                     </div>
 
                                     <div className="mb-4">
-                                        <label className="font-semibold" htmlFor="LoginPassword">Password:</label>
-                                        <input id="LoginPassword" type="password" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Password:" />
+                                        <label className="font-semibold" htmlFor="country">Country:</label>
+                                        <input id="country" type="password" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Country " required />
+                                    </div>
+
+                                 <div className="mb-4">
+                                        <label className="font-semibold" htmlFor="company_name">Company Name :</label>
+                                        <input id="company_name" type="password" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Company Name" required />
+                                    </div>
+
+                                    <div className="mb-4">
+                                        <label className="font-semibold" htmlFor="brief_business_requirment">Brief Business Requirement :</label>
+                                        <input id="brief_business_requirment" type="password" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Brief Business Requirement " required />
                                     </div>
 
                                     <div className="mb-4">
