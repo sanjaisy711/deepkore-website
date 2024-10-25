@@ -67,15 +67,15 @@ export default function Navbar(props) {
                 navClass === "nav-light" ?
                     <Link className="logo" href="/">
                         <span className="inline-block dark:hidden">
-                            <Image src='/images/dark-logo.svg' className="l-dark" width={158} height={24}  alt="" />
-                            <Image src='/images/light-logo.svg' className="l-light" width={158} height={24} alt="" />
+                            <Image src='/images/dark-logo.svg' className="l-dark" width={178} height={24}  alt="" />
+                            <Image src='/images/light-logo.svg' className="l-light" width={178} height={24} alt="" />
                         </span>
-                        <Image src='/images/light-logo.svg' width={158} height={24} className="hidden dark:inline-block" alt="" />
+                        <Image src='/images/light-logo.svg' width={178} height={24} className="hidden dark:inline-block" alt="" />
                     </Link>
                     :
                     <Link className="logo" href="/">
-                        <Image src='/images/dark-logo.svg' width={158} height={24} className="inline-block dark:hidden" alt="" />
-                        <Image src='/images/light-logo.svg' width={158} height={24} className="hidden dark:inline-block" alt="" />
+                        <Image src='/images/dark-logo.svg' width={178} height={24} className="inline-block dark:hidden" alt="" />
+                        <Image src='/images/light-logo.svg' width={178} height={24} className="hidden dark:inline-block" alt="" />
                     </Link>
             }
 
