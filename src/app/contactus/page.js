@@ -91,21 +91,10 @@ export default function Page(){
                                         </div>
                                         <div className="lg:col-span-6 mb-5">
                                             <div className="text-start">
-                                                <label htmlFor="name" className="font-semibold">Last Name:</label>
-                                                <div className="form-icon relative mt-2">
-                                                    <Icon.User className="size-4 absolute top-3 start-4"></Icon.User>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder=" Last Name :"  />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-
-                                        <div className="lg:col-span-6 mb-5">
-                                            <div className="text-start">
                                                 <label htmlFor="email" className="font-semibold">Business Email:</label>
                                                 <div className="form-icon relative mt-2">
                                                     <Icon.Mail className="size-4 absolute top-3 start-4"></Icon.Mail>
-                                                    <input name="email" id="email" type="email" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder=" Business Email :" required />
+                                                    <input name="business_email" id="email" type="email" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder=" Business Email :" required />
                                                 </div>
                                             </div>
                                         </div>
@@ -116,7 +105,7 @@ export default function Page(){
                                                 <label htmlFor="name" className="font-semibold">Phone :</label>
                                                 <div className="form-icon relative mt-2">
                                                     <Icon.Phone className="size-4 absolute top-3 start-4"></Icon.Phone>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Phone :" required />
+                                                    <input name="mobile" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Phone :" required />
                                                 </div>
                                             </div>
                                         </div>
@@ -125,7 +114,7 @@ export default function Page(){
                                                 <label htmlFor="name" className="font-semibold">Country  :</label>
                                                 <div className="form-icon relative mt-2">
                                                     <Icon.Map className="size-4 absolute top-3 start-4"></Icon.Map>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Country :" />
+                                                    <input name="country" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Country :" />
                                                 </div>
                                             </div>
                                         </div>
@@ -134,7 +123,7 @@ export default function Page(){
                                                 <label htmlFor="name" className="font-semibold">Company Name:</label>
                                                 <div className="form-icon relative mt-2">
                                                     <Icon.User className="size-4 absolute top-3 start-4"></Icon.User>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder=" Company Name :"required />
+                                                    <input name="company_name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder=" Company Name :"required />
                                                 </div>
                                             </div>
                                         </div>
@@ -143,11 +132,10 @@ export default function Page(){
                                                 <label htmlFor="name" className="font-semibold">Brief Business Requirement  :</label>
                                                 <div className="form-icon relative mt-2">
                                                     <Icon.User className="size-4 absolute top-3 start-4"></Icon.User>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Brief Business Requirement" required />
+                                                    <input name="brief_business_requirment" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Brief Business Requirement" required />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                     <button type="submit" id="submit" name="send" className="py-2 px-5 font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md justify-center flex items-center">Send Message</button>
                                 </form>
                             </div>
