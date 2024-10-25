@@ -1158,12 +1158,6 @@ export const lowServices = [
 ]
 export const contactData = [
     {
-     icon:FiPhone,
-     title:"Phone",
-     desc:"The phrasal sequence of the is now so that many campaign and benefit",
-     contact:"+91 96116 22441"
-    },
-    {
      icon: FaRegEnvelope,
      title:"Email",
      desc:"The phrasal sequence of the is now so that many campaign and benefit",
