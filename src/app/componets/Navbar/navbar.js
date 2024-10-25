@@ -70,7 +70,7 @@ export default function Navbar(props) {
                             <Image src='/images/dark-logo.svg' className="l-dark" width={158} height={34}  alt="" />
                             <Image src='/images/light-logo.svg' className="l-light" width={158} height={34} alt="" />
                         </span>
-                        <Image src='/images/light-logo.svg' width={168} height={24} className="hidden dark:inline-block" alt="" />
+                        <Image src='/images/light-logo.svg' width={158} height={34} className="hidden dark:inline-block" alt="" />
                     </Link>
                     :
                     <Link className="logo" href="/">
