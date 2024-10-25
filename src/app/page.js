@@ -13,7 +13,7 @@ const GetInTuct = dynamic(() => import("./componets/getInTuch"));
 import SaasCounter from "./componets/counter/saasCounter";
 import VideoModal from "./componets/videoModal/videoModal";
 import AccordionTwo from "./componets/accordianTwo";
-import classic04 from '../image/classic04.gif'
+import classic04 from '../images/classic04.gif'
 
 
 const TinySlider = dynamic(() => import("tiny-slider-react"), { ssr: false });
