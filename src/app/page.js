@@ -13,6 +13,8 @@ const GetInTuct = dynamic(() => import("./componets/getInTuch"));
 import SaasCounter from "./componets/counter/saasCounter";
 import VideoModal from "./componets/videoModal/videoModal";
 import AccordionTwo from "./componets/accordianTwo";
+import classic04 from '../image/classic04.gif'
+
 
 const TinySlider = dynamic(() => import("tiny-slider-react"), { ssr: false });
 import "../../node_modules/tiny-slider/dist/tiny-slider.css";
@@ -228,9 +230,7 @@ export default function Page() {
             >
                 <div className="grid mt-8">
             <div className="relative overflow-hidden rounded-lg shadow-md dark:shadow-gray-800">
-             <video controls autoPlay loop>
-                <source src="/images/classic04.mp4" type="video/mp4" />
-              </video>
+                <img src="/images/classic04.gif" alt="loading..." />
                 </div>
                 </div>
               <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 end-0 rotate-45 -z-1 rounded-3xl"></div>
