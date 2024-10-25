@@ -3,20 +3,22 @@ import * as Icon from 'react-feather';
 
 import {HiArrowTrendingUp, HiOutlineCog6Tooth} from "react-icons/hi2"
 import {FaArrowsSpin} from 'react-icons/fa6'
-import { MdApi, MdCenterFocusWeak, MdOutlineBrightness5, MdOutlineCalendarMonth, MdOutlineJoinInner, MdOutlineLocalDrink, MdOutlineRestartAlt, MdOutlineSelectAll } from 'react-icons/md';
+import { MdApi, MdCenterFocusWeak, MdOutlineBrightness5, MdOutlineCalendarMonth, MdOutlineJoinInner, MdOutlineLocalDrink, MdOutlineRestartAlt, MdOutlineSelectAll, MdOutlineAppShortcut, MdOutlineAnalytics } from 'react-icons/md';
 import { AiOutlineCompass, AiOutlineDashboard, AiOutlineDollar, AiOutlineEye, AiOutlineFire, AiOutlineHome, AiOutlineStar, AiOutlineWifi } from 'react-icons/ai';
 import { LiaCrosshairsSolid, LiaDiscord, LiaDocker, LiaDropbox, LiaExchangeAltSolid, LiaFileInvoiceDollarSolid, LiaMoneyBillAltSolid, LiaMoneyCheckAltSolid, LiaRulerCombinedSolid, LiaSwatchbookSolid, LiaThermometerSolid, LiaUniversitySolid } from 'react-icons/lia';
 import { TbAward, TbBuildingMonument, TbBuildingSkyscraper, TbCameraPlus, TbCurrencyBitcoin, TbHeartRateMonitor, TbKeyboardShow, TbUserCheck } from 'react-icons/tb';
-import { RiBatteryChargeLine, RiBitCoinLine, RiHospitalLine, RiMailSendLine, RiMoneyCnyBoxLine, RiPresentationFill } from 'react-icons/ri';
+import { RiBatteryChargeLine, RiBitCoinLine, RiHospitalLine, RiMailSendLine, RiMoneyCnyBoxLine, RiPresentationFill, RiPieChart2Fill } from 'react-icons/ri';
 import { LuAirplay, LuAtom, LuBarChart, LuClock, LuMicroscope, LuParkingCircle, LuPizza, LuSearch, LuTablets, LuUsers } from 'react-icons/lu';
 import { FaDribbble, FaRegBuilding, FaRegComment, FaRegCommentDots, FaRegComments, FaRegStar } from 'react-icons/fa';
-import { BiCrop, BiCube, BiDna, BiLineChart, BiLogoDribbble, BiShieldAlt2, BiSolidBookOpen, BiTachometer, BiWallet, BiWater } from 'react-icons/bi';
+import { BiCrop, BiCube, BiDna, BiLineChart, BiLogoDribbble, BiShieldAlt2, BiSolidBookOpen, BiTachometer, BiWallet, BiWater, BiChalkboard } from 'react-icons/bi';
 import { PiBandaids, PiBellSimpleRingingBold, PiBriefcase, PiFlowerLight, PiLockKey, PiSyringeLight } from 'react-icons/pi';
 import { FiAirplay, FiFileText, FiKey, FiThumbsUp } from 'react-icons/fi';
 import { GoClock, GoRocket } from 'react-icons/go';
 import { VscMention } from 'react-icons/vsc';
 import { BsBookmark, BsBriefcase, BsCheckCircle, BsShieldCheck, BsSuitClub } from 'react-icons/bs';
 import { TfiTruck } from 'react-icons/tfi';
+import { GiProcessor } from "react-icons/gi";
+import { SiGoogleforms } from "react-icons/si";
 
 export const businessAbout = [
     {
@@ -998,32 +1000,32 @@ export const servicesData = [
 ]
 export const servicesTwo = [
     {
-        icon:FiAirplay,
+        icon:SiGoogleforms,
         title:"Data Form",
         desc:"Our platform’s Data Form feature allows you to create custom forms effortlessly without coding."
     },
     {
-        icon:MdApi,
+        icon:GiProcessor,
         title:"Process",
         desc:"Automate complex workflows without code. Our platform's Process feature lets you design and automate processes with a simple drag-and-drop interface. "
     },
     {
-        icon:TbCameraPlus,
+        icon:BiChalkboard,
         title:"Board",
         desc:"Our platform’s Board feature provides a visual management tool that helps you organize and track your projects effortlessly. "
     },
     {
-        icon:PiFlowerLight,
+        icon:MdOutlineAppShortcut,
         title:"App",
         desc:"Our platform’s App feature allows you to create custom applications tailored to your business needs without any coding."
     },
     {
-        icon:HiOutlineCog6Tooth,
+        icon:RiPieChart2Fill,
         title:"Intergration",
         desc:"Our platform offers robust Integration capabilities that allow you to connect seamlessly with your existing tools and applications. "
     },
     {
-        icon:FaRegComment,
+        icon:MdOutlineAnalytics,
         title:"Analytics",
         desc:"Our platform's Analytics feature empowers you to turn data into actionable insights effortlessly."
     },
