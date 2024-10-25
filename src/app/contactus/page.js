@@ -102,7 +102,7 @@ export default function Page(){
 
                                         <div className="lg:col-span-6 mb-5">
                                             <div className="text-start">
-                                                <label htmlFor="email" className="font-semibold">Your Email:</label>
+                                                <label htmlFor="email" className="font-semibold">Business Email:</label>
                                                 <div className="form-icon relative mt-2">
                                                     <Icon.Mail className="size-4 absolute top-3 start-4"></Icon.Mail>
                                                     <input name="email" id="email" type="email" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Email :" />
@@ -110,6 +110,25 @@ export default function Page(){
                                             </div>
                                         </div>
                                     </div>
+
+                                     <div className="lg:col-span-6 mb-5">
+                                            <div className="text-start">
+                                                <label htmlFor="name" className="font-semibold">Phone :</label>
+                                                <div className="form-icon relative mt-2">
+                                                    <Icon.Phone className="size-4 absolute top-3 start-4"></Icon.Phone>
+                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Phone :" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                     <div className="lg:col-span-6 mb-5">
+                                            <div className="text-start">
+                                                <label htmlFor="name" className="font-semibold">Country  :</label>
+                                                <div className="form-icon relative mt-2">
+                                                    <Icon.Map className="size-4 absolute top-3 start-4"></Icon.Map>
+                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Country :" />
+                                                </div>
+                                            </div>
+                                        </div>
                                    <div className="lg:col-span-6 mb-5">
                                             <div className="text-start">
                                                 <label htmlFor="name" className="font-semibold">Company Name:</label>
@@ -119,73 +138,45 @@ export default function Page(){
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="lg:col-span-6 mb-5">
+                                         <div className="lg:col-span-6 mb-5">
                                             <div className="text-start">
-                                                <label htmlFor="name" className="font-semibold">Phone :</label>
-                                                <div className="form-icon relative mt-2">
-                                                    <Icon.Phone className="size-4 absolute top-3 start-4"></Icon.Phone>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Phone :" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                          <div className="lg:col-span-6 mb-5">
-                                            <div className="text-start">
-                                                <label htmlFor="name" className="font-semibold">Country  :</label>
-                                                <div className="form-icon relative mt-2">
-                                                    <Icon.Map className="size-4 absolute top-3 start-4"></Icon.Map>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Country :" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                          <div className="lg:col-span-6 mb-5">
-                                            <div className="text-start">
-                                                <label htmlFor="name" className="font-semibold"> Job Role :</label>
-                                                <div className="form-icon relative mt-2">
-                                                    <Icon.Users className="size-4 absolute top-3 start-4"></Icon.Users>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Job Role :" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                       <div className="lg:col-span-6 mb-5">
-                                            <div className="text-start">
-                                                <label htmlFor="name" className="font-semibold">What’s your Industry  :</label>
+                                                <label htmlFor="name" className="font-semibold">Brief Business Requirement  :</label>
                                                 <div className="form-icon relative mt-2">
                                                     <Icon.User className="size-4 absolute top-3 start-4"></Icon.User>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="What’s your Industry:" />
+                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Brief Business Requirement" />
                                                 </div>
                                             </div>
                                         </div>
-                                          <div className="lg:col-span-6 mb-5">
-                                            <div className="text-start">
-                                                <label htmlFor="name" className="font-semibold">Reason for Inquiry  :</label>
-                                                <div className="form-icon relative mt-2">
-                                                    <Icon.Inbox className="size-4 absolute top-3 start-4"></Icon.Inbox>
-                                                    <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Reason for Inquiry :" />
-                                                </div>
-                                            </div>
-                                        </div>
+                                         // <div className="lg:col-span-6 mb-5">
+                                           // <div className="text-start">
+                                             //   <label htmlFor="name" className="font-semibold">Reason for Inquiry  :</label>
+                                             //   <div className="form-icon relative mt-2">
+                                             //       <Icon.Inbox className="size-4 absolute top-3 start-4"></Icon.Inbox>
+                                              //      <input name="name" id="name" type="text" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Reason for Inquiry :" />
+                                              //  </div>
+                                         //   </div>
+                                     //   </div>
 
-                                    <div className="grid grid-cols-1">
-                                        <div className="mb-5">
-                                            <div className="text-start">
-                                                <label htmlFor="subject" className="font-semibold">Your Question:</label>
-                                                <div className="form-icon relative mt-2">
-                                                    <Icon.Book className="size-4 absolute top-3 start-4"></ Icon.Book>
-                                                    <input name="subject" id="subject" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Subject :" />
-                                                </div>
-                                            </div>
-                                        </div>
+                                //    <div className="grid grid-cols-1">
+                                        //<div className="mb-5">
+                                           // <div className="text-start">
+                                            //    <label htmlFor="subject" className="font-semibold">Your Question:</label>
+                                             //   <div className="form-icon relative mt-2">
+                                              //      <Icon.Book className="size-4 absolute top-3 start-4"></ Icon.Book>
+                                              //      <input name="subject" id="subject" className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Subject :" />
+                                             //   </div>
+                                           //</div>
+                                       // </div>
 
-                                        <div className="mb-5">
-                                            <div className="text-start">
-                                                <label htmlFor="comments" className="font-semibold">Your Comment:</label>
-                                                <div className="form-icon relative mt-2">
-                                                    <Icon.MessageCircle className="size-4 absolute top-3 start-4"></Icon.MessageCircle>
-                                                    <textarea name="comments" id="comments" className="form-input ps-11 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Message :"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
+                                       // <div className="mb-5">
+                                       //     <div className="text-start">
+                                        //        <label htmlFor="comments" className="font-semibold">Your Comment:</label>
+                                         //       <div className="form-icon relative mt-2">
+                                         //           <Icon.MessageCircle className="size-4 absolute top-3 start-4"></Icon.MessageCircle>
+                                         //         <textarea name="comments" id="comments" className="form-input ps-11 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Message :"></textarea>
+                                       //         </div>
+                                           // </div>
+                                        //</div>
                                     </div>
                                     <button type="submit" id="submit" name="send" className="py-2 px-5 font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md justify-center flex items-center">Send Message</button>
                                 </form>
