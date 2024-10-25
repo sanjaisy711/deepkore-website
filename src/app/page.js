@@ -411,8 +411,8 @@ export default function Page() {
             >
               <Image
                 src="/images/hero1.png"
-                width={0}
-                height={0}
+                width={900}
+                height={664}
                 sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
                 className="rounded-lg shadow-md dark:shadow-gray-800"
