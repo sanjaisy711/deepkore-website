@@ -404,14 +404,23 @@ export default function Page() {
           </div>
         </div>
         <div className="container relative md:mt-24 mt-16">
-         <div className="relative grid md:grid-cols-12 grid-cols-1 items-center mt-8 gap-[30px]">
-            <div className="md:col-span-6">
-              <div className="relative">
-                <div className="relative rounded-xl overflow-hidden shadow-md dark:shadow-gray-800">
-                  <div
-                    className="w-full py-72 bg-slate-400  bg-no-repeat bg-top bg-cover jarallax"
-                    style={{ backgroundImage: "url('/images/02.png')" }}
-                  ></div>
+          <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
+            <div
+              className="relative order-1 md:order-2 wow animate__animated animate__fadeInRight"
+              data-wow-delay=".5s"
+            >
+              <Image
+                src="/images/hero1.png"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: "100%", height: "auto" }}
+                className="rounded-lg shadow-md dark:shadow-gray-800"
+                alt=""
+              />
+              <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 end-0 rotate-45 -z-1 rounded-3xl"></div>
+            </div>
+
 
             <div
               className="lg:me-8 order-2 md:order-1 wow animate__animated animate__fadeInLeft"
@@ -442,8 +451,6 @@ export default function Page() {
                   to deployment
                 </li>
               </ul>
-              </div>
-            </div>
             </div>
           </div>
         </div>
