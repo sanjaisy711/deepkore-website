@@ -34,12 +34,6 @@ export default function Page() {
                                         <label className="font-semibold" htmlFor="company_name">Company Name :</label>
                                         <input id="company_name" type="password" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Company Name" required />
                                     </div>
-
-                                    <div className="mb-4">
-                                        <label className="font-semibold" htmlFor="brief_business_requirment">Brief Business Requirement :</label>
-                                        <input id="brief_business_requirment" type="password" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Brief Business Requirement " required />
-                                    </div>
-
                                     <div className="mb-4">
                                         <div className="flex items-center w-full mb-0">
                                             <input className="form-checkbox rounded border-gray-200 dark:border-gray-800 text-indigo-600 focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50 me-2" type="checkbox" value="" id="AcceptT&C" />
