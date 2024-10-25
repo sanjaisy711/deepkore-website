@@ -47,7 +47,7 @@ export default function Page() {
                                     </div>
 
                                     <div className="text-center">
-                                        <span className="text-slate-400 me-2">Already have an account ? </span> <Link href="/https://brightbars.dgitra.com/login" className="text-black dark:text-white font-bold inline-block">Sign in</Link>
+                                        <span className="text-slate-400 me-2">Already have an account ? </span> <Link href="https://brightbars.dgitra.com/login" className="text-black dark:text-white font-bold inline-block">Sign in</Link>
                                     </div>
                                 </div>
                             </form>
