@@ -81,7 +81,7 @@ export default function Page() {
 
 
                                       <h5 className="text-xl font-semibold mb-4 mt-8">5. User Responsibilities</h5>
-                                <p className="text-slate-400">By using our <b className="text-red-600"> Services</b> , you agree that you will not:</p>
+                                <p className="text-slate-400">By using our Services, you agree that you will not:</p>
                                    <ul className="list-none text-slate-400 mt-3">
                                     <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Use the platform for any unlawful purposes or in violation of any applicable laws or regulations.</li>
                                     <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Distribute viruses, malware, or other harmful software.</li>
@@ -90,7 +90,7 @@ export default function Page() {
                                     <li className="flex items-center mt-2"><FaArrowRight className="ms-2 text-[10px] text-indigo-600  align-middle me-2"/>Misuse or abuse our Services, including creating malicious or fraudulent applications.</li>
                                
                                 </ul> 
-                                 <p className="text-slate-400">You are <b className="text-red-600">responsible </b> for the content you create, including any applications, data, or code.</p>
+                                 <p className="text-slate-400">You are responsible for the content you create, including any applications, data, or code.</p>
 
 
 
@@ -132,7 +132,7 @@ export default function Page() {
 
                                 <h5 className="text-xl font-semibold mb-4 mt-8">11. Limitation of Liability</h5>
                                 <p className="text-slate-400">To the fullest extent permitted by law, Dgiverse and its affiliates, officers, directors, employees, and agents will not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the Services, even if we have been advised of the possibility of such damages.</p>
-                                <p className="text-slate-400">Our total liability to you for any claim arising from or relating to these Terms or the <b className="text-red-600"> Services </b> will not exceed the amount you paid to us in the twelve months preceding the claim.</p>
+                                <p className="text-slate-400">Our total liability to you for any claim arising from or relating to these Terms or the Services will not exceed the amount you paid to us in the twelve months preceding the claim.</p>
 
 
                                   <h5 className="text-xl font-semibold mb-4 mt-8">12. Indemnification</h5>
