@@ -251,7 +251,7 @@ export default function Page() {
                 </li>
                 <li className="mb-1 flex items-center">
                   <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i> Acale as your business grows
+                  <i></i> Scale as your business grows
                 </li>
                 <li className="mb-1 flex items-center">
                   <BsCheckCircle className="text-indigo-600 text-base me-2" />
@@ -410,7 +410,7 @@ export default function Page() {
               data-wow-delay=".5s"
             >
               <Image
-                src="/images/saas/classic06.PNG"
+                src="/images/02.png"
                 width={0}
                 height={0}
                 sizes="100vw"
