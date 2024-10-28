@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import * as Icon from 'react-feather';
 
-import {FaRegEnvelope,FaDribbble,FaLinkedin, FaFacebookF, FaInstagram, FaTwitter,FaRegFile,FaBehance} from 'react-icons/fa';
+import {FaRegEnvelope,FaDribbble,FaLinkedin, FaFacebookF,FaYoutube, FaInstagram, FaTwitter,FaRegFile,FaBehance} from 'react-icons/fa';
 import {PiShoppingCart} from "react-icons/pi"
 import {MdKeyboardArrowRight} from "react-icons/md"
 
@@ -70,6 +70,7 @@ export default function Footer() {
                                         <p className="mt-6 text-gray-300">Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs. One platform. No coding. Completely hassle-free.</p>
                                         <ul className="list-none mt-5 space-x-1 space-y-1">
                                            <li className="inline"><Link href="https://www.linkedin.com/company/worksbyte" target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><FaLinkedin className='text-sm'/></Link></li>
+                                            <li className="inline"><Link href="https://www.youtube.com/watch?v=0FHTRPkpr90" target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><FaYoutube className='text-sm'/></Link></li>
                                             <li className="inline"><Link href="#" target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><FaFacebookF className='text-sm'/></Link></li>
                                             <li className="inline"><Link href="#" target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><FaInstagram className='text-sm'/></Link></li>
                                             <li className="inline"><Link href="#" target="_blank" className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"><FaTwitter className='text-sm'/></Link></li>
