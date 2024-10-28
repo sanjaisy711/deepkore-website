@@ -112,7 +112,7 @@ export default function Navbar(props) {
                         <Link href="aboutus">About Us</Link>
                     </li>
                     <li className={manu === "/contactus" || "" ? "active" : ""}><Link href="contactus" className="sub-menu-item">Contact Us</Link></li>
-                    <li className={manu === "/auth-signup" || "" ? "active" : ""}><Link href="auth-signup" className="sub-menu-item">Get Started</Link></li>
+                    <li className={manu === "/auth-signup" || "" ? "active" : ""}><Link href="auth-signup" className="sub-menu-item py-2 px-5 inline-flex items-center item-center font-semibold tracking-wide align-middle transition duration-500 ease-in-out text-base text-center absolute top-[2px] end-[3px] h-[46px] bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white rounded-full">Get Started</Link></li>
                     <li className={manu === "/https://brightbars.dgitra.com/login" || "" ? "active" : ""}><Link href="https://brightbars.dgitra.com/login" className="sub-menu-item">Login</Link></li>
                     
              </ul> 
