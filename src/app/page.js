@@ -146,8 +146,6 @@ export default function Page() {
               <video controls autoPlay loop>
                 <source src="/images/modern.mp4" type="video/mp4" />
               </video>
-
-              <VideoModal />
             </div>
           </div>
         </div>
