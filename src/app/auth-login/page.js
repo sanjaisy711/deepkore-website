@@ -1,110 +1,51 @@
 import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import { TEInput, TERipple } from "tw-elements-react";
 import Switcher from '../componets/switcher';
 
 export default function Page() {
     return (
         <>
-        <section className="h-full bg-neutral-200 dark:bg-neutral-700">
-      <div className="container h-full p-10">
-        <div className="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
-          <div className="w-full">
-            <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
-              <div className="g-0 lg:flex lg:flex-wrap">
-                {/* <!-- Left column container--> */}
-                <div className="px-4 md:px-0 lg:w-6/12">
-                  <div className="md:mx-6 md:p-12">
-                    {/* <!--Logo--> */}
-                    <div className="text-center">
-                      <img
-                        className="mx-auto w-48"
-                        src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                        alt="logo"
-                      />
-                      <h4 className="mb-12 mt-1 pb-1 text-xl font-semibold">
-                        We are The Lotus Team
-                      </h4>
+         <section className="md:h-screen py-36 flex items-center  bg-no-repeat bg-center bg-cover" style={{backgroundImage:"url('/images/cta.jpg')"}}>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+            <div className="container relative">
+                <div className="flex justify-center">
+                    <div className="max-w-[400px] w-full m-auto p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800 rounded-md">
+                        <Link href="/"><Image src="/images/logo-icon-64.png" height={64} width={72} className="mx-auto" alt="" /></Link>
+                        <h5 className="my-6 text-xl font-semibold">Login</h5>
+                        <form className="text-start">
+                            <div className="grid grid-cols-1">
+                                <div className="mb-4">
+                                    <label className="font-semibold" htmlFor="LoginEmail">Email Address:</label>
+                                    <input id="LoginEmail" type="email" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="name@example.com" />
+                                </div>
+
+                                <div className="mb-4">
+                                    <label className="font-semibold" htmlFor="LoginPassword">Password:</label>
+                                    <input id="LoginPassword" type="password" className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0" placeholder="Password:" />
+                                </div>
+
+                                <div className="flex justify-between mb-4">
+                                    <div className="flex items-center mb-0">
+                                        <input className="form-checkbox rounded border-gray-200 dark:border-gray-800 text-indigo-600 focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50 me-2" type="checkbox" value="" id="RememberMe" />
+                                        <label className="form-checkbox-label text-slate-400" htmlFor="RememberMe">Remember me</label>
+                                    </div>
+                                    <p className="text-slate-400 mb-0"><Link href="/auth-re-password" className="text-slate-400">Forgot password ?</Link></p>
+                                </div>
+
+                                <div className="mb-4">
+                                    <input type="submit" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md w-full" value="Login / Sign in" />
+                                </div>
+
+                                <div className="text-center">
+                                    <span className="text-slate-400 me-2">Do not have an account ?</span> <Link href="/auth-signup" className="text-black dark:text-white font-bold inline-block">Sign Up</Link>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-
-                    <form>
-                      <p className="mb-4">Please register an account</p>
-                      {/* <!--Username input--> */}
-                      <TEInput
-                        type="text"
-                        label="Username"
-                        className="mb-4"
-                      ></TEInput>
-
-                      {/* <!--Password input--> */}
-                      <TEInput
-                        type="password"
-                        label="Password"
-                        className="mb-4"
-                      ></TEInput>
-
-                      {/* <!--Submit button--> */}
-                      <div className="mb-12 pb-1 pt-1 text-center">
-                        <TERipple rippleColor="light" className="w-full">
-                          <button
-                            className="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
-                            type="button"
-                            style={{
-                              background:
-                                "linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)",
-                            }}
-                          >
-                            Sign up
-                          </button>
-                        </TERipple>
-
-                        {/* <!--Forgot password link--> */}
-                        <a href="#!">Terms and conditions</a>
-                      </div>
-
-                      {/* <!--Register button--> */}
-                      <div className="flex items-center justify-between pb-6">
-                        <p className="mb-0 mr-2">Have an account?</p>
-                        <TERipple rippleColor="light">
-                          <button
-                            type="button"
-                            className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-danger transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-                          >
-                            Login
-                          </button>
-                        </TERipple>
-                      </div>
-                    </form>
-                  </div>
                 </div>
-
-                {/* <!-- Right column container with background and description--> */}
-                <div
-                  className="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none"
-                  style={{
-                    background:
-                      "linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)",
-                  }}
-                >
-                  <div className="px-4 py-6 text-white md:mx-6 md:p-12">
-                    <h4 className="mb-6 text-xl font-semibold">
-                      We are more than just a company
-                    </h4>
-                    <p className="text-sm">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
         <Switcher/>
         </>
     )
