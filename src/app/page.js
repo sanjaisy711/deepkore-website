@@ -401,57 +401,7 @@ export default function Page() {
                 
           </div>
         </div>
-        <div className="container relative md:mt-24 mt-16">
-          <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
-            <div
-              className="relative order-1 md:order-2 wow animate__animated animate__fadeInRight"
-              data-wow-delay=".5s"
-            >
-              <Image
-                src="/images/hero1.png"
-                width={0}
-                height={0}
-                sizes="100vw"
-                style={{ width: "100%", height: "auto" }}
-                className="rounded-lg shadow-md dark:shadow-gray-800"
-                alt=""
-              />
-              <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 end-0 rotate-45 -z-1 rounded-3xl"></div>
-            </div>
-
-
-            <div
-              className="lg:me-8 order-2 md:order-1 wow animate__animated animate__fadeInLeft"
-              data-wow-delay=".5s"
-            >
-              <h2 className="mb-4 text-2xl leading-normal font-medium">
-                The worksbyte Advantage
-              </h2>
-              <ul className="list-none text-slate-400 mt-4">
-                <li className="mb-1 flex items-center">
-                  <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i>Choose from 100s of pre-built templates or build your
-                  app from scratch
-                </li>
-                <li className="mb-1 flex items-center">
-                  <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i>Get access to powerful management tools that make
-                  handling projects easier
-                </li>
-                <li className="mb-1 flex items-center">
-                  <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i>Collaborate with your team to build your apps on a
-                  single, unified platform
-                </li>
-                <li className="mb-1 flex items-center">
-                  <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i>Accelerate development and minimize your costs and time
-                  to deployment
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        
 
         <GetInTuct className="container relative md:mt-24 mt-16" />
       </section>
