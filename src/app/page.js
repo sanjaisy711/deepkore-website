@@ -38,11 +38,11 @@ export default function Page() {
             <div className="md:col-span-6">
               <div className="md:me-8">
                 <h4 className="font-bold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-black dark:text-white relative">
-                Build Smarter, <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-600 relative inline-block"><span className="relative text-white">Deploy</span></span> {" "}
-                   Faster
+                  Build Smarter, <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-600 relative inline-block"><span className="relative text-white">Deploy</span></span> {" "}
+                  Faster
                 </h4>
                 <p className="font-bold text-slate-400 text-lg max-w-xl">
-                Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs.
+                  Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs.
                 </p>
 
                 <div className="subcribe-form mt-6 mb-3">
@@ -55,9 +55,9 @@ export default function Page() {
                       placeholder="Your Email Address :"
                     />
                     <button
-                      type="/contactus"  
+                      type="/contactus"
                       className="py-2 px-5 inline-flex items-center item-center font-semibold tracking-wide align-middle transition duration-500 ease-in-out text-base text-center absolute top-[2px] end-[3px] h-[46px] bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white rounded-full"
-                        >
+                    >
                       Schedule a Demo
                       <FaArrowRight className="ms-2 text-[10px]" />
                     </button>
@@ -130,14 +130,14 @@ export default function Page() {
               />
             </div>
             <h3 className="mb-6 mt-8 md:text-4xl text-3xl md:leading-normal leading-normal font-bold">
-             Leading Enterprise Application Platform for <br /> {" "}
+              Leading Enterprise Application Platform for <br /> {" "}
               <span className="after:absolute after:end-0  after:start-0  after:bottom-1 after:lg:h-3 after:h-2 after:w-auto after:rounded-md after:bg-indigo-600/30 relative text-indigo-600">
                 Digital Tranformation.
               </span>
             </h3>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-            Enhance your workflows and elevate employee productivity. Worksbyte enables you to effortlessly create apps that match the fast-paced growth of your business—no coding required.
+              Enhance your workflows and elevate employee productivity. Worksbyte enables you to effortlessly create apps that match the fast-paced growth of your business—no coding required.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export default function Page() {
             </h3>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-            Worksbyte empowers non-technical users to quickly build and adapt applications without coding, fostering collaboration and innovation. With its user-friendly interface, cost-effectiveness, and rapid development capabilities, Worksbyte transforms the way businesses operate and respond to change.
+              Worksbyte empowers non-technical users to quickly build and adapt applications without coding, fostering collaboration and innovation. With its user-friendly interface, cost-effectiveness, and rapid development capabilities, Worksbyte transforms the way businesses operate and respond to change.
             </p>
           </div>
 
@@ -189,7 +189,7 @@ export default function Page() {
                 Dataform{" "}
               </h3>
               <p className="text-slate-400">
-                Our platform’s Data Form feature allows you to create custom forms effortlessly without coding.With a drag-and-drop interface, it streamlines data collection, validation, and integration into your applications 
+                Our platform’s Data Form feature allows you to create custom forms effortlessly without coding.With a drag-and-drop interface, it streamlines data collection, validation, and integration into your applications
               </p>
               <ul className="list-none text-slate-400 mt-4">
                 <li className="mb-1 flex items-center">
@@ -225,11 +225,11 @@ export default function Page() {
               className="relative order-1 md:order-2 wow animate__animated animate__fadeInRight"
               data-wow-delay=".5s"
             >
-                <div className="grid mt-8">
-            <div className="relative overflow-hidden rounded-lg shadow-md dark:shadow-gray-800">
-                <img src="/images/classic04.gif" alt="loading..." />
+              <div className="grid mt-8">
+                <div className="relative overflow-hidden rounded-lg shadow-md dark:shadow-gray-800">
+                  <img src="/images/classic04.gif" alt="loading..." />
                 </div>
-                </div>
+              </div>
               <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 end-0 rotate-45 -z-1 rounded-3xl"></div>
             </div>
 
@@ -241,11 +241,11 @@ export default function Page() {
                 Process
               </h3>
               <p className="text-slate-400">
-              Automate complex workflows without code. Our platform's Process feature lets you design and automate processes with a simple drag-and-drop interface. Integrates seamlessly with your data and scales with your business. Streamline operations and reduce manual work.</p>
+                Automate complex workflows without code. Our platform's Process feature lets you design and automate processes with a simple drag-and-drop interface. Integrates seamlessly with your data and scales with your business. Streamline operations and reduce manual work.</p>
               <ul className="list-none text-slate-400 mt-4">
                 <li className="mb-1 flex items-center">
                   <BsCheckCircle className="text-indigo-600 text-base me-2" />
-                  <i></i> Seamlessly integrate data 
+                  <i></i> Seamlessly integrate data
                 </li>
                 <li className="mb-1 flex items-center">
                   <BsCheckCircle className="text-indigo-600 text-base me-2" />
@@ -293,7 +293,7 @@ export default function Page() {
             >
               <h3 className="mb-4 text-2xl leading-normal font-medium">App</h3>
               <p className="text-slate-400">
-                Our platform’s App feature allows you to create custom applications tailored to your business needs without any coding. With an intuitive interface and pre-built components, you can design, deploy, and manage apps quickly and efficiently. 
+                Our platform’s App feature allows you to create custom applications tailored to your business needs without any coding. With an intuitive interface and pre-built components, you can design, deploy, and manage apps quickly and efficiently.
               </p>
               <ul className="list-none text-slate-400 mt-4">
                 <li className="mb-1 flex items-center">
@@ -348,7 +348,7 @@ export default function Page() {
                 Analytics
               </h3>
               <p className="text-slate-400">
-               Our platform's Analytics feature empowers you to turn data into actionable insights effortlessly. With intuitive dashboards and customizable reports, you can visualize key metrics and track performance in real time. 
+                Our platform's Analytics feature empowers you to turn data into actionable insights effortlessly. With intuitive dashboards and customizable reports, you can visualize key metrics and track performance in real time.
               </p>
               <ul className="list-none text-slate-400 mt-4">
                 <li className="mb-1 flex items-center">
@@ -398,10 +398,10 @@ export default function Page() {
             </div>
 
             <AccordionTwo />
-                
+
           </div>
         </div>
-        
+
 
         <GetInTuct className="container relative md:mt-24 mt-16" />
       </section>
