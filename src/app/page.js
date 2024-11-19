@@ -194,9 +194,9 @@ export default function Page() {
               className="lg:ms-8 wow animate__animated animate__fadeInRight"
               data-wow-delay=".3s"
             >
-              <h1 className="mb-4 text-2xl leading-normal font-medium">
+              <h2 className="mb-4 text-2xl leading-normal font-medium">
                 Dataform{" "}
-              </h1>
+              </h2>
               <p className="text-slate-400">
                 Our platform’s Data Form feature allows you to create custom
                 forms effortlessly without coding.With a drag-and-drop
@@ -249,9 +249,9 @@ export default function Page() {
               className="lg:me-8 order-2 md:order-1 wow animate__animated animate__fadeInLeft"
               data-wow-delay=".5s"
             >
-              <h1 className="mb-4 text-2xl leading-normal font-medium">
+              <h2 className="mb-4 text-2xl leading-normal font-medium">
                 Process
-              </h1>
+              </h2>
               <p className="text-slate-400">
                 Automate complex workflows without code. Our platform's Process
                 feature lets you design and automate processes with a simple
@@ -308,7 +308,7 @@ export default function Page() {
               className="lg:ms-8 wow animate__animated animate__fadeInRight"
               data-wow-delay=".3s"
             >
-              <h1 className="mb-4 text-2xl leading-normal font-medium">App</h1>
+              <h2 className="mb-4 text-2xl leading-normal font-medium">App</h2>
               <p className="text-slate-400">
                 Our platform’s App feature allows you to create custom
                 applications tailored to your business needs without any coding.
@@ -364,9 +364,9 @@ export default function Page() {
               className="lg:me-8 order-2 md:order-1 wow animate__animated animate__fadeInLeft"
               data-wow-delay=".5s"
             >
-              <h1 className="mb-4 text-2xl leading-normal font-medium">
+              <h2 className="mb-4 text-2xl leading-normal font-medium">
                 Analytics
-              </h1>
+              </h2>
               <p className="text-slate-400">
                 Our platform's Analytics feature empowers you to turn data into
                 actionable insights effortlessly. With intuitive dashboards and
