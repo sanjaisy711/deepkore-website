@@ -17,6 +17,7 @@ export default function Page() {
   const [businessEmail, setBusinessEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [companyName, setCompanyName] = useState("");
+  const [selectedPlan, setSelectedPlan] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [emailCheck, setEmailCheck] = useState(false); // Track email format validation error
@@ -36,6 +37,11 @@ export default function Page() {
     setAllFieldsCheck(false); // Reset error messages
   };
 
+  const handlePlanSelection = (plan) => {
+    setSelectedPlan(plan);
+    openModal();
+  };
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,6 +58,7 @@ export default function Page() {
           business_email: businessEmail,
           mobile: phone,
           company_name: companyName,
+          plan: selectedPlan,
         })
         .then((response) => {
           setSuccessMessage(true); // Show success message
@@ -129,7 +136,7 @@ export default function Page() {
                 </span>
               </div>
               <button
-                onClick={openModal}
+                onClick={() => handlePlanSelection("Trial")}
                 className="py-2 px-5 inline-block justify-items-center font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mt-5"
               >
                 Contact us
@@ -146,7 +153,7 @@ export default function Page() {
                 </span>
               </div>
               <button
-                onClick={openModal}
+                onClick={() => handlePlanSelection("Enterprise")}
                 className="py-2 px-5 inline-block justify-items-center font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mt-5"
               >
                 Contact us
