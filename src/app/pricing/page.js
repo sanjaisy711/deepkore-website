@@ -206,9 +206,9 @@ export default function Page() {
                       onSubmit={handleSubmit}
                       className="space-y-4 text-start"
                     >
-                      <p className="text-red-600 text-xs">
+                      {/* <p className="text-red-600 text-xs">
                         {!allFieldsCheck && "* All fields are required"}
-                      </p>
+                      </p> */}
                       <div>
                         <label
                           className="font-semibold text-left"
@@ -301,7 +301,7 @@ export default function Page() {
                       >
                         {isLoading ? "Submitting..." : "Register"}
                       </button>
-                      <div className="text-center">
+                      {/* <div className="text-center">
                         <span className="text-slate-400 me-2">
                           Already have an account ?
                         </span>{" "}
@@ -311,7 +311,7 @@ export default function Page() {
                         >
                           Sign in
                         </Link>
-                      </div>
+                      </div> */}
                     </form>
                   </div>
                 )}
