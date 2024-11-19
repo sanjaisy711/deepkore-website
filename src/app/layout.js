@@ -44,7 +44,7 @@ const alex = Alex_Brush({
 export const metadata = {
   title: "Worksbyte - Build Smarter & Deploy Faster",
   description:
-    "Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs.",
+    "Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs. Enhance your workflows and elevate employee productivity. Worksbyte enables you to effortlessly create apps that match the fast-paced growth of your business no coding required.",
 };
 
 export default function RootLayout({ children }) {
