@@ -160,9 +160,9 @@ export default function Page() {
             className="grid grid-cols-1 pb-8 text-center wow animate__animated animate__fadeInUp"
             data-wow-delay=".1s"
           >
-            <h1 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
+            <h2 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
               Why Everyone Loves worksbyte
-            </h1>
+            </h2>
 
             <p className="text-slate-400 max-w-xl mx-auto">
               Worksbyte empowers non-technical users to quickly build and adapt
