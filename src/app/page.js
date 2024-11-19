@@ -129,7 +129,7 @@ export default function Page() {
                 width={66}
                 height={66}
                 className="block mx-auto"
-                alt=""
+                alt="worksbyte logo"
               />
             </div>
             <h1 className="mb-6 mt-8 md:text-4xl text-3xl md:leading-normal leading-normal font-bold">
@@ -185,7 +185,7 @@ export default function Page() {
                 sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
                 className="rounded-lg shadow-md dark:shadow-gray-800"
-                alt=""
+                alt="Dataform"
               />
               <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 start-0 rotate-45 -z-1 rounded-3xl"></div>
             </div>
@@ -299,7 +299,7 @@ export default function Page() {
                 sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
                 className="rounded-lg shadow-md dark:shadow-gray-800"
-                alt=""
+                alt="App"
               />
               <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 start-0 rotate-45 -z-1 rounded-3xl"></div>
             </div>
@@ -355,7 +355,7 @@ export default function Page() {
                 sizes="100vw"
                 style={{ width: "100%", height: "auto" }}
                 className="rounded-lg shadow-md dark:shadow-gray-800"
-                alt=""
+                alt="Analytics"
               />
               <div className="overflow-hidden absolute lg:size-[400px] size-[320px] bg-indigo-600/5 bottom-0 end-0 rotate-45 -z-1 rounded-3xl"></div>
             </div>
