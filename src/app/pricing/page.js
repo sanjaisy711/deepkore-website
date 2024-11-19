@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "../componets/Navbar/navbar";
 import Footer from "../componets/Footer/footer";
 import Switcher from "../componets/switcher";
@@ -189,22 +190,51 @@ export default function Page() {
                   </div>
                 ) : (
                   <div>
-                    <h5 className="text-xl font-semibold mb-6">Sign Up</h5>
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <Link href="/">
+                      <Image
+                        src="/images/logo-icon.svg"
+                        height={74}
+                        width={82}
+                        className="mx-auto"
+                        alt=""
+                      />
+                    </Link>
+                    <h5 className="text-xl font-semibold mb-6 text-start">
+                      Sign Up
+                    </h5>
+                    <form
+                      onSubmit={handleSubmit}
+                      className="space-y-4 text-start"
+                    >
+                      <p className="text-red-600 text-xs">
+                        {!allFieldsCheck && "* All fields are required"}
+                      </p>
                       <div>
+                        <label
+                          className="font-semibold text-left"
+                          htmlFor="name"
+                        >
+                          Your Name:
+                        </label>
                         <input
                           type="text"
-                          className="form-input w-full rounded-md border-gray-300"
+                          className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
                           placeholder="Your Name"
                           required
                           onChange={(e) => setName(e.target.value)}
                         />
                       </div>
                       <div>
+                        <label
+                          className="font-semibold text-left"
+                          htmlFor="business_email"
+                        >
+                          Business Email Address:
+                        </label>
                         <input
                           type="email"
-                          className="form-input w-full rounded-md border-gray-300"
-                          placeholder="Business Email"
+                          className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
+                          placeholder="name@example.com"
                           required
                           onChange={(e) => setBusinessEmail(e.target.value)}
                         />
@@ -215,18 +245,30 @@ export default function Page() {
                         )}
                       </div>
                       <div>
+                        <label
+                          className="font-semibold text-left"
+                          htmlFor="mobile"
+                        >
+                          Phone :
+                        </label>
                         <input
                           type="tel"
-                          className="form-input w-full rounded-md border-gray-300"
+                          className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
                           placeholder="Phone Number"
                           required
                           onChange={(e) => setPhone(e.target.value)}
                         />
                       </div>
                       <div>
+                        <label
+                          className="font-semibold text-left"
+                          htmlFor="company_name"
+                        >
+                          Company Name :
+                        </label>
                         <input
                           type="text"
-                          className="form-input w-full rounded-md border-gray-300"
+                          className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
                           placeholder="Company Name"
                           required
                           onChange={(e) => setCompanyName(e.target.value)}
@@ -242,12 +284,14 @@ export default function Page() {
                         />
                         <label className="ml-2" htmlFor="accept">
                           I accept the{" "}
-                          <Link href="/terms">Terms and Conditions</Link>
+                          <Link href="/page-terms" className="text-indigo-600">
+                            Terms and Conditions
+                          </Link>
                         </label>
                       </div>
                       {!isChecked && (
                         <p className="text-red-600 text-xs">
-                          Please accept the terms.
+                          Please accept our terms and Conditions.
                         </p>
                       )}
                       <button
@@ -257,6 +301,17 @@ export default function Page() {
                       >
                         {isLoading ? "Submitting..." : "Register"}
                       </button>
+                      <div className="text-center">
+                        <span className="text-slate-400 me-2">
+                          Already have an account ?
+                        </span>{" "}
+                        <Link
+                          href="https://brightbars.dgitra.com/login"
+                          className="text-black dark:text-white font-bold inline-block"
+                        >
+                          Sign in
+                        </Link>
+                      </div>
                     </form>
                   </div>
                 )}

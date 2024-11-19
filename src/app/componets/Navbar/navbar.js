@@ -93,7 +93,7 @@ export default function Navbar(props) {
               width={158}
               height={34}
               className="hidden dark:inline-block"
-              alt=""
+              alt="worksbyte"
             />
           </Link>
         ) : (
