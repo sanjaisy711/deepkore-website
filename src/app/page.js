@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import Head from "next/head";
 
 const Navbar = dynamic(() => import("./componets/Navbar/navbar"));
 const Footer = dynamic(() => import("./componets/Footer/footer"));
@@ -30,23 +29,6 @@ import { teams } from "./Data/data";
 export default function Page() {
   return (
     <>
-      <Head>
-        <link rel="canonical" href="https://www.worksbyte.com/" />
-        <meta
-          property="og:title"
-          content="Worksbyte - Build Smarter, Deploy Faster"
-        />
-        <meta
-          property="og:description"
-          content="Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs. Enhance your workflows and elevate employee productivity. Worksbyte enables you to effortlessly create apps that match the fast-paced growth of your business no coding required."
-        />
-        <meta
-          property="og:image"
-          content="https://www.worksbyte.com/_next/image?url=%2Fimages%2Fsaas%2Fclassic02.png&w=1920&q=75"
-        />
-        <meta property="og:url" content="https://www.worksbyte.com/" />
-        <meta property="og:type" content="website" />
-      </Head>
       <Navbar />
 
       <section className="relative table w-full py-36 overflow-hidden bg-gradient-to-b to-transparent from-indigo-600/20 dark:from-indigo-600/40">
