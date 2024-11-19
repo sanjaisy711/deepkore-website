@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const Navbar = dynamic(() => import("./componets/Navbar/navbar"));
 const Footer = dynamic(() => import("./componets/Footer/footer"));
@@ -29,6 +30,9 @@ import { teams } from "./Data/data";
 export default function Page() {
   return (
     <>
+      <Head>
+        <link rel="canonical" href="https://www.worksbyte.com/" />
+      </Head>
       <Navbar />
 
       <section className="relative table w-full py-36 overflow-hidden bg-gradient-to-b to-transparent from-indigo-600/20 dark:from-indigo-600/40">
