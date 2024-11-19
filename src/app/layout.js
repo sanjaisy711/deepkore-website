@@ -42,7 +42,7 @@ const alex = Alex_Brush({
 });
 
 export const metadata = {
-  title: "Worksbyte - Build Smarter, Deploy Faster",
+  title: "Worksbyte - Build Smarter & Deploy Faster",
   description:
     "Worksbyte lets you transform ideas into powerful Enterprise applications that adapt to your business needs.",
 };
