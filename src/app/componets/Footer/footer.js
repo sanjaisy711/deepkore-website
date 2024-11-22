@@ -20,6 +20,7 @@ import {
 import { PiShoppingCart } from "react-icons/pi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { useState } from "react";
+import getEnvConfig from "../getenv";
 import { useRouter } from "next/navigation";
 
 export default function Footer() {
@@ -32,8 +33,8 @@ export default function Footer() {
   function SubscribeEmail(e) {
     //console.log(e.target.value);
     axios
-      // .post("https://common.apiv1.dgiverse.com/site/newsletter/subscribe", {
-      .post("http://localhost:3001/site/newsletter/subscribe", {
+      .post(`${getEnvConfig()}/site/newsletter/subscribe`, {
+        // .post("http://localhost:3001/site/newsletter/subscribe", {
         email: email,
       })
       .then(function (response) {

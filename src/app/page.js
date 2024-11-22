@@ -1,8 +1,10 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const Navbar = dynamic(() => import("./componets/Navbar/navbar"));
 const Footer = dynamic(() => import("./componets/Footer/footer"));
@@ -27,6 +29,52 @@ import { FaArrowRight } from "react-icons/fa";
 import { teams } from "./Data/data";
 
 export default function Page() {
+  const [businessEmail, setBusinessEmail] = useState("");
+  const [successMessage, setSuccessMessage] = useState(false);
+  const [businessEmailCheck, setBusinessEmailCheck] = useState(false);
+
+  const router = useRouter();
+
+  function SubscribeEmail(e) {
+    e.preventDefault();
+
+    if (
+      !businessEmail ||
+      /@(gmail\.com|ymail\.com|outlook\.com|live\.com|hotmail\.com)$/.test(
+        businessEmail
+      )
+    ) {
+      setBusinessEmailCheck(true); // Show email error if not valid
+      return;
+    }
+    //console.log(e.target.value);
+    axios
+      // .post(`${getEnvConfig()}/site/newsletter/subscribe`, {
+      .post("http://localhost:3001/site/lead/scheduledemo", {
+        business_email: businessEmail,
+      })
+      .then((response) => {
+        console.log("Success:", response);
+        setSuccessMessage(true); // Show success message
+        setBusinessEmail(""); // Clear input
+        setTimeout(() => {
+          setSuccessMessage(false); // Hide success message after 3 seconds
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("Error occurred:", error);
+
+        if (error.response) {
+          // Show specific error if email is required
+          if (error.response.data.message === "Email is required") {
+            setBusinessEmailCheck(true);
+          }
+        } else {
+          console.error("Network or unknown error:", error);
+        }
+      });
+  }
+
   return (
     <>
       <Navbar />
@@ -47,18 +95,21 @@ export default function Page() {
                   Worksbyte lets you transform ideas into powerful Enterprise
                   applications that adapt to your business needs.
                 </p>
-
                 <div className="subcribe-form mt-6 mb-3">
-                  <form className="relative max-w-xl">
+                  <form className="relative max-w-xl" onSubmit={SubscribeEmail}>
                     <input
                       type="email"
-                      id="subcribe"
-                      name="email"
+                      id="business_email"
+                      name="businessemail"
+                      onChange={(e) => {
+                        setBusinessEmail(e.target.value);
+                        setBusinessEmailCheck(false);
+                      }}
                       className="pt-4 pe-40 pb-4 ps-6 w-full h-[50px] outline-none text-black dark:text-white rounded-full bg-white dark:bg-slate-900 shadow dark:shadow-gray-800"
-                      placeholder="Your Email Address :"
+                      placeholder="Your Business Email Address :"
                     />
                     <button
-                      type="/contactus"
+                      type="submit"
                       className="py-2 px-5 inline-flex items-center item-center font-semibold tracking-wide align-middle transition duration-500 ease-in-out text-base text-center absolute top-[2px] end-[3px] h-[46px] bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white rounded-full"
                     >
                       Schedule a Demo
@@ -66,6 +117,70 @@ export default function Page() {
                     </button>
                   </form>
                 </div>
+
+                {/* Success Message */}
+                {successMessage && (
+                  <div className="grid grid-cols-1 gap-[30px]">
+                    {/* <div className="shadow dark:shadow-slate-800 rounded bg-white dark:bg-slate-900"> */}
+                    {/* <div className="p-5 border-t border-gray-100 dark:border-slate-800"> */}
+                    <div
+                      className={`bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40 flex items-center justify-center ${
+                        successMessage ? "" : "hidden"
+                      }`}
+                    >
+                      <div className="relative w-full h-auto max-w-lg p-4">
+                        <div className="relative bg-white dark:bg-slate-900 rounded-lg shadow dark:shadow-gray-800">
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              setSuccessMessage(!successMessage);
+                              setBusinessEmail("");
+                              router.push("/");
+                              // setEmail("");
+                            }}
+                            className="absolute -top-4 -end-4 text-indigo-600 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 hover:text-gray-900 rounded-full text-sm p-1.5 ms-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
+                          >
+                            <svg
+                              className="w-5 h-5 cursor-pointer"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clipRule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+                          <div className="p-6 py-10 text-center">
+                            <div className="relative overflow-hidden text-transparent -m-3 text-indigo-600">
+                              {/* <Icon.Hexagon className="size-32 fill-red-600/5 mx-auto"></Icon.Hexagon> */}
+                              {/* <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-red-600 rounded-xl duration-500 text-4xl flex align-middle justify-center items-center"> */}
+                              {/* <BsHeartbreak /> */}
+                              {/* </div> */}
+                            </div>
+
+                            <h4 className="text-xl text-indigo-600 font-semibold mt-6">
+                              Thank You For Contacting Us!
+                            </h4>
+                            <p>We Will Get Back To You Soon.</p>
+                          </div>
+                        </div>
+                      </div>
+                      {/* </div> */}
+                      {/* </div> */}
+                    </div>
+                  </div>
+                )}
+
+                {/* Error Message (optional) */}
+                {businessEmailCheck && (
+                  <div className="mt-4 text-red-600 font-semibold">
+                    Please Provide a Business Email
+                  </div>
+                )}
 
                 <span className="text-slate-400 font-medium">
                   Looking for help?{" "}
@@ -85,7 +200,7 @@ export default function Page() {
                   ></div>
                 </div>
 
-                <div className="absolute flex justify-between items-center md:bottom-10 bottom-5 md:-start-16 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
+                {/* <div className="absolute flex justify-between items-center md:bottom-10 bottom-5 md:-start-16 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
                   <div className="flex items-center">
                     <div className="flex items-center justify-center h-[65px] min-w-[65px] bg-indigo-600/5 text-indigo-600 text-center rounded-full me-3">
                       <Icon.Monitor className="size-6"></Icon.Monitor>
@@ -97,9 +212,9 @@ export default function Page() {
                     <HiArrowTrendingDown className="me-1" />
                     0.5%
                   </span>
-                </div>
+                </div> */}
 
-                <div className="absolute xl:top-20 top-40 xl:-end-20 lg:-end-10 -end-1 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
+                {/* <div className="absolute xl:top-20 top-40 xl:-end-20 lg:-end-10 -end-1 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
                   <h5 className="text-xl font-semibold mb-3">
                     Manage Your Software
                   </h5>
@@ -113,7 +228,7 @@ export default function Page() {
                       style={{ width: "84%" }}
                     ></div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

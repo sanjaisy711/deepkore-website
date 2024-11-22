@@ -5,6 +5,7 @@ import Image from "next/image";
 import Switcher from "../componets/switcher";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import getEnvConfig from "../componets/getenv";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -22,6 +23,25 @@ export default function Page() {
     setIsChecked(!isChecked);
   };
 
+  function validateEmail(email) {
+    const restrictedDomains = [
+      "gmail.com",
+      "ymail.com",
+      "outlook.com",
+      "live.com",
+      "hotmail.com",
+    ];
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return false;
+    }
+
+    const domain = email.split("@")[1];
+
+    return !restrictedDomains.includes(domain);
+  }
+
   function Signup(e) {
     e.preventDefault();
     if (
@@ -32,23 +52,27 @@ export default function Page() {
       companyName != ""
     ) {
       setAllFieldsCheck(true);
+      if (!validateEmail(businessEmail)) {
+        setEmailCheck(true);
+        return; //
+      }
+
       axios
-        // .post("https://common.apiv1.dgiverse.com/site/leadsignup", {
-        .post("http://localhost:3001/site/leadSignup", {
+        .post(`${getEnvConfig()}/site/leadsignup`, {
           name: name,
           business_email: businessEmail,
           mobile: phone,
           company_name: companyName,
         })
         .then(function (response) {
-          // handle success
+          // handle successy
           //console.log(response);
           setEmailCheck(false);
           setSuccessMessage(true);
         })
         .catch(function (error) {
           // handle error
-          console.log(error.response.data.message);
+          // console.log(error.response.data.message);
           if (error.response.data.message == "Email is required") {
             setEmailCheck(true);
           }
@@ -116,7 +140,8 @@ export default function Page() {
                     />
                   </div>
                   <p className="text-red-600 text-xs mb-2">
-                    {emailCheck && "Incorrect email format"}
+                    {emailCheck &&
+                      "Please provide a business email (not from Gmail, Ymail, Outlook, Live, or Hotmail)"}
                   </p>
                   <div className="mb-4">
                     <label className="font-semibold" htmlFor="mobile">

@@ -92,14 +92,14 @@ export default function Page() {
                     </Link>
                     <p className="text-slate-400 mt-3">{item.desc}</p>
 
-                    <div className="mt-5">
+                    {/* <div className="mt-5">
                       <Link
                         href="/page-services"
                         className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
                       >
                         Read More <FaArrowRight className="ms-2 text-[10px]" />
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               );

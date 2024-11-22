@@ -11,6 +11,7 @@ import PricingTab from "../componets/pricingTab";
 import axios from "axios";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import getEnvConfig from "../componets/getenv";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -28,6 +29,8 @@ export default function Page() {
   const router = useRouter();
 
   const checkHandler = () => setIsChecked(!isChecked);
+  const invalidEmailDomains =
+    /@(gmail\.com|ymail\.com|outlook\.com|live\.com|hotmail\.com)$/;
 
   // Handle modal visibility
   const openModal = () => setIsModalOpen(true);
@@ -48,13 +51,20 @@ export default function Page() {
 
     // Ensure all fields are filled and the terms are accepted before sending
     if (isChecked && name && businessEmail && phone && companyName) {
+      if (invalidEmailDomains.test(businessEmail)) {
+        setEmailCheck(true); // Invalid email format
+        return; // Stop form submission
+      } else {
+        setEmailCheck(false); // Reset email check error
+      }
       setIsLoading(true); // Show loading indicator
       setAllFieldsCheck(true);
 
       // Send form data to backend
       axios
-        .post("http://localhost:3001/site/leadSignup", {
-          name,
+        .post(`${getEnvConfig()}/site/lead/plans`, {
+          // .post("http://localhost:3001/site/lead/plans", {
+          name: name,
           business_email: businessEmail,
           mobile: phone,
           company_name: companyName,
@@ -66,7 +76,7 @@ export default function Page() {
         })
         .catch((error) => {
           setIsLoading(false); // Hide loading state
-          console.error(error.response?.data?.message);
+          //console.error(error.response?.data?.message);
           if (error.response?.data?.message === "Email is required") {
             setEmailCheck(true); // Display email error
           }
@@ -75,6 +85,8 @@ export default function Page() {
       setAllFieldsCheck(false); // If not all fields are filled, show error message
     }
   };
+
+  //console.log(process.env.NODE_ENV);
 
   return (
     <>
@@ -247,7 +259,8 @@ export default function Page() {
                         />
                         {emailCheck && (
                           <p className="text-red-600 text-xs">
-                            Invalid email format.
+                            Please provide a business email (not from Gmail,
+                            Ymail, Outlook, Live, or Hotmail)
                           </p>
                         )}
                       </div>
