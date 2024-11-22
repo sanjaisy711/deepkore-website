@@ -47,6 +47,8 @@ export default function Page() {
       setBusinessEmailCheck(true); // Show email error if not valid
       return;
     }
+    setSuccessMessage(true);
+    setBusinessEmail("");
     //console.log(e.target.value);
     axios
       // .post(`${getEnvConfig()}/site/newsletter/subscribe`, {
@@ -110,6 +112,9 @@ export default function Page() {
                     />
                     <button
                       type="submit"
+                      onClick={(e) => {
+                        SubscribeEmail(e);
+                      }}
                       className="py-2 px-5 inline-flex items-center item-center font-semibold tracking-wide align-middle transition duration-500 ease-in-out text-base text-center absolute top-[2px] end-[3px] h-[46px] bg-indigo-600 hover:bg-indigo-700 border border-indigo-600 hover:border-indigo-700 text-white rounded-full"
                     >
                       Schedule a Demo
@@ -118,7 +123,6 @@ export default function Page() {
                   </form>
                 </div>
 
-                {/* Success Message */}
                 {successMessage && (
                   <div className="grid grid-cols-1 gap-[30px]">
                     {/* <div className="shadow dark:shadow-slate-800 rounded bg-white dark:bg-slate-900"> */}
@@ -132,17 +136,15 @@ export default function Page() {
                         <div className="relative bg-white dark:bg-slate-900 rounded-lg shadow dark:shadow-gray-800">
                           <button
                             type="button"
-                            onClick={(e) => {
-                              e.preventDefault();
+                            onClick={() => {
                               setSuccessMessage(!successMessage);
                               setBusinessEmail("");
                               router.push("/");
-                              // setEmail("");
                             }}
                             className="absolute -top-4 -end-4 text-indigo-600 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 hover:text-gray-900 rounded-full text-sm p-1.5 ms-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
                           >
                             <svg
-                              className="w-5 h-5 cursor-pointer"
+                              className="w-5 h-5"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                               xmlns="http://www.w3.org/2000/svg"
@@ -162,10 +164,13 @@ export default function Page() {
                               {/* </div> */}
                             </div>
 
-                            <h4 className="text-xl text-indigo-600 font-semibold mt-6">
-                              Thank You For Contacting Us!
-                            </h4>
-                            <p>We Will Get Back To You Soon.</p>
+                            <div className="text-indigo-600 font-semibold">
+                              <h4 className="text-xl">
+                                Thank You For Contacting Us!
+                              </h4>
+
+                              <p>We Will Get Back To You Soon.</p>
+                            </div>
                           </div>
                         </div>
                       </div>

@@ -45,7 +45,7 @@ export default function Footer() {
       })
       .catch(function (error) {
         // handle error
-        console.log(error.response.data.message);
+        // console.log(error.response.data.message);
         if (error.response.data.message == "Email is required") {
           setEmailCheck(true);
         }
@@ -92,7 +92,7 @@ export default function Footer() {
     },
   ];
 
-  console.log(successMessage);
+  // console.log(successMessage);
 
   return (
     <div>
