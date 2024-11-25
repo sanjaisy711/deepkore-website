@@ -15,6 +15,7 @@ const GetInTuct = dynamic(() => import("./componets/getInTuch"));
 import SaasCounter from "./componets/counter/saasCounter";
 import VideoModal from "./componets/videoModal/videoModal";
 import AccordionTwo from "./componets/accordianTwo";
+import getEnvConfig from "./componets/getenv";
 
 const TinySlider = dynamic(() => import("tiny-slider-react"), { ssr: false });
 import "../../node_modules/tiny-slider/dist/tiny-slider.css";
@@ -48,11 +49,11 @@ export default function Page() {
       return;
     }
     setSuccessMessage(true);
-    setBusinessEmail("");
+    document.getElementById("business_email").value = "";
+
     //console.log(e.target.value);
     axios
-      // .post(`${getEnvConfig()}/site/newsletter/subscribe`, {
-      .post("http://localhost:3001/site/lead/scheduledemo", {
+      .post(`${getEnvConfig()}/site/lead/scheduledemo`, {
         business_email: businessEmail,
       })
       .then((response) => {
@@ -121,71 +122,69 @@ export default function Page() {
                       <FaArrowRight className="ms-2 text-[10px]" />
                     </button>
                   </form>
-                </div>
-
-                {successMessage && (
-                  <div className="grid grid-cols-1 gap-[30px]">
-                    {/* <div className="shadow dark:shadow-slate-800 rounded bg-white dark:bg-slate-900"> */}
-                    {/* <div className="p-5 border-t border-gray-100 dark:border-slate-800"> */}
-                    <div
-                      className={`bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40 flex items-center justify-center ${
-                        successMessage ? "" : "hidden"
-                      }`}
-                    >
-                      <div className="relative w-full h-auto max-w-lg p-4">
-                        <div className="relative bg-white dark:bg-slate-900 rounded-lg shadow dark:shadow-gray-800">
-                          <button
-                            type="button"
-                            onClick={() => {
-                              setSuccessMessage(!successMessage);
-                              setBusinessEmail("");
-                              router.push("/");
-                            }}
-                            className="absolute -top-4 -end-4 text-indigo-600 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 hover:text-gray-900 rounded-full text-sm p-1.5 ms-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                          >
-                            <svg
-                              className="w-5 h-5"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                              xmlns="http://www.w3.org/2000/svg"
+                  {successMessage && (
+                    <div className="grid grid-cols-1 gap-[30px]">
+                      {/* <div className="shadow dark:shadow-slate-800 rounded bg-white dark:bg-slate-900"> */}
+                      {/* <div className="p-5 border-t border-gray-100 dark:border-slate-800"> */}
+                      <div
+                        className={`bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40 flex items-center justify-center ${
+                          successMessage ? "" : "hidden"
+                        }`}
+                      >
+                        <div className="relative w-full h-auto max-w-lg p-4">
+                          <div className="relative bg-white dark:bg-slate-900 rounded-lg shadow dark:shadow-gray-800">
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setSuccessMessage(!successMessage);
+                                setBusinessEmail("");
+                                router.push("/");
+                              }}
+                              className="absolute -top-4 -end-4 text-indigo-600 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 hover:text-gray-900 rounded-full text-sm p-1.5 ms-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
                             >
-                              <path
-                                fillRule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clipRule="evenodd"
-                              ></path>
-                            </svg>
-                          </button>
-                          <div className="p-6 py-10 text-center">
-                            <div className="relative overflow-hidden text-transparent -m-3 text-indigo-600">
-                              {/* <Icon.Hexagon className="size-32 fill-red-600/5 mx-auto"></Icon.Hexagon> */}
-                              {/* <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-red-600 rounded-xl duration-500 text-4xl flex align-middle justify-center items-center"> */}
-                              {/* <BsHeartbreak /> */}
-                              {/* </div> */}
-                            </div>
+                              <svg
+                                className="w-5 h-5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                  clipRule="evenodd"
+                                ></path>
+                              </svg>
+                            </button>
+                            <div className="p-6 py-10 text-center">
+                              <div className="relative overflow-hidden text-transparent -m-3 text-indigo-600">
+                                {/* <Icon.Hexagon className="size-32 fill-red-600/5 mx-auto"></Icon.Hexagon> */}
+                                {/* <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-red-600 rounded-xl duration-500 text-4xl flex align-middle justify-center items-center"> */}
+                                {/* <BsHeartbreak /> */}
+                                {/* </div> */}
+                              </div>
 
-                            <div className="text-indigo-600 font-semibold">
-                              <h4 className="text-xl">
-                                Thank You For Contacting Us!
-                              </h4>
-
-                              <p>We Will Get Back To You Soon.</p>
+                              <div className="text-indigo-600 font-semibold">
+                                <h4 className="text-xl">
+                                  Thank You For Contacting Us!
+                                </h4>
+                                <p>We Will Get Back To You Soon.</p>
+                              </div>
                             </div>
                           </div>
                         </div>
+                        {/* </div> */}
+                        {/* </div> */}
                       </div>
-                      {/* </div> */}
-                      {/* </div> */}
                     </div>
-                  </div>
-                )}
+                  )}
 
-                {/* Error Message (optional) */}
-                {businessEmailCheck && (
-                  <div className="mt-4 text-red-600 font-semibold">
-                    Please Provide a Business Email
-                  </div>
-                )}
+                  {/* Error Message (optional) */}
+                  {businessEmailCheck && (
+                    <div className="mt-4 text-red-600 font-semibold">
+                      Please Provide a Business Email
+                    </div>
+                  )}
+                </div>
 
                 <span className="text-slate-400 font-medium">
                   Looking for help?{" "}

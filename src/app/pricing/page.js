@@ -63,7 +63,6 @@ export default function Page() {
       // Send form data to backend
       axios
         .post(`${getEnvConfig()}/site/lead/plans`, {
-          // .post("http://localhost:3001/site/lead/plans", {
           name: name,
           business_email: businessEmail,
           mobile: phone,

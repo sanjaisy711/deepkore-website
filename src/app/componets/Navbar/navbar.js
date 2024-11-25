@@ -164,14 +164,14 @@ export default function Navbar(props) {
             </li>
             <li
               className={
-                manu === "/https://brightbars.dgitra.com/login" || ""
-                  ? "active"
-                  : ""
+                manu === "/https://login.dgitra.com/login" || "" ? "active" : ""
               }
             >
               <Link
-                href="https://brightbars.dgitra.com/login"
+                href="https://login.dgitra.com/login"
                 className="sub-menu-item"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Login
               </Link>

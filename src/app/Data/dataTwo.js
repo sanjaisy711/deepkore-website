@@ -1286,7 +1286,6 @@ export const contactData = [
     title: "Email",
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
     contact: "contact@worksbyte.com",
-    href: "mailto:sanjaip711@gmail.com",
   },
   {
     icon: RiMapPinLine,

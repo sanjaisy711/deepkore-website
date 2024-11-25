@@ -34,7 +34,6 @@ export default function Footer() {
     //console.log(e.target.value);
     axios
       .post(`${getEnvConfig()}/site/newsletter/subscribe`, {
-        // .post("http://localhost:3001/site/newsletter/subscribe", {
         email: email,
       })
       .then(function (response) {
