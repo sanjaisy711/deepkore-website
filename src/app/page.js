@@ -22,8 +22,9 @@ import "../../node_modules/tiny-slider/dist/tiny-slider.css";
 
 import * as Icon from "react-feather";
 
-import { HiArrowTrendingDown } from "react-icons/hi2";
+import { HiArrowTrendingDown, HiArrowTrendingUp } from "react-icons/hi2";
 import { BsCheckCircle } from "react-icons/bs";
+import { FaArrowUpRightDots } from "react-icons/fa6";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -204,35 +205,35 @@ export default function Page() {
                   ></div>
                 </div>
 
-                {/* <div className="absolute flex justify-between items-center md:bottom-10 bottom-5 md:-start-16 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
+                <div className="absolute flex justify-between items-center md:bottom-10 bottom-5 md:-start-16 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
                   <div className="flex items-center">
                     <div className="flex items-center justify-center h-[65px] min-w-[65px] bg-indigo-600/5 text-indigo-600 text-center rounded-full me-3">
-                      <Icon.Monitor className="size-6"></Icon.Monitor>
+                      <FaArrowUpRightDots className="size-6"></FaArrowUpRightDots>
                     </div>
                     <SaasCounter />
                   </div>
 
-                  <span className="text-red-600 flex items-center">
-                    <HiArrowTrendingDown className="me-1" />
+                  <span className="text-red-500 flex items-center">
+                    <HiArrowTrendingUp className="me-1" />
                     0.5%
                   </span>
-                </div> */}
+                </div>
 
-                {/* <div className="absolute xl:top-20 top-40 xl:-end-20 lg:-end-10 -end-1 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
+                <div className="absolute xl:top-20 top-40 xl:-end-20 lg:-end-10 -end-1 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
                   <h5 className="text-xl font-semibold mb-3">
-                    Manage Your Software
+                    Ideas to Innovation
                   </h5>
                   <div className="flex justify-between mt-3 mb-2">
                     <span className="text-slate-400">Work in progress</span>
-                    <span className="text-slate-400">84%</span>
+                    <span className="text-slate-400">92%</span>
                   </div>
                   <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-[6px]">
                     <div
                       className="bg-indigo-600 h-[6px] rounded-full"
-                      style={{ width: "84%" }}
+                      style={{ width: "92%" }}
                     ></div>
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
@@ -259,9 +260,9 @@ export default function Page() {
             </h1>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-              Enhance your workflows and elevate employee productivity.
-              Worksbyte enables you to effortlessly create apps that match the
-              fast-paced growth of your business—no coding required.
+              Transform your business and boost productivity with WorksByte.
+              Effortlessly build Enterprise apps that keep pace with your
+              business's rapid growth—all without writing a single line of code.
             </p>
           </div>
 
@@ -284,11 +285,10 @@ export default function Page() {
             </h2>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-              Worksbyte empowers non-technical users to quickly build and adapt
-              applications without coding, fostering collaboration and
-              innovation. With its user-friendly interface, cost-effectiveness,
-              and rapid development capabilities, Worksbyte transforms the way
-              businesses operate and respond to change.
+              WorksByte simplifies application development for business users,
+              enabling them to innovate and collaborate effortlessly. Its
+              intuitive platform, affordability, and rapid deployment redefine
+              how businesses operate and adapt to changing needs.
             </p>
           </div>
 

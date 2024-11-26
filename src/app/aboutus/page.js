@@ -34,9 +34,9 @@ export default function Page() {
             </h3>
 
             <p className="text-slate-300 text-lg max-w-xl mx-auto">
-              Enhance your workflows and elevate employee productivity.
-              Worksbyte enables you to effortlessly create apps that match the
-              fast-paced growth of your business—no coding required.
+              Transform your business and boost productivity with WorksByte.
+              Effortlessly build Enterprise apps that keep pace with your
+              business's rapid growth—all without writing a single line of code.
             </p>
           </div>
         </div>
