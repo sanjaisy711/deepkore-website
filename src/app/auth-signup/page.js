@@ -146,8 +146,7 @@ export default function Page() {
                     />
                   </div>
                   <p className="text-red-600 text-xs mb-2">
-                    {emailCheck &&
-                      "Please provide a business email (not from Gmail, Ymail, Outlook, Live, or Hotmail)"}
+                    {emailCheck && "Please Provide a Business Email"}
                   </p>
                   <div className="mb-4">
                     <label className="font-semibold" htmlFor="mobile">
