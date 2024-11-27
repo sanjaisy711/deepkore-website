@@ -30,6 +30,8 @@ export default function Page() {
       "outlook.com",
       "live.com",
       "hotmail.com",
+      "yahoo.com",
+      "yahoo.co.in",
     ];
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -325,7 +325,9 @@ export default function Footer() {
           <div className="container relative text-center">
             <div className="grid md:grid-cols-2 items-center">
               <div className="md:text-start text-center">
-                <p className="mb-0">© 2024 dgiverse. All rights reserved. </p>
+                <p className="mb-0">
+                  © 2024 Worksbyte Technologies. All rights reserved.{" "}
+                </p>
               </div>
             </div>
           </div>

@@ -42,7 +42,7 @@ export default function Page() {
 
     if (
       !businessEmail ||
-      /@(gmail\.com|ymail\.com|outlook\.com|live\.com|hotmail\.com)$/.test(
+      /@(gmail\.com|ymail\.com|outlook\.com|live\.com|hotmail\.com|yahoo\.com|yahoo\.co\.in)$/.test(
         businessEmail
       )
     ) {
@@ -213,9 +213,9 @@ export default function Page() {
                     <SaasCounter />
                   </div>
 
-                  <span className="text-red-500 flex items-center">
+                  <span className="text-green-500 flex items-center">
                     <HiArrowTrendingUp className="me-1" />
-                    0.5%
+                    9%
                   </span>
                 </div>
 

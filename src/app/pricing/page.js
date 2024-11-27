@@ -30,7 +30,7 @@ export default function Page() {
 
   const checkHandler = () => setIsChecked(!isChecked);
   const invalidEmailDomains =
-    /@(gmail\.com|ymail\.com|outlook\.com|live\.com|hotmail\.com)$/;
+    /@(gmail\.com|ymail\.com|outlook\.com|live\.com|hotmail\.com|yahoo\.com|yahoo.co\.in)$/;
 
   // Handle modal visibility
   const openModal = () => setIsModalOpen(true);
