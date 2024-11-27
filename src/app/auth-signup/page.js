@@ -135,7 +135,13 @@ export default function Page() {
                       name="businessemail"
                       required
                       onChange={(e) => {
-                        setBusinessEmail(e.target.value);
+                        const emailInput = e.target.value;
+                        setBusinessEmail(emailInput);
+                        if (validateEmail(emailInput)) {
+                          setEmailCheck(false);
+                        } else {
+                          setEmailCheck(true);
+                        }
                       }}
                     />
                   </div>
