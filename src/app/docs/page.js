@@ -9,10 +9,9 @@ import Switcher from "../componets/switcher";
 import Sidebar from "../componets/Sidebar";
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default mode: Dark
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const [activeSection, setActiveSection] = useState("introduction");
 
-  // Effect hook to toggle dark mode class on the HTML element
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
@@ -21,16 +20,15 @@ const App = () => {
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
     }
-    console.log("App - isDarkMode:", isDarkMode); // Debugging log
+    console.log("App - isDarkMode:", isDarkMode);
   }, [isDarkMode]);
 
-  // Function to change dark mode to light and vice versa
   const changeMode = () => {
-    setIsDarkMode((prevMode) => !prevMode); // Toggle between dark and light
+    setIsDarkMode((prevMode) => !prevMode);
   };
 
   const handleSectionChange = (section) => {
-    setActiveSection(section); // Set active section for documentation content
+    setActiveSection(section);
   };
 
   return (
@@ -92,7 +90,6 @@ const App = () => {
               )}
             </div>
 
-            {/* Main Content */}
             <div className="md:col-span-3">
               {activeSection === "introduction" && (
                 <section id="introduction" className="py-16">

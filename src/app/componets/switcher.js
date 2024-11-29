@@ -8,6 +8,7 @@ import { HiOutlineMoon, HiOutlineSun, HiArrowSmUp } from "react-icons/hi";
 export default function Switcher() {
   const [scrollToTops, setScrollToTops] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
   useEffect(() => {
     function scrollHandler() {
       setScrollToTops(window.scrollY >= 500);
@@ -22,6 +23,9 @@ export default function Switcher() {
       window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
+  const handleChange = (event) => {
+    setIsChecked(event.target.checked);
+  };
 
   const scrollToTop = () => {
     scroll.scrollToTop({
@@ -49,6 +53,7 @@ export default function Switcher() {
             className="checkbox opacity-0 absolute"
             id="chk"
             checked={isDarkMode}
+            onChange={handleChange}
             onClick={(event) => changeMode("mode", event)}
           />
           <label
