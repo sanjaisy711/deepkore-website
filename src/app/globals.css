@@ -15,4 +15,18 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+/* For Tailwind's dark mode to work globally */
+html {
+  --tw-bg-opacity: 1;
+  background-color: var(--tw-bg-color);
+}
 
+html.dark {
+  --tw-bg-opacity: 1;
+  background-color: #1f2937; /* Dark Background Color */
+}
+
+html.light {
+  --tw-bg-opacity: 1;
+  background-color: #f9fafb; /* Light Background Color */
+}
