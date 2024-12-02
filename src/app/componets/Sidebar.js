@@ -1,12 +1,11 @@
 import React from "react";
 
 const Sidebar = ({ isDarkMode, onLinkClick }) => {
-  console.log("Sidebar - isDarkMode:", isDarkMode);
   return (
     <div
       className={`sticky top-0 h-screen p-6 transition-all duration-300 bg-transparent ${
         isDarkMode ? "text-slate-400" : "text-slate-800"
-      } shadow-lg`} // Add shadow class here
+      } shadow-lg`}
     >
       <ul>
         <li className="mb-4">

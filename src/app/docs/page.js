@@ -1,18 +1,25 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { useRouter } from "next/navigation";
 import Navbar from "../componets/Navbar/navbar";
 import Footer from "../componets/Footer/footer";
-import Switcher from "../componets/switcher";
 import Sidebar from "../componets/Sidebar";
+import Image from "next/image";
+import Switcher from "../componets/switcher";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [activeSection, setActiveSection] = useState("introduction");
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
+  const router = useRouter();
 
   useEffect(() => {
+    // Check if user is logged in (e.g., from localStorage)
+    const loginStatus = localStorage.getItem("isLoggedIn");
+    setIsLoggedIn(loginStatus === "true"); // Set login status from localStorage
+
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");
@@ -20,7 +27,6 @@ const App = () => {
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
     }
-    console.log("App - isDarkMode:", isDarkMode);
   }, [isDarkMode]);
 
   const changeMode = () => {
@@ -29,6 +35,13 @@ const App = () => {
 
   const handleSectionChange = (section) => {
     setActiveSection(section);
+  };
+
+  const handleDocumentClick = () => {
+    if (!isLoggedIn) {
+      // Redirect to login page if not logged in
+      router.push("/login");
+    }
   };
 
   return (
