@@ -118,6 +118,78 @@ const App = () => {
                   </p>
                 </section>
               )}
+              {activeSection === "role" && (
+                <section id="admin" className="py-16">
+                  <h4 className="text-3xl font-semibold mb-4">Account Owner</h4>
+                  <h4 className="text-3xl font-semibold mb-4">Super Admin</h4>
+                  <h4 className="text-3xl font-semibold mb-4">User Admin</h4>
+                  <h4 className="text-3xl font-semibold mb-4">Billing Admin</h4>
+                  <h4 className="text-3xl font-semibold mb-4">User</h4>
+                  {/* <p className="text-slate-400 text-base leading-8">
+                    We are using npm which allows having complete automation for
+                    build flow. In case if you don't know npm...
+                  </p> */}
+                </section>
+              )}
+
+              {activeSection === "usermanagement" && (
+                <section id="admin" className="py-16">
+                  <h4 className="text-3xl font-semibold mb-4">Active Users</h4>
+                  <h4 className="text-3xl font-semibold mb-4">
+                    Inactive Users
+                  </h4>
+                  {/* <p className="text-slate-400 text-base leading-8">
+                    We are using npm which allows having complete automation for
+                    build flow. In case if you don't know npm...
+                  </p> */}
+                </section>
+              )}
+              {activeSection === "groupmanagement" && (
+                <section id="admin" className="py-16">
+                  <h4 className="text-3xl font-semibold mb-4">
+                    Group Management
+                  </h4>
+                  {/* <h4 className="text-3xl font-semibold mb-4">
+                    Inactive Users
+                  </h4> */}
+                  {/* <p className="text-slate-400 text-base leading-8">
+                    We are using npm which allows having complete automation for
+                    build flow. In case if you don't know npm...
+                  </p> */}
+                </section>
+              )}
+              {activeSection === "auditlogs" && (
+                <section id="admin" className="py-16">
+                  <h4 className="text-3xl font-semibold mb-4">Audit Logs</h4>
+                  {/* <h4 className="text-3xl font-semibold mb-4">
+                    Inactive Users
+                  </h4> */}
+                  {/* <p className="text-slate-400 text-base leading-8">
+                    We are using npm which allows having complete automation for
+                    build flow. In case if you don't know npm...
+                  </p> */}
+                </section>
+              )}
+
+              {activeSection === "accountsettings" && (
+                <section id="admin" className="py-16">
+                  <h4 className="text-3xl font-semibold mb-4">
+                    Account Details
+                  </h4>
+                  <h4 className="text-3xl font-semibold mb-4">
+                    Format Setting
+                  </h4>
+                  <h4 className="text-3xl font-semibold mb-4">
+                    Weekend Setting
+                  </h4>
+                  <h4 className="text-3xl font-semibold mb-4">File Upload</h4>
+                  <h4 className="text-3xl font-semibold mb-4">Key Settings</h4>
+                  {/* <p className="text-slate-400 text-base leading-8">
+                    We are using npm which allows having complete automation for
+                    build flow. In case if you don't know npm...
+                  </p> */}
+                </section>
+              )}
 
               {activeSection === "admin" && (
                 <section id="admin" className="py-16">

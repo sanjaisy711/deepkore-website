@@ -185,7 +185,7 @@ export default function Page() {
             <div className="relative bg-white dark:bg-slate-900 rounded-lg shadow dark:shadow-gray-800">
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-indigo-600 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 hover:text-gray-900 rounded-full text-sm p-1.5"
+                className="absolute top-4 right-4 text-indigo-600 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 hover:text-indigo-600 rounded-full text-sm p-1.5"
               >
                 <svg
                   className="w-5 h-5 cursor-pointer"
@@ -227,7 +227,28 @@ export default function Page() {
                       {/* <p className="text-red-600 text-xs">
                         {!allFieldsCheck && "* All fields are required"}
                       </p> */}
-                      <div>
+
+                      <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
+                        <div className="relative bg-inherit">
+                          <input
+                            id="name"
+                            type="text"
+                            className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
+                            placeholder="Enter Your Name"
+                            required
+                            onChange={(e) => {
+                              setName(e.target.value);
+                            }}
+                          />
+                          <label
+                            htmlFor="name"
+                            className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
+                          >
+                            Your Name
+                          </label>
+                        </div>
+                      </div>
+                      {/* <div>
                         <label
                           className="font-semibold text-left"
                           htmlFor="name"
@@ -241,8 +262,32 @@ export default function Page() {
                           required
                           onChange={(e) => setName(e.target.value)}
                         />
+                      </div> */}
+                      <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
+                        <div className="relative bg-inherit">
+                          <input
+                            id="business_email"
+                            type="email"
+                            className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
+                            placeholder="Business Email Address"
+                            required
+                            onChange={(e) => setBusinessEmail(e.target.value)}
+                          />
+                          {emailCheck && (
+                            <p className="text-red-600 text-xs">
+                              Please provide a business email (not from Gmail,
+                              Ymail, Outlook, Live, or Hotmail)
+                            </p>
+                          )}
+                          <label
+                            htmlFor="business_email"
+                            className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
+                          >
+                            Business Email Address
+                          </label>
+                        </div>
                       </div>
-                      <div>
+                      {/* <div>
                         <label
                           className="font-semibold text-left"
                           htmlFor="business_email"
@@ -262,8 +307,30 @@ export default function Page() {
                             Ymail, Outlook, Live, or Hotmail)
                           </p>
                         )}
+                      </div> */}
+
+                      <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
+                        <div className="relative bg-inherit">
+                          <input
+                            id="mobile"
+                            type="number"
+                            className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
+                            placeholder="Phone"
+                            required
+                            onChange={(e) => {
+                              setPhone(e.target.value);
+                            }}
+                          />
+                          <label
+                            htmlFor="mobile"
+                            className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
+                          >
+                            Phone
+                          </label>
+                        </div>
                       </div>
-                      <div>
+
+                      {/* <div>
                         <label
                           className="font-semibold text-left"
                           htmlFor="mobile"
@@ -277,8 +344,30 @@ export default function Page() {
                           required
                           onChange={(e) => setPhone(e.target.value)}
                         />
+                      </div> */}
+
+                      <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
+                        <div className="relative bg-inherit">
+                          <input
+                            id="company_name"
+                            type="name"
+                            className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
+                            placeholder="Company Name"
+                            required
+                            onChange={(e) => {
+                              setCompanyName(e.target.value);
+                            }}
+                          />
+                          <label
+                            htmlFor="company_name"
+                            className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
+                          >
+                            Company Name
+                          </label>
+                        </div>
                       </div>
-                      <div>
+
+                      {/* <div>
                         <label
                           className="font-semibold text-left"
                           htmlFor="company_name"
@@ -292,7 +381,7 @@ export default function Page() {
                           required
                           onChange={(e) => setCompanyName(e.target.value)}
                         />
-                      </div>
+                      </div> */}
                       <div className="flex items-center mb-4">
                         <input
                           type="checkbox"

@@ -27,6 +27,58 @@ const Sidebar = ({ isDarkMode, onLinkClick }) => {
           >
             Admin
           </button>
+          <ul className="ml-4 mt-2">
+            <li>
+              <button
+                onClick={() => onLinkClick("role")}
+                className={`hover:text-indigo-600 ${
+                  isDarkMode ? "text-slate-400" : "text-slate-600"
+                }`}
+              >
+                Role
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => onLinkClick("usermanagement")}
+                className={`hover:text-indigo-600 ${
+                  isDarkMode ? "text-slate-400" : "text-slate-600"
+                }`}
+              >
+                User Management
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => onLinkClick("groupmanagement")}
+                className={`hover:text-indigo-600 ${
+                  isDarkMode ? "text-slate-400" : "text-slate-600"
+                }`}
+              >
+                Group Management
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => onLinkClick("auditlogs")}
+                className={`hover:text-indigo-600 ${
+                  isDarkMode ? "text-slate-400" : "text-slate-600"
+                }`}
+              >
+                Audit Logs
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => onLinkClick("accountsettings")}
+                className={`hover:text-indigo-600 ${
+                  isDarkMode ? "text-slate-400" : "text-slate-600"
+                }`}
+              >
+                Account Settings
+              </button>
+            </li>
+          </ul>
         </li>
         <li className="mb-4">
           <button
