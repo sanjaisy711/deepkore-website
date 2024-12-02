@@ -71,6 +71,12 @@ const App = () => {
             >
               Documentation
             </li>
+            <li className="inline-block text-base mx-0.5 ltr:rotate-0 rtl:rotate-180">
+              <MdKeyboardArrowRight className="text-xl" />
+            </li>
+            <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600">
+              <Link href="/">Logout</Link>
+            </li>
           </ul>
         </div>
       </section>

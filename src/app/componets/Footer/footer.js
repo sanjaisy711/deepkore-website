@@ -62,6 +62,11 @@ export default function Footer() {
       route: "/page-privacy",
       title: "Privacy Policy",
     },
+    {
+      liClass: "mt-[10px]",
+      route: "/login-docs",
+      title: "Documentation",
+    },
   ];
   const footerCompany = [
     {
