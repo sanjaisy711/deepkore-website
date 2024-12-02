@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"; // Ensure you are importing the useRouter hook
 import Link from "next/link";
 import Switcher from "../componets/switcher";
 import Image from "next/image";
@@ -8,13 +8,13 @@ import axios from "axios";
 import getEnvConfig from "../componets/getenv";
 
 export default function Page() {
-  const [businessname, setBusinessName] = useState("");
-  const [businessEmail, setBusinessEmail] = useState("");
+  const [subDomain, setSubDomain] = useState("");
+  const [email, setemail] = useState("");
   const [emailCheck, setEmailCheck] = useState(false);
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
 
-  const router = useRouter();
+  const router = useRouter(); // useRouter hook to navigate programmatically
 
   const validateEmail = (email) => {
     const restrictedDomains = [
@@ -38,20 +38,21 @@ export default function Page() {
 
   const Login = (e) => {
     e.preventDefault();
-    if (businessname !== "" && businessEmail !== "" && password !== "") {
-      if (!validateEmail(businessEmail)) {
+    if (subDomain !== "" && email !== "" && password !== "") {
+      if (!validateEmail(email)) {
         setEmailCheck(true);
         return;
       }
       axios
-        .post(`${getEnvConfig()}/site/leadsignup`, {
-          businessname,
-          business_email: businessEmail,
+        .post(`${getEnvConfig()}/api/user/login`, {
+          subdomain_name: subDomain,
+          email: email,
           password,
         })
         .then((response) => {
           setEmailCheck(false);
           setLoginError(false); // reset any previous login errors
+          router.push("/docs"); // Redirect to /docs page after successful login
         })
         .catch((error) => {
           setLoginError(true);
@@ -87,12 +88,12 @@ export default function Page() {
                   <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
                     <div className="relative bg-inherit">
                       <input
-                        id="businessname"
+                        id="subdomain_name"
                         type="text"
                         className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
                         placeholder="Enter Your Business Name"
                         required
-                        onChange={(e) => setBusinessName(e.target.value)}
+                        onChange={(e) => setSubDomain(e.target.value)}
                       />
                       <label
                         htmlFor="businessname"
@@ -107,14 +108,14 @@ export default function Page() {
                   <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
                     <div className="relative bg-inherit">
                       <input
-                        id="business_email"
+                        id="email"
                         type="text"
                         className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
                         placeholder="Enter Your Business Email"
                         required
                         onChange={(e) => {
                           const emailInput = e.target.value;
-                          setBusinessEmail(emailInput);
+                          setemail(emailInput);
                           setEmailCheck(!validateEmail(emailInput));
                         }}
                       />
@@ -132,30 +133,6 @@ export default function Page() {
                     </p>
                   )}
                   <br />
-
-                  {/* <div className="mb-4">
-                    <label className="font-semibold" htmlFor="LoginEmail">
-                      Email Address:
-                    </label>
-                    <input
-                      id="LoginEmail"
-                      type="email"
-                      className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                      placeholder="Enter your email address"
-                      required
-                      value={businessEmail}
-                      onChange={(e) => {
-                        const emailInput = e.target.value;
-                        setBusinessEmail(emailInput);
-                        setEmailCheck(!validateEmail(emailInput));
-                      }}
-                    />
-                  </div>
-                  {emailCheck && (
-                    <p className="text-red-600 text-xs mb-2">
-                      Please provide a valid business email address.
-                    </p>
-                  )} */}
 
                   <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
                     <div className="relative bg-inherit">
@@ -181,31 +158,10 @@ export default function Page() {
                     </p>
                   )}
 
-                  {/* <div className="mb-4">
-                    <label className="font-semibold" htmlFor="Password">
-                      Password:
-                    </label>
-                    <input
-                      id="Password"
-                      type="password"
-                      className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                      placeholder="Enter your password"
-                      required
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </div>
-                  {loginError && (
-                    <p className="text-red-500">
-                      Invalid credentials. Please try again.
-                    </p>
-                  )} */}
                   <div className="mt-4">
                     <button
                       type="submit"
                       className="w-full py-2 px-3 bg-indigo-600 text-white rounded-md"
-                      onClick={(e) => {
-                        Login(e);
-                      }}
                     >
                       Login
                     </button>
