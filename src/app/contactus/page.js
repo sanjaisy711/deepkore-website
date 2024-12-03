@@ -14,6 +14,8 @@ import Switcher from "../componets/switcher";
 import * as Icon from "react-feather";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { IoBusiness } from "react-icons/io5";
+import { FiMessageCircle } from "react-icons/fi";
 
 import { contactData } from "../Data/dataTwo";
 
@@ -233,7 +235,7 @@ export default function Page() {
                               id="name"
                               type="text"
                               className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                              placeholder=" Name"
+                              placeholder="Name"
                               required
                               onChange={(e) => {
                                 setName(e.target.value);
@@ -257,7 +259,7 @@ export default function Page() {
                               id="business_email"
                               type="email"
                               className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                              placeholder=" Business Email :"
+                              placeholder="Business Email"
                               required
                               onChange={(e) => {
                                 setBusinessEmail(e.target.value);
@@ -364,10 +366,10 @@ export default function Page() {
                     <div className="lg:col-span-6 mb-5">
                       <div className="text-start">
                         <label htmlFor="company_name" className="font-semibold">
-                          Company Name:
+                          Company Name :
                         </label>
                         <div className="form-icon relative mt-2">
-                          <Icon.User className="size-4 absolute top-3 start-4"></Icon.User>
+                          <IoBusiness className="size-4 absolute top-3 start-4"></IoBusiness>
                           <input
                             name="companyname"
                             id="company_name"
@@ -391,12 +393,11 @@ export default function Page() {
                           Brief Business Requirement :
                         </label>
                         <div className="form-icon relative mt-2">
-                          <Icon.User className="size-4 absolute top-3 start-4"></Icon.User>
-                          <input
+                          <FiMessageCircle className="size-4 absolute top-3 start-4"></FiMessageCircle>
+                          <textarea
                             name="briefbusinessrequirment"
                             id="brief_business_requirment"
-                            type="text"
-                            className="form-input ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
+                            className="form-input ps-11 w-full py-2 px-3 h-32 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
                             placeholder="Brief Business Requirement"
                             required
                             onChange={(e) => {
@@ -406,6 +407,7 @@ export default function Page() {
                         </div>
                       </div>
                     </div>
+
                     <button
                       onClick={(e) => {
                         e.preventDefault();
