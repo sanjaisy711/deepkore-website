@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Sidebar = ({ isDarkMode, onLinkClick }) => {
+  // State to track if the Admin submenu is open
+  const [isAdminOpen, setIsAdminOpen] = useState(false);
+
+  // Function to toggle the Admin submenu
+  const toggleAdminMenu = () => {
+    setIsAdminOpen((prev) => !prev);
+  };
+
   return (
     <div
       className={`sticky top-0 h-screen p-6 transition-all duration-300 bg-transparent ${
@@ -20,65 +28,84 @@ const Sidebar = ({ isDarkMode, onLinkClick }) => {
         </li>
         <li className="mb-4">
           <button
-            onClick={() => onLinkClick("admin")}
-            className={`hover:text-indigo-600 ${
+            onClick={toggleAdminMenu} // Toggle the admin menu
+            className={`flex items-center hover:text-indigo-600 ${
               isDarkMode ? "text-slate-400" : "text-slate-600"
             }`}
           >
             Admin
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className={`ml-2 w-4 h-4 transform transition-transform ${
+                isAdminOpen ? "rotate-180" : "rotate-0"
+              }`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
           </button>
-          <ul className="ml-4 mt-2">
-            <li>
-              <button
-                onClick={() => onLinkClick("role")}
-                className={`hover:text-indigo-600 ${
-                  isDarkMode ? "text-slate-400" : "text-slate-600"
-                }`}
-              >
-                Role
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => onLinkClick("usermanagement")}
-                className={`hover:text-indigo-600 ${
-                  isDarkMode ? "text-slate-400" : "text-slate-600"
-                }`}
-              >
-                User Management
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => onLinkClick("groupmanagement")}
-                className={`hover:text-indigo-600 ${
-                  isDarkMode ? "text-slate-400" : "text-slate-600"
-                }`}
-              >
-                Group Management
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => onLinkClick("auditlogs")}
-                className={`hover:text-indigo-600 ${
-                  isDarkMode ? "text-slate-400" : "text-slate-600"
-                }`}
-              >
-                Audit Logs
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => onLinkClick("accountsettings")}
-                className={`hover:text-indigo-600 ${
-                  isDarkMode ? "text-slate-400" : "text-slate-600"
-                }`}
-              >
-                Account Settings
-              </button>
-            </li>
-          </ul>
+          {/* Conditionally render the sub-menu */}
+          {isAdminOpen && (
+            <ul className="ml-4 mt-2">
+              <li>
+                <button
+                  onClick={() => onLinkClick("role")}
+                  className={`hover:text-indigo-600 ${
+                    isDarkMode ? "text-slate-400" : "text-slate-600"
+                  }`}
+                >
+                  Role
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onLinkClick("usermanagement")}
+                  className={`hover:text-indigo-600 ${
+                    isDarkMode ? "text-slate-400" : "text-slate-600"
+                  }`}
+                >
+                  User Management
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onLinkClick("groupmanagement")}
+                  className={`hover:text-indigo-600 ${
+                    isDarkMode ? "text-slate-400" : "text-slate-600"
+                  }`}
+                >
+                  Group Management
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onLinkClick("auditlogs")}
+                  className={`hover:text-indigo-600 ${
+                    isDarkMode ? "text-slate-400" : "text-slate-600"
+                  }`}
+                >
+                  Audit Logs
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onLinkClick("accountsettings")}
+                  className={`hover:text-indigo-600 ${
+                    isDarkMode ? "text-slate-400" : "text-slate-600"
+                  }`}
+                >
+                  Account Settings
+                </button>
+              </li>
+            </ul>
+          )}
         </li>
         <li className="mb-4">
           <button

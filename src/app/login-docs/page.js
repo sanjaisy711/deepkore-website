@@ -51,7 +51,8 @@ export default function Page() {
         })
         .then((response) => {
           setEmailCheck(false);
-          setLoginError(false); // reset any previous login errors
+          setLoginError(false);
+          console.log("Login successful, response:", response);
           router.push("/docs"); // Redirect to /docs page after successful login
         })
         .catch((error) => {
