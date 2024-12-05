@@ -64,7 +64,7 @@ export default function Footer() {
     },
     {
       liClass: "mt-[10px]",
-      route: "/login-docs",
+      route: "/docs",
       title: "Documentation",
     },
   ];

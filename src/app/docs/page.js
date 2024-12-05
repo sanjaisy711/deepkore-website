@@ -8,44 +8,89 @@ import Sidebar from "../componets/Sidebar";
 import Image from "next/image";
 import Switcher from "../componets/switcher";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import Head from "next/head";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [activeSection, setActiveSection] = useState("introduction");
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
+  const [isLoggedIn, setIsLoggedIn] = useState();
+  const [loading, setLoading] = useState(true); // Initial loading state
   const router = useRouter();
 
+  // Check login status on mount
+
   useEffect(() => {
-    // Check if user is logged in (e.g., from localStorage)
-    const loginStatus = localStorage.getItem("isLoggedIn");
-    setIsLoggedIn(loginStatus === "true"); // Set login status from localStorage
-
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("light");
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      setIsLoggedIn(true);
     } else {
-      document.documentElement.classList.add("light");
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
-
-  const changeMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
-
-  const handleSectionChange = (section) => {
-    setActiveSection(section);
-  };
-
-  const handleDocumentClick = () => {
-    if (!isLoggedIn) {
-      // Redirect to login page if not logged in
+      setIsLoggedIn(false);
       router.push("/login");
     }
+  }, []);
+
+  // useEffect(() => {
+  //   const loginStatus = localStorage.getItem("isLoggedIn");
+  //   if (loginStatus === "true") {
+  //     setIsLoggedIn(true);
+  //   } else {
+  //     setIsLoggedIn(false);
+  //   }
+  //   setLoading(false); // Finished loading
+  // }, []);
+  // useEffect(() => {
+  //   if (!localStorage.getItem("authToken")) {
+  //     router.push("/login");
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   // Only redirect when loading is complete and login status is known
+  //   if (!loading) {
+  //     if (isLoggedIn === false) {
+  //       router.push("/login");
+  //     } else if (isLoggedIn === true) {
+  //       console.log("docs");
+  //       router.replace("/docs"); // Redirect to docs if logged in
+  //     }
+  //   }
+  // }, [isLoggedIn, loading, router]);
+
+  const changeMode = () => setIsDarkMode((prevMode) => !prevMode);
+  const handleSectionChange = (section) => setActiveSection(section);
+  const handleLogout = () => {
+    // Remove login-related data from localStorage
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("authToken"); // Assuming authToken is stored in localStorage
+
+    // Update the state to reflect logged-out status
+    setIsLoggedIn(false);
+
+    // Redirect to the login page
+    router.push("/login");
   };
+
+  // if (loading) {
+  //   return (
+  //     <div className="loading-spinner">
+  //       <p>Loading...</p>
+  //       {/* Consider adding a spinner component here */}
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
+      <Head>
+        <title>{`Documentation - ${
+          activeSection.charAt(0).toUpperCase() + activeSection.slice(1)
+        }`}</title>
+        <meta
+          name="description"
+          content={`Learn about ${activeSection} in our platform`}
+        />
+      </Head>
+
       <Navbar />
 
       <section className="relative table w-full py-32 lg:py-40 bg-gray-50 dark:bg-slate-800">
@@ -75,7 +120,9 @@ const App = () => {
               <MdKeyboardArrowRight className="text-xl" />
             </li>
             <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600">
-              <Link href="/">Logout</Link>
+              <Link href="/" onClick={handleLogout}>
+                Logout
+              </Link>
             </li>
           </ul>
         </div>
@@ -105,6 +152,7 @@ const App = () => {
                 <Sidebar
                   isDarkMode={isDarkMode}
                   onLinkClick={handleSectionChange}
+                  activeSection={activeSection} // Pass the active section state
                 />
               )}
             </div>
@@ -131,10 +179,6 @@ const App = () => {
                   <h4 className="text-3xl font-semibold mb-4">User Admin</h4>
                   <h4 className="text-3xl font-semibold mb-4">Billing Admin</h4>
                   <h4 className="text-3xl font-semibold mb-4">User</h4>
-                  {/* <p className="text-slate-400 text-base leading-8">
-                    We are using npm which allows having complete automation for
-                    build flow. In case if you don't know npm...
-                  </p> */}
                 </section>
               )}
 
@@ -144,10 +188,6 @@ const App = () => {
                   <h4 className="text-3xl font-semibold mb-4">
                     Inactive Users
                   </h4>
-                  {/* <p className="text-slate-400 text-base leading-8">
-                    We are using npm which allows having complete automation for
-                    build flow. In case if you don't know npm...
-                  </p> */}
                 </section>
               )}
               {activeSection === "groupmanagement" && (
@@ -155,25 +195,11 @@ const App = () => {
                   <h4 className="text-3xl font-semibold mb-4">
                     Group Management
                   </h4>
-                  {/* <h4 className="text-3xl font-semibold mb-4">
-                    Inactive Users
-                  </h4> */}
-                  {/* <p className="text-slate-400 text-base leading-8">
-                    We are using npm which allows having complete automation for
-                    build flow. In case if you don't know npm...
-                  </p> */}
                 </section>
               )}
               {activeSection === "auditlogs" && (
                 <section id="admin" className="py-16">
                   <h4 className="text-3xl font-semibold mb-4">Audit Logs</h4>
-                  {/* <h4 className="text-3xl font-semibold mb-4">
-                    Inactive Users
-                  </h4> */}
-                  {/* <p className="text-slate-400 text-base leading-8">
-                    We are using npm which allows having complete automation for
-                    build flow. In case if you don't know npm...
-                  </p> */}
                 </section>
               )}
 
@@ -190,10 +216,6 @@ const App = () => {
                   </h4>
                   <h4 className="text-3xl font-semibold mb-4">File Upload</h4>
                   <h4 className="text-3xl font-semibold mb-4">Key Settings</h4>
-                  {/* <p className="text-slate-400 text-base leading-8">
-                    We are using npm which allows having complete automation for
-                    build flow. In case if you don't know npm...
-                  </p> */}
                 </section>
               )}
 

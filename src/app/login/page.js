@@ -13,8 +13,9 @@ export default function Page() {
   const [emailCheck, setEmailCheck] = useState(false);
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const router = useRouter(); // useRouter hook to navigate programmatically
+  const router = useRouter();
 
   const validateEmail = (email) => {
     const restrictedDomains = [
@@ -43,6 +44,7 @@ export default function Page() {
         setEmailCheck(true);
         return;
       }
+      setIsLoading(true);
       axios
         .post(`${getEnvConfig()}/api/user/login`, {
           subdomain_name: subDomain,
@@ -50,21 +52,31 @@ export default function Page() {
           password,
         })
         .then((response) => {
-          setEmailCheck(false);
-          setLoginError(false);
-          console.log("Login successful, response:", response);
-          router.push("/docs"); // Redirect to /docs page after successful login
+          if (response) {
+            localStorage.setItem("authToken", response.data.result.accessToken);
+            router.push("/docs");
+          }
+          // setEmailCheck(false);
+          // setLoginError(false);
+          // console.log("Login successful, response:", response);
+          // localStorage.setItem("authToken", response.data.token);
+
+          // if (localStorage.getItem("authToken")) {
+          //   router.push("/docs");
+          // }
         })
         .catch((error) => {
           setLoginError(true);
+        })
+        .finally(() => {
+          setIsLoading(false); // Reset loading state after the request is finished
         });
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform any other checks or logic here if needed before calling Login
-    Login(e);
+    Login(e); // Call Login function
   };
 
   return (
@@ -128,6 +140,7 @@ export default function Page() {
                       </label>
                     </div>
                   </div>
+
                   {emailCheck && (
                     <p className="text-red-600 text-xs mb-2">
                       Please provide a valid business email address.
@@ -163,8 +176,9 @@ export default function Page() {
                     <button
                       type="submit"
                       className="w-full py-2 px-3 bg-indigo-600 text-white rounded-md"
+                      disabled={isLoading} // Disable the button when loading
                     >
-                      Login
+                      {isLoading ? "Logging in..." : "Login"}
                     </button>
                   </div>
                 </div>
