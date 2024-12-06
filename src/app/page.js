@@ -548,7 +548,7 @@ export default function Page() {
 
       <Footer />
       <Switcher />
-      <CookieModal />
+      {/* <CookieModal /> */}
     </>
   );
 }

@@ -7,14 +7,11 @@ import { HiOutlineMoon, HiOutlineSun, HiArrowSmUp } from "react-icons/hi";
 
 export default function Switcher() {
   const [scrollToTops, setScrollToTops] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
-  const [isChecked, setIsChecked] = useState(false);
   useEffect(() => {
     function scrollHandler() {
       setScrollToTops(window.scrollY >= 500);
     }
     if (typeof window !== "undefined") {
-      document.documentElement.className = "dark";
       window.addEventListener("scroll", scrollHandler);
     }
     window.scrollTo(0, 0);
@@ -23,9 +20,6 @@ export default function Switcher() {
       window.removeEventListener("scroll", scrollHandler);
     };
   }, []);
-  const handleChange = (event) => {
-    setIsChecked(event.target.checked);
-  };
 
   const scrollToTop = () => {
     scroll.scrollToTop({
@@ -34,14 +28,24 @@ export default function Switcher() {
     });
   };
 
-  function changeMode(mode) {
-    if (mode === "mode") {
-      if (isDarkMode) {
-        document.documentElement.className = "light";
-      } else {
-        document.documentElement.className = "dark";
-      }
-      setIsDarkMode(!isDarkMode);
+  function changeMode(mode, event) {
+    switch (mode) {
+      case "mode":
+        if (document.documentElement.className.includes("dark")) {
+          document.documentElement.className = "light";
+        } else {
+          document.documentElement.className = "dark";
+        }
+        break;
+      case "layout":
+        if (event.target?.innerText === "LTR") {
+          document.documentElement.dir = "ltr";
+        } else {
+          document.documentElement.dir = "rtl";
+        }
+        break;
+      default:
+        break;
     }
   }
   return (
@@ -52,8 +56,6 @@ export default function Switcher() {
             type="checkbox"
             className="checkbox opacity-0 absolute"
             id="chk"
-            checked={isDarkMode}
-            onChange={handleChange}
             onClick={(event) => changeMode("mode", event)}
           />
           <label
