@@ -398,11 +398,13 @@ export default function Page() {
               )}
               <div className="text-center">
                 <span className="text-slate-400 me-2">
-                  Already have an account ?
-                </span>{" "}
+                  Already have an account?
+                </span>
                 <Link
                   href="https://brightbars.dgitra.com/login"
                   className="text-black dark:text-white font-bold inline-block"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Sign in
                 </Link>
