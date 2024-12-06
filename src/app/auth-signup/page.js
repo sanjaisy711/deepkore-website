@@ -270,6 +270,11 @@ export default function Page() {
                       Phone
                     </label>
                   </div>
+                  {isPhoneEmpty && (
+                    <p className="text-red-600 text-xs bg-transparent">
+                      Phone is required
+                    </p>
+                  )}
                 </div>
                 <br />
 
