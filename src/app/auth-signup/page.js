@@ -16,10 +16,62 @@ export default function Page() {
   const [allFieldsCheck, setAllFieldsCheck] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [isChecked, setIsChecked] = useState(false);
-  const [selectedCountryCode, setSelectedCountryCode] = useState("+1"); // Default is USA (+1)
+  const [selectedCountryCode, setSelectedCountryCode] = useState("+1");
   const [country, setCountry] = useState("United States");
 
+  // Error state for all fields
+  const [isNameEmpty, setIsNameEmpty] = useState(false);
+  const [isPhoneEmpty, setIsPhoneEmpty] = useState(false);
+  const [isCompanyNameEmpty, setIsCompanyNameEmpty] = useState(false);
+  const [isEmailEmpty, setIsEmailEmpty] = useState(false);
+
   const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let valid = true;
+
+    // Reset all error states
+    setIsNameEmpty(false);
+    setIsEmailEmpty(false);
+    setIsPhoneEmpty(false);
+    setIsCompanyNameEmpty(false);
+    setEmailCheck(false);
+
+    // Validation for name field
+    if (name.trim() === "") {
+      setIsNameEmpty(true);
+      valid = false;
+    }
+
+    // Validation for email field
+    if (businessEmail.trim() === "") {
+      setIsEmailEmpty(true);
+      valid = false;
+    } else if (!validateEmail(businessEmail)) {
+      setEmailCheck(true);
+      valid = false;
+    }
+
+    // Validation for phone field
+    if (phone.trim() === "") {
+      setIsPhoneEmpty(true);
+      valid = false;
+    }
+
+    // Validation for company name field
+    if (companyName.trim() === "") {
+      setIsCompanyNameEmpty(true);
+      valid = false;
+    }
+
+    if (valid && isChecked) {
+      Signup();
+    } else {
+      // If not valid, show the error messages and prevent submission
+      return;
+    }
+  };
 
   const checkHandler = () => {
     setIsChecked(!isChecked);
@@ -42,25 +94,17 @@ export default function Page() {
     }
 
     const domain = email.split("@")[1];
-
     return !restrictedDomains.includes(domain);
   }
 
-  function Signup(e) {
-    e.preventDefault();
+  function Signup() {
     if (
       isChecked &&
-      name != "" &&
-      businessEmail != "" &&
-      phone != "" &&
-      companyName != ""
+      name !== "" &&
+      businessEmail !== "" &&
+      phone !== "" &&
+      companyName !== ""
     ) {
-      setAllFieldsCheck(true);
-      if (!validateEmail(businessEmail)) {
-        setEmailCheck(true);
-        return; //
-      }
-
       axios
         .post(`${getEnvConfig()}/site/leadsignup`, {
           name: name,
@@ -69,14 +113,10 @@ export default function Page() {
           company_name: companyName,
         })
         .then(function (response) {
-          // handle successy
-          //console.log(response);
           setEmailCheck(false);
           setSuccessMessage(true);
         })
         .catch(function (error) {
-          // handle error
-          // console.log(error.response.data.message);
           if (error.response.data.message == "Email is required") {
             setEmailCheck(true);
           }
@@ -104,11 +144,8 @@ export default function Page() {
                 />
               </Link>
               <h5 className="my-6 text-xl font-semibold">Signup</h5>
-              {/* action="auth-signup-success" */}
               <form className="text-start">
-                {/* <p className="text-red-600 text-xs">
-                  {!allFieldsCheck && "* All fields are required"}
-                </p> */}
+                {/* Name Field */}
                 <div className="grid grid-cols-1">
                   <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
                     <div className="relative bg-inherit">
@@ -117,11 +154,14 @@ export default function Page() {
                         type="text"
                         className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
                         placeholder="Enter Your Name"
-                        required
                         onChange={(e) => {
                           setName(e.target.value);
+                          if (e.target.value.trim() !== "") {
+                            setIsNameEmpty(false);
+                          }
                         }}
                       />
+
                       <label
                         htmlFor="name"
                         className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
@@ -130,70 +170,26 @@ export default function Page() {
                       </label>
                     </div>
                   </div>
-                  <br />
+                  {isNameEmpty && (
+                    <p className="text-red-600 text-xs">Name is required</p>
+                  )}
+                </div>
+                <br />
 
-                  {/* <div className="mb-4">
-                    <label className="font-semibold" htmlFor="name">
-                      Your Name:
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                      placeholder="Harry"
-                      name="name"
-                      required
-                      onChange={(e) => {
-                        setName(e.target.value);
-                      }}
-                    />
-                  </div> */}
-
-                  <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
-                    <div className="relative bg-inherit">
-                      <input
-                        id="business_email"
-                        type="email"
-                        className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
-                        placeholder="Business Email Address"
-                        required
-                        onChange={(e) => {
-                          const emailInput = e.target.value;
-                          setBusinessEmail(emailInput);
-                          if (validateEmail(emailInput)) {
-                            setEmailCheck(false);
-                          } else {
-                            setEmailCheck(true);
-                          }
-                        }}
-                      />
-                      <label
-                        htmlFor="business_email"
-                        className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
-                      >
-                        Business Email Address
-                      </label>
-                    </div>
-                  </div>
-                  <p className="text-red-600 text-xs mb-2">
-                    {emailCheck && "Please Provide a Business Email"}
-                  </p>
-                  <br />
-
-                  {/* <div className="mb-4">
-                    <label className="font-semibold" htmlFor="business_email">
-                      Business Email Address:
-                    </label>
+                {/* Email Field */}
+                <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
+                  <div className="relative bg-inherit">
                     <input
                       id="business_email"
                       type="email"
-                      className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                      placeholder="name@example.com"
-                      name="businessemail"
-                      required
+                      className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
+                      placeholder="Business Email Address"
                       onChange={(e) => {
                         const emailInput = e.target.value;
                         setBusinessEmail(emailInput);
+                        if (emailInput.trim() !== "") {
+                          setIsEmailEmpty(false);
+                        }
                         if (validateEmail(emailInput)) {
                           setEmailCheck(false);
                         } else {
@@ -201,151 +197,159 @@ export default function Page() {
                         }
                       }}
                     />
-                  </div>
-                  <p className="text-red-600 text-xs mb-2">
-                    {emailCheck && "Please Provide a Business Email"}
-                  </p> */}
 
-                  {/* <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
-                    <div className="relative bg-inherit">
-                      <input
-                        id="mobile"
-                        type="number"
-                        className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
-                        placeholder="Phone"
-                        required
-                        onChange={(e) => {
-                          setPhone(e.target.value);
-                        }}
-                      />
-                      <label
-                        htmlFor="mobile"
-                        className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
-                      >
-                        Phone
-                      </label>
-                    </div>
-                  </div> */}
-
-                  <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
-                    <div className="relative bg-inherit">
-                      <input
-                        id="mobile"
-                        type="number"
-                        className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
-                        placeholder="Phone"
-                        required
-                        onChange={(e) => {
-                          setPhone(e.target.value);
-                        }}
-                      />
-                      <label
-                        htmlFor="mobile"
-                        className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
-                      >
-                        Phone
-                      </label>
-                    </div>
-                  </div>
-                  <br />
-
-                  {/* <div className="mb-4">
-                    <label className="font-semibold" htmlFor="mobile">
-                      Phone :
+                    <label
+                      htmlFor="business_email"
+                      className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
+                    >
+                      Business Email Address
                     </label>
+                  </div>
+                  {(emailCheck || isEmailEmpty) && (
+                    <p className="text-red-600 text-xs">
+                      {emailCheck
+                        ? "Please Provide a Business Email is required"
+                        : "Email is required"}
+                    </p>
+                  )}
+                </div>
+                <br />
+
+                {/* Phone Field */}
+                <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
+                  <div className="relative bg-inherit flex">
+                    {/* Country Dropdown */}
+                    <select
+                      value={selectedCountryCode}
+                      onChange={(e) => setSelectedCountryCode(e.target.value)}
+                      className="peer h-10 w-24 rounded-l-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-slate-200 dark:ring-gray-700 dark:focus:border-indigo-600 dark:bg-slate-900"
+                    >
+                      <option value="+1">+1 - United States</option>
+                      <option value="+44">+44 - United Kingdom</option>
+                      <option value="+91">+91 - India</option>
+                      <option value="+61">+61 - Australia</option>
+                      <option value="+81">+81 - Japan</option>
+                      <option value="+33">+33 - France</option>
+                      <option value="+49">+49 - Germany</option>
+                      <option value="+39">+39 - Italy</option>
+                      <option value="+34">+34 - Spain</option>
+                      <option value="+1">+1 - Canada</option>
+                      <option value="+55">+55 - Brazil</option>
+                      <option value="+86">+86 - China</option>
+                      <option value="+7">+7 - Russia</option>
+                      <option value="+27">+27 - South Africa</option>
+                      <option value="+53">+53 - Cuba</option>
+                      <option value="+971">+971 - United Arab Emirates</option>
+                      <option value="+45">+45 - Denmark</option>
+                      <option value="+46">+46 - Sweden</option>
+                      <option value="+31">+31 - Netherlands</option>
+                      <option value="+47">+47 - Norway</option>
+                      <option value="+32">+32 - Belgium</option>
+                      <option value="+352">+352 - Luxembourg</option>
+                      <option value="+34">+34 - Spain</option>
+                      <option value="+20">+20 - Egypt</option>
+                      {/* Add more country codes and names here */}
+                    </select>
+
                     <input
-                      id="mobile"
-                      type="number"
-                      className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                      placeholder="Contact Number"
-                      name="phone"
-                      required
+                      id="phone"
+                      type="text"
+                      className="peer h-10 w-full rounded-r-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
+                      placeholder="Phone Number"
                       onChange={(e) => {
                         setPhone(e.target.value);
+                        if (e.target.value.trim() !== "") {
+                          setIsPhoneEmpty(false);
+                        }
                       }}
                     />
-                  </div> */}
-
-                  <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
-                    <div className="relative bg-inherit">
-                      <input
-                        id="company_name"
-                        type="name"
-                        className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
-                        placeholder="Company Name"
-                        required
-                        onChange={(e) => {
-                          setCompanyName(e.target.value);
-                        }}
-                      />
-                      <label
-                        htmlFor="company_name"
-                        className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
-                      >
-                        Company Name
-                      </label>
-                    </div>
-                  </div>
-                  <br />
-
-                  {/* <div className="mb-4">
-                    <label className="font-semibold" htmlFor="company_name">
-                      Company Name :
+                    <label
+                      htmlFor="phone"
+                      className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
+                    >
+                      Phone
                     </label>
-                    <input
-                      id="company_name"
-                      type="name"
-                      className="form-input mt-3 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-200 focus:border-indigo-600 dark:border-gray-800 dark:focus:border-indigo-600 focus:ring-0"
-                      placeholder="Company Name"
-                      name="companyname"
-                      required
-                      onChange={(e) => {
-                        setCompanyName(e.target.value);
-                      }}
-                    />
-                  </div> */}
-                  <div className="mb-4">
-                    <div className="flex items-center w-full mb-0">
-                      <input
-                        className="form-checkbox rounded border-gray-200 dark:border-gray-800 text-indigo-600 focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50 me-2"
-                        type="checkbox"
-                        value=""
-                        id="AcceptT&C"
-                        checked={isChecked}
-                        onChange={checkHandler}
-                        required
-                      />
-                      <label
-                        className="form-check-label text-slate-400"
-                        htmlFor="AcceptT&C"
-                      >
-                        I Accept{" "}
-                        <Link href="/page-terms" className="text-indigo-600">
-                          Terms And Condition
-                        </Link>
-                      </label>
-                    </div>
-                    <p className="text-red-600 text-xs">
-                      {!isChecked && "Please accept our terms and Conditions"}
-                    </p>
                   </div>
                 </div>
+                <br />
+
+                {/* Company Name Field */}
+                <div className="mb-4p-6 bg-white dark:bg-slate-900 shadow-md dark:shadow-gray-800">
+                  <div className="relative bg-inherit">
+                    <input
+                      id="company_name"
+                      type="text"
+                      className="peer h-10 w-full rounded-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 placeholder-transparent ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-gray-200 dark:ring-gray-700 dark:focus:border-indigo-600"
+                      placeholder="Company Name"
+                      onChange={(e) => {
+                        setCompanyName(e.target.value);
+                        if (e.target.value.trim() !== "") {
+                          setIsCompanyNameEmpty(false);
+                        }
+                      }}
+                    />
+
+                    <label
+                      htmlFor="company_name"
+                      className="absolute left-2 -top-3 text-sm text-gray-500 bg-inherit px-1 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3 peer-focus:text-border-indigo-600 peer-focus:text-sm dark:text-gray-400 dark:peer-focus:border-indigo-600"
+                    >
+                      Company Name
+                    </label>
+                  </div>
+                  {isCompanyNameEmpty && (
+                    <p className="text-red-600 text-xs bg-transparent">
+                      Company name is required
+                    </p>
+                  )}
+                </div>
+                <br />
+                <div className="mb-4">
+                  <div className="flex items-center w-full mb-0">
+                    <input
+                      className="form-checkbox rounded border-gray-200 dark:border-gray-800 text-indigo-600 focus:border-indigo-300 focus:ring focus:ring-offset-0 focus:ring-indigo-200 focus:ring-opacity-50 me-2"
+                      type="checkbox"
+                      value=""
+                      id="AcceptT&C"
+                      checked={isChecked}
+                      onChange={checkHandler}
+                      required
+                    />
+                    <label
+                      className="form-check-label text-slate-400"
+                      htmlFor="AcceptT&C"
+                    >
+                      I Accept{" "}
+                      <Link href="/page-terms" className="text-indigo-600">
+                        Terms And Condition
+                      </Link>
+                    </label>
+                  </div>
+                  <p className="text-red-600 text-xs">
+                    {!isChecked && "Please accept our terms and Conditions"}
+                  </p>
+                </div>
+
+                {/* <div className="flex items-center justify-between mt-6">
+                  <button
+                    type="submit"
+                    className="w-full bg-blue-600 text-white py-2 rounded"
+                    onClick={handleSubmit}
+                  >
+                    Sign Up
+                  </button>
+                </div> */}
               </form>
               <div className="mb-4">
                 <input
                   type="submit"
                   name="send"
-                  onClick={(e) => {
-                    Signup(e);
-                  }}
+                  onClick={handleSubmit}
                   className="py-2 px-5 cursor-pointer inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md w-full"
                   value="Register"
                 />
               </div>
               {successMessage && (
                 <div className="grid grid-cols-1 gap-[30px]">
-                  {/* <div className="shadow dark:shadow-slate-800 rounded bg-white dark:bg-slate-900"> */}
-                  {/* <div className="p-5 border-t border-gray-100 dark:border-slate-800"> */}
                   <div
                     className={`bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40 flex items-center justify-center ${
                       successMessage ? "" : "hidden"
@@ -359,7 +363,6 @@ export default function Page() {
                             e.preventDefault();
                             setSuccessMessage(!successMessage);
                             router.push("/");
-                            // setEmail("");
                           }}
                           className="absolute -top-4 -end-4 text-indigo-600 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 hover:text-gray-900 rounded-full text-sm p-1.5 ms-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
                         >
@@ -377,12 +380,7 @@ export default function Page() {
                           </svg>
                         </button>
                         <div className="p-6 py-10 text-center">
-                          <div className="relative overflow-hidden text-transparent -m-3 text-indigo-600">
-                            {/* <Icon.Hexagon className="size-32 fill-red-600/5 mx-auto"></Icon.Hexagon> */}
-                            {/* <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-red-600 rounded-xl duration-500 text-4xl flex align-middle justify-center items-center"> */}
-                            {/* <BsHeartbreak /> */}
-                            {/* </div> */}
-                          </div>
+                          <div className="relative overflow-hidden text-transparent -m-3 text-indigo-600"></div>
 
                           <h4 className="text-xl text-indigo-600 font-semibold mt-6">
                             Thank you for registering!
@@ -390,8 +388,6 @@ export default function Page() {
                         </div>
                       </div>
                     </div>
-                    {/* </div> */}
-                    {/* </div> */}
                   </div>
                 </div>
               )}
