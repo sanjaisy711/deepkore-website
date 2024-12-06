@@ -221,7 +221,7 @@ export default function Page() {
 
                 <div className="absolute xl:top-20 top-40 xl:-end-20 lg:-end-10 -end-1 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
                   <h5 className="text-xl font-semibold mb-3">
-                    Ideas to Innovation
+                    Ideas to Application
                   </h5>
                   <div className="flex justify-between mt-3 mb-2">
                     <span className="text-slate-400">Work in progress</span>
