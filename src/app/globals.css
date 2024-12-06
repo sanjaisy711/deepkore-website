@@ -30,26 +30,6 @@ html.light {
   --tw-bg-opacity: 1;
   background-color: #f9fafb; /* Light Background Color */
 }
-.custom-dropdown {
-  background-color: transparent !important; /* Forces transparency */
-  -webkit-appearance: none; /* Removes default dropdown styling in webkit browsers */
-  -moz-appearance: none; /* Removes default dropdown styling in Firefox */
-  appearance: none; /* Removes default dropdown styling in modern browsers */
-}
-
-/* For styling the dropdown arrow in light/dark mode */
-.custom-dropdown::-ms-expand {
-  display: none; /* Hides the dropdown arrow in IE/Edge */
-}
-
-/* Styling the selected option and background */
-.custom-dropdown option {
-  background-color: white; /* Default background for light mode */
-  color: black; /* Default text color for light mode */
-}
-
-/* Dark Mode */
-.dark .custom-dropdown option {
-  background-color: #2d2d2d; /* Dark background for dark mode */
-  color: white; /* White text for dark mode */
+select {
+  font-family: "Noto Color Emoji", sans-serif;
 }
