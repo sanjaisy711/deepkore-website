@@ -222,7 +222,7 @@ export default function Page() {
                     <select
                       value={selectedCountryCode}
                       onChange={(e) => setSelectedCountryCode(e.target.value)}
-                      className="peer h-10 w-24 rounded-l-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-slate-200 dark:ring-gray-700 dark:focus:border-indigo-600 dark:bg-slate-900"
+                      className="peer h-10 w-20 rounded-l-lg border border-gray-300 bg-transparent px-2 text-sm text-gray-900 ring-2 ring-gray-500 focus:border-indigo-600 focus:outline-none dark:border-gray-600 dark:text-slate-200 dark:ring-gray-700 dark:focus:border-indigo-600 dark:bg-slate-900"
                     >
                       <option value="+1">+1 - United States</option>
                       <option value="+44">+44 - United Kingdom</option>
