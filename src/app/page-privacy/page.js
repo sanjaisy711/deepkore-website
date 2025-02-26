@@ -59,7 +59,7 @@ export default function Page() {
             <div className="md:w-3/4">
               <div className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
                 <h5 className="text-xl font-semibold mb-4">Privacy Policy</h5>
-                <p className="text-slate-400">Last updated: [22/10/2024]</p>
+                <p className="text-slate-400">Last updated: [26/02/2025]</p>
 
                 <h5 className="text-xl font-semibold mb-4 mt-8">
                   Introduction:
