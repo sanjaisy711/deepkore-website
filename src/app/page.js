@@ -467,7 +467,7 @@ export default function Page() {
               data-wow-delay=".5s"
             >
               <Image
-                src="/images/saas/classic05.PNG"
+                src="/images/saas/classic05.png"
                 width={0}
                 height={0}
                 sizes="100vw"
