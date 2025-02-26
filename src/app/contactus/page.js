@@ -6,6 +6,8 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import countryCodes from "country-codes-list";
 import getEnvConfig from "../componets/getenv";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 import Navbar from "../componets/Navbar/navbar";
 import Footer from "../componets/Footer/footer";
@@ -139,7 +141,7 @@ export default function Page() {
         <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
           <ul className="tracking-[0.5px] mb-0 inline-flex space-x-1">
             <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white">
-              <Link href="/">Worksbyte</Link>
+              <Link href="/">Deepkore</Link>
             </li>
             <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180">
               <MdKeyboardArrowRight className="text-xl" />
@@ -192,6 +194,15 @@ export default function Page() {
                         className="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
                       >
                         {item.contact}
+                      </a>
+                    </div>
+                    <div className="mt-5">
+                      <a
+                        href="https://www.google.com/maps?ll=13.078316,80.26046&z=13&t=m&hl=en-GB&gl=US&mapclient=embed&q=Chennai+Tamil+Nadu"
+                        target="_blank"
+                        className="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
+                      >
+                        {item.contact1}
                       </a>
                     </div>
                   </div>

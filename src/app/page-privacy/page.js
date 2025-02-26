@@ -23,7 +23,7 @@ export default function Page() {
         <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
           <ul className="tracking-[0.5px] mb-0 inline-flex space-x-1">
             <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600">
-              <Link href="/i">Worksbyte</Link>
+              <Link href="/i">Deepkore</Link>
             </li>
             <li className="inline-block text-base mx-0.5 ltr:rotate-0 rtl:rotate-180">
               <MdKeyboardArrowRight className="text-xl" />
@@ -65,10 +65,10 @@ export default function Page() {
                   Introduction:
                 </h5>
                 <p className="text-slate-400">
-                  At Worksbyte Technologies, your privacy is important to us.
+                  At Deepkore Technologies, your privacy is important to us.
                   This Privacy Policy explains how we collect, use, disclose,
                   and safeguard your information when you visit our website
-                  www.worksbyte.com, use our services, or engage with us. Please
+                  www.deepkore.com, use our services, or engage with us. Please
                   read this policy carefully to understand our views and
                   practices regarding your personal data and how we will treat
                   it.
@@ -237,7 +237,7 @@ export default function Page() {
                     href="mailto:muru@dgiverse.com,kris@dgiverse.com"
                     className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
                   >
-                    contact@worksbyte.com
+                    contact@deepkore.com
                   </a>{" "}
                 </p>
 
@@ -271,7 +271,7 @@ export default function Page() {
                     href="mailto:muru@dgiverse.com,kris@dgiverse.com"
                     className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
                   >
-                    contact@worksbyte.com
+                    contact@deepkore.com
                   </a>{" "}
                 </p>
 

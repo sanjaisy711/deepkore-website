@@ -34,7 +34,7 @@ export default function Page() {
             </h3>
 
             <p className="text-slate-300 text-lg max-w-xl mx-auto">
-              Transform your business and boost productivity with WorksByte.
+              Transform your business and boost productivity with Deepkore.
               Effortlessly build Enterprise apps that keep pace with your
               business's rapid growth—all without writing a single line of code.
             </p>
@@ -44,7 +44,7 @@ export default function Page() {
         <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
           <ul className=" tracking-[0.5px]  mb-0 inline-flex mx-auto space-x-1">
             <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white">
-              <Link href="/">Worksbyte</Link>
+              <Link href="/">Deepkore</Link>
             </li>
             <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180">
               <MdKeyboardArrowRight className="text-xl" />
@@ -127,7 +127,7 @@ export default function Page() {
                 </h3>
 
                 <p className="text-slate-400 max-w-xl">
-                  Worksbyte lets you transform ideas into powerful Enterprise
+                  Deepkore lets you transform ideas into powerful Enterprise
                   applications that adapt to your business needs. One platform.
                   No coding. Completely hassle-free.
                 </p>

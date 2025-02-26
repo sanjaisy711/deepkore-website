@@ -9,7 +9,6 @@ import { useRouter } from "next/navigation";
 const Navbar = dynamic(() => import("./componets/Navbar/navbar"));
 const Footer = dynamic(() => import("./componets/Footer/footer"));
 const Switcher = dynamic(() => import("./componets/switcher"));
-const CookieModal = dynamic(() => import("./componets/cookieModal"));
 const CompanyLogo = dynamic(() => import("./componets/companyLogo"));
 const GetInTuct = dynamic(() => import("./componets/getInTuch"));
 import SaasCounter from "./componets/counter/saasCounter";
@@ -96,7 +95,7 @@ export default function Page() {
                   Faster
                 </h4>
                 <p className="font-bold text-slate-400 text-lg max-w-xl">
-                  Worksbyte lets you transform ideas into powerful Enterprise
+                  Deepkore lets you transform ideas into powerful Enterprise
                   applications that adapt to your business needs.
                 </p>
                 <div className="subcribe-form mt-6 mb-3">
@@ -219,7 +218,7 @@ export default function Page() {
                   </span>
                 </div>
 
-                <div className="absolute xl:top-20 top-40 xl:-end-20 lg:-end-10 -end-1 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
+                <div className="absolute xl:top-10 top-60 xl:-end-20 lg:-end-10 -end-1 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-60 m-3">
                   <h5 className="text-xl font-semibold mb-3">
                     Ideas to Application
                   </h5>
@@ -249,7 +248,7 @@ export default function Page() {
                 width={66}
                 height={66}
                 className="block mx-auto"
-                alt="worksbyte logo"
+                alt="deepkore logo"
               />
             </div>
             <h1 className="mb-6 mt-8 md:text-4xl text-3xl md:leading-normal leading-normal font-bold">
@@ -260,7 +259,7 @@ export default function Page() {
             </h1>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-              Transform your business and boost productivity with WorksByte.
+              Transform your business and boost productivity with Deepkore.
               Effortlessly build Enterprise apps that keep pace with your
               business's rapid growth—all without writing a single line of code.
             </p>
@@ -281,11 +280,11 @@ export default function Page() {
             data-wow-delay=".1s"
           >
             <h2 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
-              Why Everyone Loves worksbyte
+              Why Everyone Loves deepkore
             </h2>
 
             <p className="text-slate-400 max-w-xl mx-auto">
-              WorksByte simplifies application development for business users,
+              Deepkore simplifies application development for business users,
               enabling them to innovate and collaborate effortlessly. Its
               intuitive platform, affordability, and rapid deployment redefine
               how businesses operate and adapt to changing needs.

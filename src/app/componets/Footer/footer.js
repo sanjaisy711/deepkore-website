@@ -116,14 +116,14 @@ export default function Footer() {
                       />
                     </Link>
                     <p className="mt-6 text-gray-300">
-                      Worksbyte lets you transform ideas into powerful
-                      Enterprise applications that adapt to your business needs.
-                      One platform. No coding. Completely hassle-free.
+                      Deepkore lets you transform ideas into powerful Enterprise
+                      applications that adapt to your business needs. One
+                      platform. No coding. Completely hassle-free.
                     </p>
                     <ul className="list-none mt-5 space-x-1 space-y-1">
                       <li className="inline">
                         <Link
-                          href="https://www.linkedin.com/company/worksbyte"
+                          href="https://www.linkedin.com/company/deepkore"
                           target="_blank"
                           className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
@@ -168,7 +168,7 @@ export default function Footer() {
                       </li>
                       <li className="inline">
                         <Link
-                          href="mailto:contact@worksbyte"
+                          href="mailto:contact@deepkore"
                           className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
                           <FaRegEnvelope className=" text-sm" />
@@ -331,7 +331,8 @@ export default function Footer() {
             <div className="grid md:grid-cols-2 items-center">
               <div className="md:text-start text-center">
                 <p className="mb-0">
-                  © 2024 Worksbyte Technologies. All rights reserved.{" "}
+                  © {new Date().getFullYear()} Deepkore Technologies. All rights
+                  reserved.{" "}
                 </p>
               </div>
             </div>

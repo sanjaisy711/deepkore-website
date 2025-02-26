@@ -23,7 +23,7 @@ export default function Page() {
         <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
           <ul className="tracking-[0.5px] mb-0 inline-flex space-x-1">
             <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600">
-              <Link href="/i">worksbyte</Link>
+              <Link href="/i">deepkore</Link>
             </li>
             <li className="inline-block text-base mx-0.5 ltr:rotate-0 rtl:rotate-180">
               <MdKeyboardArrowRight className="text-xl" />
@@ -64,7 +64,7 @@ export default function Page() {
                 </h5>
                 <p className="text-slate-400">Last Updated: 22/10/2024</p>
                 <p className="text-slate-400">
-                  Welcome to Worksbyte Technologies. These Terms of Service
+                  Welcome to Deepkore Technologies. These Terms of Service
                   (“Terms”) govern your access to and use of our website,
                   services, and platform (collectively, the “Services”). By
                   accessing or using the Services, you agree to be bound by
@@ -260,7 +260,7 @@ export default function Page() {
                     href="mailto:muru@dgiverse.com,kris@dgiverse.com"
                     className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
                   >
-                    contact@worksbyte
+                    contact@deepkore
                   </a>
                   . Please note that any fees paid are non-refundable upon
                   termination.
@@ -298,7 +298,7 @@ export default function Page() {
                   11. Limitation of Liability
                 </h5>
                 <p className="text-slate-400">
-                  To the fullest extent permitted by law, Worksbyte Technologies
+                  To the fullest extent permitted by law, Deepkore Technologies
                   and its affiliates, officers, directors, employees, and agents
                   will not be liable for any direct, indirect, incidental,
                   special, consequential, or punitive damages arising out of or
@@ -316,7 +316,7 @@ export default function Page() {
                   12. Indemnification
                 </h5>
                 <p className="text-slate-400">
-                  You agree to indemnify, defend, and hold harmless Worksbyte
+                  You agree to indemnify, defend, and hold harmless Deepkore
                   Technologies, its affiliates, and their respective officers,
                   directors, employees, and agents from and against any claims,
                   liabilities, damages, losses, and expenses, including
@@ -362,7 +362,7 @@ export default function Page() {
                     href="mailto:muru@dgiverse.com,kris@dgiverse.com"
                     className="relative inline-flex items-center font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-indigo-600 hover:text-indigo-600 after:bg-indigo-600 duration-500"
                   >
-                    contact@worksbyte.com
+                    contact@deepkore.com
                   </a>
                 </p>
 

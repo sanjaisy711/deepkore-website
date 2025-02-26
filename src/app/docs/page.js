@@ -105,7 +105,7 @@ const App = () => {
         <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
           <ul className="tracking-[0.5px] mb-0 inline-flex space-x-1">
             <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out hover:text-indigo-600">
-              <Link href="/">worksbyte</Link>
+              <Link href="/">deepkore</Link>
             </li>
             <li className="inline-block text-base mx-0.5 ltr:rotate-0 rtl:rotate-180">
               <MdKeyboardArrowRight className="text-xl" />
@@ -162,9 +162,9 @@ const App = () => {
                 <section id="introduction" className="py-16">
                   <h4 className="text-3xl font-semibold mb-4">Introduction</h4>
                   <p className="text-slate-400 text-base leading-8">
-                    <strong>Worksbyte</strong> simplifies application
-                    development for business users, enabling them to innovate
-                    and collaborate effortlessly.
+                    <strong>Deepkore</strong> simplifies application development
+                    for business users, enabling them to innovate and
+                    collaborate effortlessly.
                   </p>
                   <p className="text-slate-400 text-base leading-8 font-semibold mt-2">
                     Its intuitive platform, affordability, and rapid deployment

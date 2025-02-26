@@ -48,7 +48,7 @@ export const aboutServices = [
 export const accordionData = [
   {
     id: 1,
-    title: "What is a Worksbyte platform?",
+    title: "What is a Deepkore platform?",
     content:
       " An LCNC platform enables users to build applications without extensive coding knowledge. It provides visual interfaces, drag-and-drop features, and pre-built components, allowing both technical and non-technical users to create and customize apps quickly and efficiently.",
   },
@@ -60,9 +60,9 @@ export const accordionData = [
   },
   {
     id: 3,
-    title: "How does Worksbyte improve business productivity?",
+    title: "How does Deepkore improve business productivity?",
     content:
-      "Worksbyte platforms speed up application development by reducing the time and complexity involved in coding. This allows businesses to launch solutions faster, automate routine tasks, and respond quickly to changes, thereby improving overall productivity.",
+      "Deepkore platforms speed up application development by reducing the time and complexity involved in coding. This allows businesses to launch solutions faster, automate routine tasks, and respond quickly to changes, thereby improving overall productivity.",
   },
   {
     id: 4,
@@ -593,14 +593,14 @@ export const furnitureService = [
 export const insuranceServices = [
   {
     feedback:
-      '" worksbyte made the processes so easy. worksbyte instantly increased the amount of interest and ultimately saved us over $10,000. " ',
+      '" deepkore made the processes so easy. deepkore instantly increased the amount of interest and ultimately saved us over $10,000. " ',
     name: "Christa Smith",
     role: "Manager",
     image: "/images/client/01.jpg",
   },
   {
     feedback:
-      '" I highly recommend worksbyte as the new way to sell your home "by owner". My home sold in 24 hours for the asking price. Best $400 you could spend to sell your home. "',
+      '" I highly recommend deepkore as the new way to sell your home "by owner". My home sold in 24 hours for the asking price. Best $400 you could spend to sell your home. "',
     name: "Christa Smith",
     role: "Manager",
     image: "/images/client/02.jpg",
@@ -620,14 +620,14 @@ export const insuranceServices = [
   },
   {
     feedback:
-      '" worksbyte made selling my home easy and stress free. They went above and beyond what is expected. "',
+      '" deepkore made selling my home easy and stress free. They went above and beyond what is expected. "',
     name: "Christa Smith",
     role: "Manager",
     image: "/images/client/05.jpg",
   },
   {
     feedback:
-      '" worksbyte is fair priced, quick to respond, and easy to use. I highly recommend their services! "',
+      '" deepkore is fair priced, quick to respond, and easy to use. I highly recommend their services! "',
     name: "Christa Smith",
     role: "Manager",
     image: "/images/client/06.jpg",
@@ -921,14 +921,14 @@ export const portfolioImageTwo = [
 export const realEstateServices = [
   {
     description:
-      '" worksbyte made the processes so easy. worksbyte instantly increased the amount of interest and ultimately saved us over $10,000. "',
+      '" deepkore made the processes so easy. deepkore instantly increased the amount of interest and ultimately saved us over $10,000. "',
     image: "/images/client/01.jpg",
     name: "Christa Smith",
     role: "Manager",
   },
   {
     description:
-      '" I highly recommend worksbyte as the new way to sell your home "by owner". My home sold in 24 hours for the asking price. Best $400 you could spend to sell your home. "',
+      '" I highly recommend deepkore as the new way to sell your home "by owner". My home sold in 24 hours for the asking price. Best $400 you could spend to sell your home. "',
     image: "/images/client/02.jpg",
     name: "Christa Smith",
     role: "Manager",
@@ -948,14 +948,14 @@ export const realEstateServices = [
   },
   {
     description:
-      '" worksbyte made selling my home easy and stress free. They went above and beyond what is expected. "',
+      '" deepkore made selling my home easy and stress free. They went above and beyond what is expected. "',
     image: "/images/client/05.jpg",
     name: "Christa Smith",
     role: "Manager",
   },
   {
     description:
-      '" worksbyte is fair priced, quick to respond, and easy to use. I highly recommend their services! "',
+      '" deepkore is fair priced, quick to respond, and easy to use. I highly recommend their services! "',
     image: "/images/client/06.jpg",
     name: "Christa Smith",
     role: "Manager",
@@ -984,12 +984,12 @@ export const foodImage = [
 export const studioPortfolio = [
   {
     image: "/images/studio/work1.jpg",
-    title: "worksbyte Personal Portfolio",
+    title: "deepkore Personal Portfolio",
     name: "Creative",
   },
   {
     image: "/images/studio/work2.jpg",
-    title: "worksbyte Minimal Portfolio",
+    title: "deepkore Minimal Portfolio",
     name: "Minimal",
   },
   {
@@ -999,17 +999,17 @@ export const studioPortfolio = [
   },
   {
     image: "/images/studio/work4.jpg",
-    title: "worksbyte Portfolio",
+    title: "deepkore Portfolio",
     name: "Portfolio",
   },
   {
     image: "/images/studio/work5.jpg",
-    title: "worksbyte Constuction",
+    title: "deepkore Constuction",
     name: "Corporate",
   },
   {
     image: "/images/studio/work6.jpg",
-    title: "worksbyte SEO",
+    title: "deepkore SEO",
     name: "SEO",
   },
   {
@@ -1129,13 +1129,13 @@ export const clientsData = [
     image: "/images/client/02.jpg",
     name: "Barbara McIntosh",
     role: "Student",
-    desc: "There are so many things I had to do with my old software that I just Do not do at all with worksbyte. Suspicious but I can not say I Do not love it.",
+    desc: "There are so many things I had to do with my old software that I just Do not do at all with deepkore. Suspicious but I can not say I Do not love it.",
   },
   {
     image: "/images/client/03.jpg",
     name: "Carl Oliver",
     role: "Student",
-    desc: "The best part about worksbyte is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.",
+    desc: "The best part about deepkore is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.",
   },
   {
     image: "/images/client/04.jpg",
@@ -1147,7 +1147,7 @@ export const clientsData = [
     image: "/images/client/05.jpg",
     name: "Barbara McIntosh",
     role: "Student",
-    desc: "I used to have to remit tax to the EU and with worksbyte I somehow Do not have to do that anymore. Nervous to travel there now though.",
+    desc: "I used to have to remit tax to the EU and with deepkore I somehow Do not have to do that anymore. Nervous to travel there now though.",
   },
   {
     image: "/images/client/06.jpg",
@@ -1165,13 +1165,13 @@ export const clientsData = [
     image: "/images/client/02.jpg",
     name: "Barbara McIntosh",
     role: "Student",
-    desc: "There are so many things I had to do with my old software that I just Do not do at all with worksbyte. Suspicious but I can not say I Do not love it.",
+    desc: "There are so many things I had to do with my old software that I just Do not do at all with deepkore. Suspicious but I can not say I Do not love it.",
   },
   {
     image: "/images/client/03.jpg",
     name: "Carl Oliver",
     role: "Student",
-    desc: "The best part about worksbyte is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.",
+    desc: "The best part about deepkore is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.",
   },
   {
     image: "/images/client/04.jpg",
@@ -1183,7 +1183,7 @@ export const clientsData = [
     image: "/images/client/05.jpg",
     name: "Barbara McIntosh",
     role: "Student",
-    desc: "I used to have to remit tax to the EU and with worksbyte I somehow Do not have to do that anymore. Nervous to travel there now though.",
+    desc: "I used to have to remit tax to the EU and with deepkore I somehow Do not have to do that anymore. Nervous to travel there now though.",
   },
   {
     image: "/images/client/06.jpg",
@@ -1201,13 +1201,13 @@ export const clientsData = [
     image: "/images/client/03.jpg",
     name: "Barbara McIntosh",
     role: "Student",
-    desc: "There are so many things I had to do with my old software that I just Do not do at all with worksbyte. Suspicious but I can not say I Do not love it.",
+    desc: "There are so many things I had to do with my old software that I just Do not do at all with deepkore. Suspicious but I can not say I Do not love it.",
   },
   {
     image: "/images/client/04.jpg",
     name: "Carl Oliver",
     role: "Student",
-    desc: "The best part about worksbyte is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.",
+    desc: "The best part about deepkore is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.",
   },
 ];
 export const courseData = [
@@ -1285,13 +1285,13 @@ export const contactData = [
     icon: FaRegEnvelope,
     title: "Email",
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
-    contact: "contact@worksbyte.com",
+    contact: "contact@deepkore.com",
   },
   {
     icon: RiMapPinLine,
     title: "Location",
     desc: "The phrasal sequence of the is now so that many campaign and benefit",
-    contact: "View on Google map",
+    contact1: "View on Google map",
   },
 ];
 export const courseDetail = [

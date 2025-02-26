@@ -76,41 +76,41 @@ export default function Navbar(props) {
               <Image
                 src="/images/dark-logo.svg"
                 className="l-dark"
-                width={168}
+                width={150}
                 height={34}
-                alt="worksbyte logo dark"
+                alt="deepkore logo dark"
               />
               <Image
                 src="/images/light-logo.svg"
                 className="l-light"
-                width={168}
+                width={150}
                 height={34}
-                alt="worksbyte logo light"
+                alt="deepkore logo light"
               />
             </span>
             <Image
               src="/images/light-logo.svg"
-              width={168}
+              width={150}
               height={34}
               className="hidden dark:inline-block"
-              alt="worksbyte"
+              alt="deepkore"
             />
           </Link>
         ) : (
           <Link className="logo" href="/">
             <Image
               src="/images/dark-logo.svg"
-              width={168}
+              width={150}
               height={34}
               className="inline-block dark:hidden"
-              alt=" worksbyte logo dark"
+              alt=" deepkore logo dark"
             />
             <Image
               src="/images/light-logo.svg"
-              width={168}
+              width={150}
               height={34}
               className="hidden dark:inline-block"
-              alt=" worksbyte logo light"
+              alt=" deepkore logo light"
             />
           </Link>
         )}

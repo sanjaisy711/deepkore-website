@@ -38,7 +38,7 @@ export default function Page() {
         <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
           <ul className=" tracking-[0.5px]  mb-0 inline-flex mx-auto space-x-1">
             <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white">
-              <Link href="/">Worksbyte</Link>
+              <Link href="/">Deepkore</Link>
             </li>
             <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180">
               <MdKeyboardArrowRight className="text-xl" />
@@ -136,7 +136,7 @@ export default function Page() {
               data-wow-delay=".5s"
             >
               <h2 className="mb-4 text-2xl leading-normal font-medium">
-                The worksbyte Advantage
+                The deepkore Advantage
               </h2>
               <ul className="list-none text-slate-400 mt-4">
                 <li className="mb-1 flex items-center">

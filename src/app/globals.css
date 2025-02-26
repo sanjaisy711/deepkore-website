@@ -15,6 +15,11 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+@media (min-width: 768px) {
+  select {
+    width: auto; /* or a fixed width that works better for desktop */
+  }
+}
 /* For Tailwind's dark mode to work globally */
 html {
   --tw-bg-opacity: 1;
@@ -32,4 +37,18 @@ html.light {
 }
 select {
   font-family: "Noto Color Emoji", sans-serif;
+}
+select,
+option {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "NotoColorEmoji", "Emoji",
+    sans-serif;
+}
+select,
+option {
+  color: #333; /* or any dark color to make the flags visible */
+}
+select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
