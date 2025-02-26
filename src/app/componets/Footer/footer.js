@@ -168,7 +168,7 @@ export default function Footer() {
                       </li>
                       <li className="inline">
                         <Link
-                          href="mailto:contact@deepkore"
+                          href="mailto:muru@dgiverse.com,kris@dgiverse.com"
                           className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
                           <FaRegEnvelope className=" text-sm" />
