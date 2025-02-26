@@ -357,6 +357,9 @@ export default function Page() {
             >
               <div className="grid mt-8">
                 <div className="relative overflow-hidden rounded-lg shadow-md dark:shadow-gray-800">
+                  {/* <video autoPlay muted loop>
+                    <source src="/images/classic04.mp4" type="video/mp4" />
+                  </video> */}
                   <img src="/images/classic04.gif" alt="loading..." />
                 </div>
               </div>

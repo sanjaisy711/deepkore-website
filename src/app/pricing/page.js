@@ -132,7 +132,7 @@ export default function Page() {
               Choose Pricing Plan
             </h3>
             <p className="text-slate-400 max-w-xl mx-auto">
-              Start working with Workbytes that can provide everything you need
+              Start working with Deepkore that can provide everything you need
               to generate awareness, drive traffic, connect.
             </p>
           </div>

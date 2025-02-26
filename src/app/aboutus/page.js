@@ -123,7 +123,7 @@ export default function Page() {
               <div className="lg:ms-5">
                 <Counter />
                 <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
-                  Meet Workbytes changing the world
+                  Meet Deepkore changing the world
                 </h3>
 
                 <p className="text-slate-400 max-w-xl">

@@ -136,7 +136,7 @@ export default function Page() {
               data-wow-delay=".5s"
             >
               <h2 className="mb-4 text-2xl leading-normal font-medium">
-                The deepkore Advantage
+                The Deepkore Advantage
               </h2>
               <ul className="list-none text-slate-400 mt-4">
                 <li className="mb-1 flex items-center">

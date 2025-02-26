@@ -5,7 +5,6 @@ import Image from "next/image";
 import Navbar from "../componets/Navbar/navbar";
 import Footer from "../componets/Footer/footer";
 import Switcher from "../componets/switcher";
-import CookieModal from "../componets/cookieModal";
 
 import { blogData } from "../Data/data";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -143,7 +142,6 @@ export default function Page() {
 
       <Footer />
       <Switcher />
-      <CookieModal />
     </>
   );
 }
