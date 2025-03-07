@@ -76,22 +76,22 @@ export default function Navbar(props) {
               <Image
                 src="/images/dark-logo.svg"
                 className="l-dark"
-                width={150}
-                height={34}
+                width={170}
+                height={40}
                 alt="deepkore logo dark"
               />
               <Image
                 src="/images/light-logo.svg"
                 className="l-light"
-                width={150}
-                height={34}
+                width={170}
+                height={40}
                 alt="deepkore logo light"
               />
             </span>
             <Image
               src="/images/light-logo.svg"
-              width={150}
-              height={34}
+              width={170}
+              height={40}
               className="hidden dark:inline-block"
               alt="deepkore"
             />
@@ -100,15 +100,15 @@ export default function Navbar(props) {
           <Link className="logo" href="/">
             <Image
               src="/images/dark-logo.svg"
-              width={150}
+              width={170}
               height={34}
               className="inline-block dark:hidden"
               alt=" deepkore logo dark"
             />
             <Image
               src="/images/light-logo.svg"
-              width={150}
-              height={34}
+              width={170}
+              height={40}
               className="hidden dark:inline-block"
               alt=" deepkore logo light"
             />
@@ -145,9 +145,9 @@ export default function Navbar(props) {
               <Link href="pricing">Pricing</Link>
             </li>
 
-            <li className={manu === "/blog" || "" ? "active" : ""}>
+            {/* <li className={manu === "/blog" || "" ? "active" : ""}>
               <Link href="blog">Blog</Link>
-            </li>
+            </li> */}
 
             <li className={manu === "/aboutus" || "" ? "active" : ""}>
               <Link href="aboutus">About Us</Link>
