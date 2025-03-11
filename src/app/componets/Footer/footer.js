@@ -123,7 +123,7 @@ export default function Footer() {
                     <ul className="list-none mt-5 space-x-1 space-y-1">
                       <li className="inline">
                         <Link
-                          href="https://www.linkedin.com/company/deepkore"
+                          href="https://www.linkedin.com/company/deepkore-technologies"
                           target="_blank"
                           className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
@@ -150,7 +150,7 @@ export default function Footer() {
                       </li>
                       <li className="inline">
                         <Link
-                          href="#"
+                          href="/"
                           target="_blank"
                           className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
@@ -159,7 +159,7 @@ export default function Footer() {
                       </li>
                       <li className="inline">
                         <Link
-                          href="#"
+                          href="/"
                           target="_blank"
                           className="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 rounded-md hover:border-indigo-600 dark:hover:border-indigo-600 hover:bg-indigo-600 dark:hover:bg-indigo-600"
                         >
