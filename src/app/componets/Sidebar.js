@@ -1,172 +1,52 @@
 import React, { useState } from "react";
+import {
+  FaProjectDiagram,
+  FaUsers,
+  FaIndustry,
+  FaBriefcase,
+  FaChartBar,
+} from "react-icons/fa";
+
+const menuItems = [
+  { label: "BY USE-CASES", key: "byusecase", icon: <FaProjectDiagram /> },
+  { label: "BY ROLES", key: "byroles", icon: <FaUsers /> },
+  { label: "BY SIZE", key: "bysize", icon: <FaBriefcase /> },
+  { label: "BY INDUSTRY", key: "byindustry", icon: <FaIndustry /> },
+  { label: "BY FUNCTION", key: "byfunction", icon: <FaChartBar /> },
+];
 
 const Sidebar = ({ isDarkMode, onLinkClick }) => {
-  // State to track if the Admin submenu is open
-  const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [activeKey, setActiveKey] = useState(null);
 
-  // Function to toggle the Admin submenu
-  const toggleAdminMenu = () => {
-    setIsAdminOpen((prev) => !prev);
+  const handleClick = (key) => {
+    setActiveKey(key);
+    onLinkClick(key);
   };
 
   return (
     <div
-      className={`sticky top-0 h-screen p-6 transition-all duration-300 bg-transparent ${
-        isDarkMode ? "text-slate-400" : "text-slate-800"
-      } shadow-lg`}
+      className={`sticky top-0 h-screen w-64 p-6 transition-all duration-300 backdrop-blur-lg bg-white/10 dark:bg-gray-900/50 border border-gray-300/30 dark:border-gray-700/30 shadow-xl rounded-xl`}
     >
-      <ul>
-        <li className="mb-4">
-          <button
-            onClick={() => onLinkClick("introduction")}
-            className={`hover:text-indigo-600 ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
-            Introduction
-          </button>
-        </li>
-        <li className="mb-4">
-          <button
-            onClick={toggleAdminMenu} // Toggle the admin menu
-            className={`flex items-center hover:text-indigo-600 ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
-            Admin
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className={`ml-2 w-4 h-4 transform transition-transform ${
-                isAdminOpen ? "rotate-180" : "rotate-0"
+      {/* <h2 className="text-xl font-semibold text-center text-gray-800 dark:text-white mb-6">
+        AI-Powered Menu
+      </h2> */}
+
+      <ul className="space-y-3">
+        {menuItems.map((item) => (
+          <li key={item.key}>
+            <button
+              onClick={() => handleClick(item.key)}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-300 ${
+                activeKey === item.key
+                  ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md scale-105"
+                  : "text-gray-700 dark:text-gray-300 hover:scale-105 hover:bg-gradient-to-r hover:from-gray-100 hover:to-indigo-100 dark:hover:from-gray-800 dark:hover:to-gray-700"
               }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          {/* Conditionally render the sub-menu */}
-          {isAdminOpen && (
-            <ul className="ml-4 mt-2">
-              <li>
-                <button
-                  onClick={() => onLinkClick("role")}
-                  className={`hover:text-indigo-600 ${
-                    isDarkMode ? "text-slate-400" : "text-slate-600"
-                  }`}
-                >
-                  Role
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onLinkClick("usermanagement")}
-                  className={`hover:text-indigo-600 ${
-                    isDarkMode ? "text-slate-400" : "text-slate-600"
-                  }`}
-                >
-                  User Management
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onLinkClick("groupmanagement")}
-                  className={`hover:text-indigo-600 ${
-                    isDarkMode ? "text-slate-400" : "text-slate-600"
-                  }`}
-                >
-                  Group Management
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onLinkClick("auditlogs")}
-                  className={`hover:text-indigo-600 ${
-                    isDarkMode ? "text-slate-400" : "text-slate-600"
-                  }`}
-                >
-                  Audit Logs
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onLinkClick("accountsettings")}
-                  className={`hover:text-indigo-600 ${
-                    isDarkMode ? "text-slate-400" : "text-slate-600"
-                  }`}
-                >
-                  Account Settings
-                </button>
-              </li>
-            </ul>
-          )}
-        </li>
-        <li className="mb-4">
-          <button
-            onClick={() => onLinkClick("dashboard")}
-            className={`hover:text-indigo-600 ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
-            Dashboard
-          </button>
-        </li>
-        <li className="mb-4">
-          <button
-            onClick={() => onLinkClick("dataForm")}
-            className={`hover:text-indigo-600 ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
-            DataForm
-          </button>
-        </li>
-        <li className="mb-4">
-          <button
-            onClick={() => onLinkClick("process")}
-            className={`hover:text-indigo-600 ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
-            Process
-          </button>
-        </li>
-        <li className="mb-4">
-          <button
-            onClick={() => onLinkClick("analytics")}
-            className={`hover:text-indigo-600 ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
-            Analytics
-          </button>
-        </li>
-        <li className="mb-4">
-          <button
-            onClick={() => onLinkClick("integration")}
-            className={`hover:text-indigo-600 ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
-            Integration
-          </button>
-        </li>
-        <li className="mb-4">
-          <button
-            onClick={() => onLinkClick("pages")}
-            className={`hover:text-indigo-600 ${
-              isDarkMode ? "text-slate-400" : "text-slate-600"
-            }`}
-          >
-            Pages
-          </button>
-        </li>
+              <span className="text-lg">{item.icon}</span>
+              <span className="text-sm font-medium">{item.label}</span>
+            </button>
+          </li>
+        ))}
       </ul>
     </div>
   );
