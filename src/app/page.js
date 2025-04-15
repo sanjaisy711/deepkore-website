@@ -88,7 +88,7 @@ export default function Page() {
             <div className="md:col-span-6">
               <div className="md:me-8">
                 <h4 className="font-bold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 text-black dark:text-white relative">
-                  Shape the Future{" "}
+                  Building the Future{" "}
                   <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-indigo-600 relative inline-block">
                     <span className="relative text-white">AI</span>
                   </span>{" "}
@@ -549,7 +549,7 @@ export default function Page() {
       </section>
 
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
       {/* <CookieModal /> */}
     </>
   );

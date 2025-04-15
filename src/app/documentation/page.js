@@ -224,7 +224,7 @@ export default function Page() {
       </section>
 
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }

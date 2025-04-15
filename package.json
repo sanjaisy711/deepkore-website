@@ -1,7 +1,7 @@
 {
   "name": "deepkore",
   "version": "2.3.0",
-  "description": "Build Smarter & Deploy Faster",
+  "description": "Building the Future of AI Driven Business",
   "private": true,
   "scripts": {
     "dev": "next dev -p 4000",

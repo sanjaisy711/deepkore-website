@@ -503,7 +503,7 @@ export default function Page() {
         </div>
       </div>
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }

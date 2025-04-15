@@ -430,7 +430,7 @@ export default function Page() {
       )}
 
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }

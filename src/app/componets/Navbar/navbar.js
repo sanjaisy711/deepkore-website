@@ -149,9 +149,9 @@ export default function Navbar(props) {
               <Link href="blog">Blog</Link>
             </li> */}
 
-            <li className={manu === "/solutions" || "" ? "active" : ""}>
+            {/* <li className={manu === "/solutions" || "" ? "active" : ""}>
               <Link href="solutions">Solutions</Link>
-            </li>
+            </li> */}
             <li className={manu === "/contactus" || "" ? "active" : ""}>
               <Link href="contactus" className="sub-menu-item">
                 Contact Us

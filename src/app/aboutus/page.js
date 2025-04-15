@@ -153,7 +153,7 @@ export default function Page() {
       <div className="container relative mt-8"></div>
 
       <Footer />
-      <Switcher />
+      {/* <Switcher /> */}
     </>
   );
 }

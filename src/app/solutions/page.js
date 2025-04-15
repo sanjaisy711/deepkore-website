@@ -1005,7 +1005,7 @@ const App = () => {
       </section>
 
       <Footer />
-      <Switcher isDarkMode={isDarkMode} changeMode={changeMode} />
+      {/* <Switcher isDarkMode={isDarkMode} changeMode={changeMode} /> */}
     </>
   );
 };

@@ -43,7 +43,7 @@ const alex = Alex_Brush({
 });
 
 export const metadata = {
-  title: "Deepkore - Build Smarter & Deploy Faster",
+  title: "Deepkore - Building the Future of AI Driven Business",
   description:
     "Deepkore lets you transform ideas into powerful Enterprise applications that adapt to your business needs. Enhance your workflows and elevate employee productivity. Deepkore enables you to effortlessly create apps that match the fast-paced growth of your business no coding required.",
 };
